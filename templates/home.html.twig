@@ -1,8 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{{ test }}
 
-<button type="button" class="btn btn-danger">coucou</button>
+<div class="container-fluid bg-info">
+<img src="{{ asset('images/lowpoly_banner.jpg') }}" alt="banner" class="w-100">
+</div>
+
+<div class="container-fluid bg-secondary">
+    <div class="row">
+        <div class="col-md-12 bg-success text-center color">
+            <h1>salut</h1>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

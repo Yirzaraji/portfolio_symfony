@@ -1,0 +1,13 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid{
+    padding:0;
+    background-color: rgba(248, 247, 216, 0.7);
+}
+
+h1{
+    color: purple;
+    
+}
