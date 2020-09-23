@@ -2,15 +2,139 @@
 
 {% block body %}
 
-<div class="container-fluid bg-info">
-<img src="{{ asset('images/lowpoly_banner.jpg') }}" alt="banner" class="w-100">
+{# ========== BANNER BLOC ============ #}
+<div class="container-fluid banner">
+    <div class="row text-center">
+        <div class="col-md-5 blockBanner01">
+            <img src="{{ asset('images/logoround.png') }}" 
+            alt="banner" style="width:40%" class="img-responsive img-center">
+            <p>DEVELOPPEUR</p>
+            <p><span>PHP créatif</span></p> 
+            <p>Remi Larrauri</p>
+            <p>06 29 61 53 66</p>
+            <button class="btn btn-info mb-5">CV</button><br>
+            <span>IN </span><span>MAIL </span><span>GIT </span>
+        </div>
+        <div class="col-md-7 bannerLowpolyImg bg-success">
+            <img src="{{ asset('images/lowpoly_banner.jpg') }}" 
+            alt="banner" class="w-100 img-responsive cover">
+        </div>
+    </div>
 </div>
 
-<div class="container-fluid bg-secondary">
+<div class="container-fluid pb-5 pt-5">
     <div class="row">
-        <div class="col-md-12 bg-success text-center color">
-            <h1>salut</h1>
+        <div class="col-md-12 text-center color titleColor mt-3">
+            <img src="https://via.placeholder.com/70" alt="">
+            <h4><b>CE QUE JE</b> SAIS FAIRE...</h4>
         </div>
+    </div>
+    <div class="row text-center justify-content-center">
+        <div class="col-md-3 tripleCard mr-2">ee</div>
+        <div class="col-md-3 tripleCard mr-2">ez</div>
+        <div class="col-md-3 tripleCard mr-2">re</div>
+    </div>
+</div>
+
+<div class="container-fluid pb-5 pt-5">
+    <div class="row">
+        <div class="col-md-12 text-center color titleColor mt-3 mb-5">
+            <img src="https://via.placeholder.com/70" alt="">
+            <h4><b>QUELQUES</b> PROJET...</h4>
+            <span class="filterSpan">PRINT</span> <span class="filterSpan">DEV</span> <span class="filterSpan">DESIGN</span>
+        </div>
+    </div>
+    <div class="row text-center justify-content-center">
+        <div class="col-md-3 tripleCard mr-2 mb-2">ee</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">ez</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">re</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">ee</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">ez</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">re</div>
+    </div>
+    
+</div>
+
+<div class="container-fluid pb-5 pt-5">
+    <div class="row blocExp">
+        <div class="col-md-4 text-center color titleColor mt-3 mb-5">
+            <img src="https://via.placeholder.com/70" alt="">
+            <h4><b>EXPERIENCES</b> PROFESSIONNELLES...</h4>
+        </div>
+        <div class="col-md-8"></div>
+    </div>
+    <div class="row blocDip">
+        <div class="col-md-4 text-center color titleColor mt-3 mb-5">
+            <img src="https://via.placeholder.com/70" alt="">
+            <h4><b>DIPLOMES</b> CERTIFICATIONS...</h4>
+        </div>
+        <div class="col-md-8"></div>
+    </div>
+</div>
+
+<div class="container-fluid pb-5 pt-5">
+    <div class="row">
+        <div class="col-md-12 text-center color titleColor mt-3 mb-5">
+            <img src="https://via.placeholder.com/70" alt="">
+            <h4><b>QUELQUES</b> SKILLS...</h4>
+            <span class="filterSpan">BACK</span> <span class="filterSpan">FRONT</span> <span class="filterSpan">CONCEPTION</span>
+        </div>
+    </div>
+    <div class="row text-center justify-content-center">
+        <div class="col-md-3 tripleCard mr-2 mb-2">ee</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">ez</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">re</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">ee</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">ez</div>
+        <div class="col-md-3 tripleCard mr-2 mb-2">re</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row blocContact justify-content-center">
+        <div class="col-md-4 text-center color titleColor">
+        <img src="{{ asset('images/iconrocket.png') }}" 
+            alt="banner" class="w-100 img-responsive">
+        </div>
+        <div class="col-md-4 text-center d-flex align-items-center color titleColor mt-3 mb-5">
+            <form action="">
+               <h3>CONTACTEZ MOI.</h3>
+                <div class="row mb-4">
+                    <div class="col">
+                    <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Mail">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <textarea class="form-control" rows="8" aria-label="With textarea" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">ENVOYER</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pb-5 pt-5">
+    <div class="row text-center justify-content-center">
+        <div class="col-md-2 tripleCard mr-2 mb-2">ee</div>
+        <div class="col-md-2 tripleCard mr-2 mb-2">ez</div>
+        <div class="col-md-2 tripleCard mr-2 mb-2">re</div>
+        <div class="col-md-2 tripleCard mr-2 mb-2">ee</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row text-center justify-content-center">
+        <div class="col-md-12 footerBlock mr-2 mb-2">Copyright ©2020 | Yirzaraji | All rights reserved</div>
     </div>
 </div>
 
