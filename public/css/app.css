@@ -1,23 +1,98 @@
 body{
     font-family: 'Rajdhani', sans-serif;
+    background-color: rgb(244, 244, 244);
 }
 
-.container-fluid{
-    padding:0;
+.NavDesktop{
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    padding-right: 5%;
+    padding-top: 1%;
+    
 }
+
+.navButton{
+    margin-left: 6%;
+    font-weight: bold;
+    color: white;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: 0.4s;
+}
+
+.navButton:hover{
+    background-color: rgb(255, 255, 255);
+    color: #263e84;
+    transition: 0.4s;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 .blockBanner01{
-    
-background: rgba(65,35,191,1);
-background: -moz-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(65,35,191,1)), color-stop(12%, rgba(67,32,182,1)), color-stop(96%, rgba(80,11,118,1)));
-background: -webkit-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
-background: -o-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
-background: -ms-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
-background: linear-gradient(to right, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4123bf', endColorstr='#500b76', GradientType=1 );
+    background: rgba(65,35,191,1);
+    background: -moz-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(65,35,191,1)), color-stop(12%, rgba(67,32,182,1)), color-stop(96%, rgba(80,11,118,1)));
+    background: -webkit-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -o-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -ms-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: linear-gradient(to right, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4123bf', endColorstr='#500b76', GradientType=1 );
+    font-weight: bold;
+    color: white;
 
+}
 
+.blockBanner01 p:nth-child(2), p:nth-child(3){
+    font-size: 2.3rem;
+    line-height: 20px;
+}
+
+.blockBanner01 p:nth-child(4) span:nth-child(1){
+    margin-top: 50px;
+    font-size: 1.4rem;
+    background-color: white;
+    color:rgb(74, 2, 141);
+    border-radius: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.blockBanner01 img:nth-child(7), img:nth-child(8), img:nth-child(9){
+  
+    color: rgb(0, 255, 21);
+    border: 2px solid white;
+    border-radius: 50%; 
+}
+
+.blockBanner01 p:nth-child(4) span:nth-child(3){
+    font-size: 1.4rem;
+    background-color: white;
+    color: rgb(74, 2, 141);
+    border-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.bannerLowpolyImg{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.blockiDO{
+    background-color:white;
+}
+
+.btnrounded{
+    border-radius: 50%;
 }
 
 h1{
@@ -25,12 +100,7 @@ h1{
     
 }
 
-.NavDesktop{
-    position: absolute;
-    z-index: 999;
-    right: 0;
-    
-}
+
 
 .titleColor{
     color:rgb(119, 21, 111);
@@ -38,9 +108,17 @@ h1{
 
 .tripleCard{
     min-height: 300px;
-    background-color: rgb(226, 226, 226);
     border-radius: 10px;
 }
+
+.tripleCard img{
+    border-radius: 50%;
+}
+
+.projectCard img{
+    border-radius: 10px;
+}
+
 
 .filterSpan{
     padding-top: 4px;
@@ -53,13 +131,20 @@ h1{
 
 .blocExp{
     min-height: 650px;
-    background-color: aquamarine;
+    background: rgba(65,35,191,1);
+    background: -moz-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(65,35,191,1)), color-stop(12%, rgba(67,32,182,1)), color-stop(96%, rgba(80,11,118,1)));
+    background: -webkit-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -o-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -ms-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: linear-gradient(to right, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4123bf', endColorstr='#500b76', GradientType=1 );
 }
 
 .blocDip{
 
     min-height: 650px;
-    background-color: rgb(5, 199, 134);
+    background-color: white;
 
 }
 
@@ -73,6 +158,10 @@ h1{
     background: -ms-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
     background: linear-gradient(to right, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4123bf', endColorstr='#500b76', GradientType=1 );
+}
+
+.blocContact img{
+    width: 90%!important;
 }
 
 .footerBlock{

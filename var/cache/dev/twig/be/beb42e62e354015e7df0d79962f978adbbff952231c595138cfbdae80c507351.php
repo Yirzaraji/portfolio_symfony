@@ -26,6 +26,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
         $this->blocks = [
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -61,40 +62,63 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         // line 6
         echo "<div class=\"container-fluid banner\">
     <div class=\"row text-center\">
-        <div class=\"col-md-5 blockBanner01\">
+        <div class=\"col-sm-5 col-md-5 blockBanner01 pb-3\">
             <img src=\"";
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logoround.png"), "html", null, true);
         echo "\" 
             alt=\"banner\" style=\"width:40%\" class=\"img-responsive img-center\">
             <p>DEVELOPPEUR</p>
-            <p><span>PHP créatif</span></p> 
-            <p>Remi Larrauri</p>
-            <p>06 29 61 53 66</p>
-            <button class=\"btn btn-info mb-5\">CV</button><br>
-            <span>IN </span><span>MAIL </span><span>GIT </span>
+            <p><span>&#60;?PHP créatif ?&#62;</span></p> 
+            <p><span>Remi Larrauri</span><br>
+            <span>06.29.61.53.66</span></p>
+            <button class=\"btn btnrounded btn-info mb-5\">CV</button><br>
+            <img src=\"https://via.placeholder.com/30\" alt=\"\">
+            <img src=\"https://via.placeholder.com/30\" alt=\"\">
+            <img src=\"https://via.placeholder.com/30\" alt=\"\">
         </div>
-        <div class=\"col-md-7 bannerLowpolyImg bg-success\">
+        <div class=\"col-sm-7 col-md-7 bannerLowpolyImg\">
             <img src=\"";
-        // line 19
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/lowpoly_banner.jpg"), "html", null, true);
         echo "\" 
-            alt=\"banner\" class=\"w-100 img-responsive cover\">
+            alt=\"banner\" class=\"w-100 h-100 img-responsive cover\">
         </div>
     </div>
 </div>
 
-<div class=\"container-fluid pb-5 pt-5\">
+<div class=\"container-fluid blockiDO pb-5 pt-5\">
     <div class=\"row\">
-        <div class=\"col-md-12 text-center color titleColor mt-3\">
+        <div class=\"col-md-12 text-center color titleColor mt-3 mb-5\">
             <img src=\"https://via.placeholder.com/70\" alt=\"\">
             <h4><b>CE QUE JE</b> SAIS FAIRE...</h4>
         </div>
     </div>
     <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-3 tripleCard mr-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2\">re</div>
+        <div class=\"col-md-3 tripleCard mr-2\">
+            <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            PRINT</br>
+            <p class=\"mt-1\">
+                elementum, quis finibus nulla facilisis.</br> 
+                Sed eleifend quis turpis id euismod. Morbi.
+            </p>
+        </div>
+        <div class=\"col-md-3 tripleCard mr-2\">
+            <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            DEV</br>
+            <p class=\"mt-1\">
+                elementum, quis finibus nulla facilisis.</br> 
+                Sed eleifend quis turpis id euismod. Morbi.
+            </p>
+        </div>
+        <div class=\"col-md-3 tripleCard mr-2\">
+        <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            DESIGN</br>
+            <p class=\"mt-1\">
+                elementum, quis finibus nulla facilisis.</br> 
+                Sed eleifend quis turpis id euismod. Morbi.
+            </p>
+        </div>
     </div>
 </div>
 
@@ -106,13 +130,27 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
             <span class=\"filterSpan\">PRINT</span> <span class=\"filterSpan\">DEV</span> <span class=\"filterSpan\">DESIGN</span>
         </div>
     </div>
+    <div class=\"row text-center justify-content-center mb-2\">
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard mb-2\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard mb-2\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+    </div>
     <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">re</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">re</div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
     </div>
     
 </div>
@@ -142,21 +180,35 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
             <span class=\"filterSpan\">BACK</span> <span class=\"filterSpan\">FRONT</span> <span class=\"filterSpan\">CONCEPTION</span>
         </div>
     </div>
+    <div class=\"row text-center justify-content-center mb-2\">
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard mb-2\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard mb-2\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+    </div>
     <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">re</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">re</div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
     </div>
 </div>
 
 <div class=\"container-fluid\">
     <div class=\"row blocContact justify-content-center\">
-        <div class=\"col-md-4 text-center color titleColor\">
+        <div class=\"col-md-4 text-center color titleColor  mr-5\">
         <img src=\"";
-        // line 96
+        // line 147
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/iconrocket.png"), "html", null, true);
         echo "\" 
             alt=\"banner\" class=\"w-100 img-responsive\">
@@ -189,11 +241,37 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 </div>
 
 <div class=\"container-fluid pb-5 pt-5\">
-    <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-2 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-2 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-2 tripleCard mr-2 mb-2\">re</div>
-        <div class=\"col-md-2 tripleCard mr-2 mb-2\">ee</div>
+    <div class=\"row justify-content-center\">
+        <div class=\"col-md-2 footerCard\"></div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\"></div>
     </div>
 </div>
 
@@ -202,6 +280,25 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         <div class=\"col-md-12 footerBlock mr-2 mb-2\">Copyright ©2020 | Yirzaraji | All rights reserved</div>
     </div>
 </div>
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 220
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 221
+        echo "
+<script>
+console.log('copuiiu')
+</script>
 
 ";
         
@@ -221,7 +318,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
     public function getDebugInfo()
     {
-        return array (  160 => 96,  80 => 19,  67 => 9,  62 => 6,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  298 => 221,  291 => 220,  212 => 147,  83 => 21,  68 => 9,  63 => 6,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -233,34 +330,57 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 {# ========== BANNER BLOC ============ #}
 <div class=\"container-fluid banner\">
     <div class=\"row text-center\">
-        <div class=\"col-md-5 blockBanner01\">
+        <div class=\"col-sm-5 col-md-5 blockBanner01 pb-3\">
             <img src=\"{{ asset('images/logoround.png') }}\" 
             alt=\"banner\" style=\"width:40%\" class=\"img-responsive img-center\">
             <p>DEVELOPPEUR</p>
-            <p><span>PHP créatif</span></p> 
-            <p>Remi Larrauri</p>
-            <p>06 29 61 53 66</p>
-            <button class=\"btn btn-info mb-5\">CV</button><br>
-            <span>IN </span><span>MAIL </span><span>GIT </span>
+            <p><span>&#60;?PHP créatif ?&#62;</span></p> 
+            <p><span>Remi Larrauri</span><br>
+            <span>06.29.61.53.66</span></p>
+            <button class=\"btn btnrounded btn-info mb-5\">CV</button><br>
+            <img src=\"https://via.placeholder.com/30\" alt=\"\">
+            <img src=\"https://via.placeholder.com/30\" alt=\"\">
+            <img src=\"https://via.placeholder.com/30\" alt=\"\">
         </div>
-        <div class=\"col-md-7 bannerLowpolyImg bg-success\">
+        <div class=\"col-sm-7 col-md-7 bannerLowpolyImg\">
             <img src=\"{{ asset('images/lowpoly_banner.jpg') }}\" 
-            alt=\"banner\" class=\"w-100 img-responsive cover\">
+            alt=\"banner\" class=\"w-100 h-100 img-responsive cover\">
         </div>
     </div>
 </div>
 
-<div class=\"container-fluid pb-5 pt-5\">
+<div class=\"container-fluid blockiDO pb-5 pt-5\">
     <div class=\"row\">
-        <div class=\"col-md-12 text-center color titleColor mt-3\">
+        <div class=\"col-md-12 text-center color titleColor mt-3 mb-5\">
             <img src=\"https://via.placeholder.com/70\" alt=\"\">
             <h4><b>CE QUE JE</b> SAIS FAIRE...</h4>
         </div>
     </div>
     <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-3 tripleCard mr-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2\">re</div>
+        <div class=\"col-md-3 tripleCard mr-2\">
+            <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            PRINT</br>
+            <p class=\"mt-1\">
+                elementum, quis finibus nulla facilisis.</br> 
+                Sed eleifend quis turpis id euismod. Morbi.
+            </p>
+        </div>
+        <div class=\"col-md-3 tripleCard mr-2\">
+            <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            DEV</br>
+            <p class=\"mt-1\">
+                elementum, quis finibus nulla facilisis.</br> 
+                Sed eleifend quis turpis id euismod. Morbi.
+            </p>
+        </div>
+        <div class=\"col-md-3 tripleCard mr-2\">
+        <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            DESIGN</br>
+            <p class=\"mt-1\">
+                elementum, quis finibus nulla facilisis.</br> 
+                Sed eleifend quis turpis id euismod. Morbi.
+            </p>
+        </div>
     </div>
 </div>
 
@@ -272,13 +392,27 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
             <span class=\"filterSpan\">PRINT</span> <span class=\"filterSpan\">DEV</span> <span class=\"filterSpan\">DESIGN</span>
         </div>
     </div>
+    <div class=\"row text-center justify-content-center mb-2\">
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard mb-2\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard mb-2\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+    </div>
     <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">re</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">re</div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
     </div>
     
 </div>
@@ -308,19 +442,33 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
             <span class=\"filterSpan\">BACK</span> <span class=\"filterSpan\">FRONT</span> <span class=\"filterSpan\">CONCEPTION</span>
         </div>
     </div>
+    <div class=\"row text-center justify-content-center mb-2\">
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard mb-2\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard mb-2\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+    </div>
     <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">re</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-3 tripleCard mr-2 mb-2\">re</div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
+        <div class=\"col-md-3 projectCard\">
+            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+        </div>
     </div>
 </div>
 
 <div class=\"container-fluid\">
     <div class=\"row blocContact justify-content-center\">
-        <div class=\"col-md-4 text-center color titleColor\">
+        <div class=\"col-md-4 text-center color titleColor  mr-5\">
         <img src=\"{{ asset('images/iconrocket.png') }}\" 
             alt=\"banner\" class=\"w-100 img-responsive\">
         </div>
@@ -352,11 +500,37 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 </div>
 
 <div class=\"container-fluid pb-5 pt-5\">
-    <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-2 tripleCard mr-2 mb-2\">ee</div>
-        <div class=\"col-md-2 tripleCard mr-2 mb-2\">ez</div>
-        <div class=\"col-md-2 tripleCard mr-2 mb-2\">re</div>
-        <div class=\"col-md-2 tripleCard mr-2 mb-2\">ee</div>
+    <div class=\"row justify-content-center\">
+        <div class=\"col-md-2 footerCard\"></div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\"></div>
     </div>
 </div>
 
@@ -365,6 +539,14 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         <div class=\"col-md-12 footerBlock mr-2 mb-2\">Copyright ©2020 | Yirzaraji | All rights reserved</div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script>
+console.log('copuiiu')
+</script>
 
 {% endblock %}", "home.html.twig", "B:\\dev stuff\\portfolio_symfony\\templates\\home.html.twig");
     }

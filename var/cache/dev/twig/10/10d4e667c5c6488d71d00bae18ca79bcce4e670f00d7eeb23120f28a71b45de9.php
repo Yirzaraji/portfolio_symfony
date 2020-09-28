@@ -36,45 +36,13 @@ class __TwigTemplate_bbeb72c422c0f27e88a9fbd67afd7b90934f02a7c082a5925852afbc650
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "NavBar.html.twig"));
 
-        // line 1
-        echo "<nav class=\"navbar navbar-dark bg-dark\">
-  <a class=\"navbar-brand\" href=\"#\">Navbar</a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
-
-  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-    <ul class=\"navbar-nav mr-auto\">
-      <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"#\">Link</a>
-      </li>
-      <li class=\"nav-item dropdown\">
-        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-          Dropdown
-        </a>
-        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-          <a class=\"dropdown-item\" href=\"#\">Action</a>
-          <a class=\"dropdown-item\" href=\"#\">Another action</a>
-          <div class=\"dropdown-divider\"></div>
-          <a class=\"dropdown-item\" href=\"#\">Something else here</a>
-        </div>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
-      </li>
-    </ul>
-    <form class=\"form-inline my-2 my-lg-0\">
-      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
-    </form>
-  </div>
-</nav>
-<nav>
+        // line 36
+        echo "<nav>
   <div class=\"NavDesktop\">
-  yio
+    <div class=\"navButton\">HOME</div>
+    <div class=\"navButton\">CV</div>
+    <div class=\"navButton\">ABOUT</div>
+    <div class=\"navButton\">CONTACT</div>
   </div>
 </nav>";
         
@@ -89,12 +57,12 @@ class __TwigTemplate_bbeb72c422c0f27e88a9fbd67afd7b90934f02a7c082a5925852afbc650
 
     public function getDebugInfo()
     {
-        return array (  40 => 1,);
+        return array (  40 => 36,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<nav class=\"navbar navbar-dark bg-dark\">
+        return new Source("{# <nav class=\"navbar navbar-dark bg-dark\">
   <a class=\"navbar-brand\" href=\"#\">Navbar</a>
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
@@ -128,10 +96,13 @@ class __TwigTemplate_bbeb72c422c0f27e88a9fbd67afd7b90934f02a7c082a5925852afbc650
       <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
     </form>
   </div>
-</nav>
+</nav> #}
 <nav>
   <div class=\"NavDesktop\">
-  yio
+    <div class=\"navButton\">HOME</div>
+    <div class=\"navButton\">CV</div>
+    <div class=\"navButton\">ABOUT</div>
+    <div class=\"navButton\">CONTACT</div>
   </div>
 </nav>", "NavBar.html.twig", "B:\\dev stuff\\portfolio_symfony\\templates\\NavBar.html.twig");
     }
