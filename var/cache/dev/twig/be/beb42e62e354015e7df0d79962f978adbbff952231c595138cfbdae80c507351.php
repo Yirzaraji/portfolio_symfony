@@ -73,13 +73,30 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
             <p><span>Remi Larrauri</span><br>
             <span>06.29.61.53.66</span></p>
             <button class=\"btn btnrounded btn-info mb-5\">CV</button><br>
-            <img src=\"https://via.placeholder.com/30\" alt=\"\">
-            <img src=\"https://via.placeholder.com/30\" alt=\"\">
-            <img src=\"https://via.placeholder.com/30\" alt=\"\">
+            <div class=\"row justify-content-center\">
+                <div class=\"col-md-4\">
+                </div>
+                <div class=\"col-md-4\">
+                    <a href=\"https://www.linkedin.com/in/rl-dev/\"><img src=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_linkedin.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:23%\"></a>        
+                    <a href=\"#ankor_contact\"><img src=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_contact.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:23%\"></a> 
+                    <a href=\"https://github.com/Yirzaraji\"><img src=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_git.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:23%\"></a> 
+                </div> 
+                <div class=\"col-md-4\">
+                </div>       
+            </div>
         </div>
         <div class=\"col-sm-7 col-md-7 bannerLowpolyImg\">
             <img src=\"";
-        // line 21
+        // line 29
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/lowpoly_banner.jpg"), "html", null, true);
         echo "\" 
             alt=\"banner\" class=\"w-100 h-100 img-responsive cover\">
@@ -88,15 +105,21 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 </div>
 
 <div class=\"container-fluid blockiDO pb-5 pt-5\">
-    <div class=\"row\">
-        <div class=\"col-md-12 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
+    <div class=\"row justify-content-center\">
+        <div class=\"col-md-4 text-center color titleColor mt-3 mb-5\">
+            <img src=\"";
+        // line 38
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:25%\" class=\"mb-2\">
             <h4><b>CE QUE JE</b> SAIS FAIRE...</h4>
         </div>
     </div>
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 tripleCard mr-2\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            <img src=\"";
+        // line 44
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_print.png"), "html", null, true);
+        echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             PRINT</br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
@@ -104,7 +127,10 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
             </p>
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            <img src=\"";
+        // line 52
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_dev.png"), "html", null, true);
+        echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             DEV</br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
@@ -112,7 +138,10 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
             </p>
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
-        <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+        <img src=\"";
+        // line 60
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_design.png"), "html", null, true);
+        echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             DESIGN</br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
@@ -205,10 +234,10 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 </div>
 
 <div class=\"container-fluid\">
-    <div class=\"row blocContact justify-content-center\">
+    <div class=\"row blocContact justify-content-center\" id=\"ankor_contact\">
         <div class=\"col-md-4 text-center color titleColor  mr-5\">
         <img src=\"";
-        // line 147
+        // line 155
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/iconrocket.png"), "html", null, true);
         echo "\" 
             alt=\"banner\" class=\"w-100 img-responsive\">
@@ -287,14 +316,14 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
     }
 
-    // line 220
+    // line 228
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 221
+        // line 229
         echo "
 <script>
 console.log('copuiiu')
@@ -318,7 +347,7 @@ console.log('copuiiu')
 
     public function getDebugInfo()
     {
-        return array (  298 => 221,  291 => 220,  212 => 147,  83 => 21,  68 => 9,  63 => 6,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  327 => 229,  320 => 228,  241 => 155,  143 => 60,  132 => 52,  121 => 44,  112 => 38,  100 => 29,  90 => 22,  86 => 21,  82 => 20,  68 => 9,  63 => 6,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -338,9 +367,17 @@ console.log('copuiiu')
             <p><span>Remi Larrauri</span><br>
             <span>06.29.61.53.66</span></p>
             <button class=\"btn btnrounded btn-info mb-5\">CV</button><br>
-            <img src=\"https://via.placeholder.com/30\" alt=\"\">
-            <img src=\"https://via.placeholder.com/30\" alt=\"\">
-            <img src=\"https://via.placeholder.com/30\" alt=\"\">
+            <div class=\"row justify-content-center\">
+                <div class=\"col-md-4\">
+                </div>
+                <div class=\"col-md-4\">
+                    <a href=\"https://www.linkedin.com/in/rl-dev/\"><img src=\"{{ asset('images/logo_linkedin.png') }}\" alt=\"\" style=\"width:23%\"></a>        
+                    <a href=\"#ankor_contact\"><img src=\"{{ asset('images/logo_contact.png') }}\" alt=\"\" style=\"width:23%\"></a> 
+                    <a href=\"https://github.com/Yirzaraji\"><img src=\"{{ asset('images/logo_git.png') }}\" alt=\"\" style=\"width:23%\"></a> 
+                </div> 
+                <div class=\"col-md-4\">
+                </div>       
+            </div>
         </div>
         <div class=\"col-sm-7 col-md-7 bannerLowpolyImg\">
             <img src=\"{{ asset('images/lowpoly_banner.jpg') }}\" 
@@ -350,15 +387,15 @@ console.log('copuiiu')
 </div>
 
 <div class=\"container-fluid blockiDO pb-5 pt-5\">
-    <div class=\"row\">
-        <div class=\"col-md-12 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
+    <div class=\"row justify-content-center\">
+        <div class=\"col-md-4 text-center color titleColor mt-3 mb-5\">
+            <img src=\"{{ asset('images/rosace.png') }}\" alt=\"\" style=\"width:25%\" class=\"mb-2\">
             <h4><b>CE QUE JE</b> SAIS FAIRE...</h4>
         </div>
     </div>
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 tripleCard mr-2\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            <img src=\"{{ asset('images/logo_print.png') }}\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             PRINT</br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
@@ -366,7 +403,7 @@ console.log('copuiiu')
             </p>
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+            <img src=\"{{ asset('images/logo_dev.png') }}\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             DEV</br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
@@ -374,7 +411,7 @@ console.log('copuiiu')
             </p>
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
-        <img src=\"https://via.placeholder.com/70\" alt=\"\" class=\"mb-4\"></br>
+        <img src=\"{{ asset('images/logo_design.png') }}\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             DESIGN</br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
@@ -467,7 +504,7 @@ console.log('copuiiu')
 </div>
 
 <div class=\"container-fluid\">
-    <div class=\"row blocContact justify-content-center\">
+    <div class=\"row blocContact justify-content-center\" id=\"ankor_contact\">
         <div class=\"col-md-4 text-center color titleColor  mr-5\">
         <img src=\"{{ asset('images/iconrocket.png') }}\" 
             alt=\"banner\" class=\"w-100 img-responsive\">

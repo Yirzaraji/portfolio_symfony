@@ -66,9 +66,9 @@ body{
 
 .blockBanner01 img:nth-child(7), img:nth-child(8), img:nth-child(9){
   
-    color: rgb(0, 255, 21);
-    border: 2px solid white;
-    border-radius: 50%; 
+    /*color: rgb(0, 255, 21);
+     border: 2px solid white; 
+    border-radius: 50%; */
 }
 
 .blockBanner01 p:nth-child(4) span:nth-child(3){
@@ -92,7 +92,8 @@ body{
 }
 
 .btnrounded{
-    border-radius: 50%;
+    border-radius: 30%;
+    font-weight: 900;
 }
 
 h1{
@@ -103,13 +104,20 @@ h1{
 
 
 .titleColor{
-    color:rgb(119, 21, 111);
+    background: -webkit-linear-gradient(#4f9ed6, #642088);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .tripleCard{
     min-height: 300px;
     border-radius: 10px;
+    font-weight: 900;
 }
+
+/* .tripleCard:nth-child(2){
+   
+} */
 
 .tripleCard img{
     border-radius: 50%;
