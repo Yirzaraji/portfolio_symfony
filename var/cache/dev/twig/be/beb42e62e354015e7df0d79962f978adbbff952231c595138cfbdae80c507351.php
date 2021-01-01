@@ -120,7 +120,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         // line 44
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_print.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
-            PRINT</br>
+            <span class=\"triplecard_txt\">PRINT</span></br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
                 Sed eleifend quis turpis id euismod. Morbi.
@@ -131,7 +131,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         // line 52
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_dev.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
-            DEV</br>
+            <span class=\"triplecard_txt\">DEV</span></br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
                 Sed eleifend quis turpis id euismod. Morbi.
@@ -142,7 +142,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         // line 60
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_design.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
-            DESIGN</br>
+            <span class=\"triplecard_txt\">DESIGN</span></br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
                 Sed eleifend quis turpis id euismod. Morbi.
@@ -153,82 +153,160 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
 <div class=\"container-fluid pb-5 pt-5\">
     <div class=\"row\">
+        <div class=\"col-md-12 text-center color titleColor mt-3\">
+            <img src=\"";
+        // line 73
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
+            <h4 class=\"titlecolor\"><b>QUELQUES</b> PROJET...</h4>
+            <img src=\"";
+        // line 75
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trait.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
+        </div>
+    </div>
+    <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
-            <h4><b>QUELQUES</b> PROJET...</h4>
             <span class=\"filterSpan\">PRINT</span> <span class=\"filterSpan\">DEV</span> <span class=\"filterSpan\">DESIGN</span>
         </div>
     </div>
     <div class=\"row text-center justify-content-center mb-2\">
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard mb-2\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard mb-2\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
     </div>
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
     </div>
     
 </div>
 
 <div class=\"container-fluid pb-5 pt-5\">
-    <div class=\"row blocExp\">
-        <div class=\"col-md-4 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
-            <h4><b>EXPERIENCES</b> PROFESSIONNELLES...</h4>
+    <div class=\"row justify-content-center blocExp\">
+        <div class=\"col-md-3 color mt-5 mb-5\">
+            <img src=\"";
+        // line 111
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosaceb_blanc.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:22%\">
+            <h4><b>EXPERIENCES</b><br> PROFESSIONNELLES...</h4>
         </div>
-        <div class=\"col-md-8\"></div>
+        <div class=\"col-md-6 line_left mt-5 mb-5\">
+        <p><b>DEVELOPPEUR PHP | SYMFONY<br>
+        <span class=\"redfont\">DIGEAT</span></b><br>
+        MARS 2020</p>
+       
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Duis non 
+        volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.<br>
+        </p><p>Duis non volutpat arcu, eu mollis tellus.<br>
+        Quis consequat nulla effi citur at.<br>
+        Sed finibus aliquam neque sit.</p>
+
+        <p><b>WEB DESIGNER<br>
+        <span class=\"redfont\">METHODE ANCESTRALE</span></b><br>
+        AVRIL 2014</p>
+
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, <br>
+        </p><p>quis consequat nulla effi citur at.<br>
+        Duis non volutpat arcu, eu mollis tellus.<br>
+        Quis consequat nulla effi citur at<br>
+        Sed finibus aliquam neque sit.</p>
+        </div>
     </div>
-    <div class=\"row blocDip\">
-        <div class=\"col-md-4 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
-            <h4><b>DIPLOMES</b> CERTIFICATIONS...</h4>
+   
+         <div class=\"row justify-content-center blocDip\">
+        <div class=\"col-md-3 color mt-5 mb-5\">
+            <img src=\"";
+        // line 140
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:22%\">
+            <h4 class=\"gradientPurpleFont titleh4\"><b>DIPLOMES &</b><br> CERTIFICATIONS...</h4>
         </div>
-        <div class=\"col-md-8\"></div>
+        <div class=\"col-md-6 line_leftBlack mt-5 mb-5\">
+        <p><b>CONCEPTEUR DEVELOPPEUR D'APPLICATION Bac +4<br>
+        <span class=\"gradientPurpleFont\">OPEN CLASS ROOMS</span></b><br>
+        2020</p>
+       
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
+        quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, 
+        eu mollis tellus. Sed finibus aliquam neque sit amet sodales.</p>
+
+        <p><b>DEVELOPPEUR WEB Bac +2<br>
+        <span class=\"gradientPurpleFont\">SIMPLON.CO</span></b><br>
+        2020</p>
+       
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
+        quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, 
+        eu mollis tellus. Sed finibus aliquam neque sit amet sodales.</p>
+
+        <p><b>DESIGNER GRAPHIQUE<br>
+        <span class=\"gradientPurpleFont\">IDEM CREATIVE ARTS SCHOOL</span></b><br>
+        2014</p>
+
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
+        quis consequat nulla effi citur at. Maecenas sed massa</p>
+        </div>
     </div>
 </div>
 
 <div class=\"container-fluid pb-5 pt-5\">
     <div class=\"row\">
+        <div class=\"col-md-12 text-center color titleColor mt-3\">
+            <img src=\"";
+        // line 176
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
+            <h4 class=\"titlecolor\"><b>QUELQUES</b> TECHNOS...</h4>
+            <img src=\"";
+        // line 178
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trait.png"), "html", null, true);
+        echo "\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
+        </div>
+    </div>
+    <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
-            <h4><b>QUELQUES</b> SKILLS...</h4>
-            <span class=\"filterSpan\">BACK</span> <span class=\"filterSpan\">FRONT</span> <span class=\"filterSpan\">CONCEPTION</span>
+            <span class=\"filterSpan\">BACK</span> 
+            <span class=\"filterSpan\">CONCEPTION</span>
+            <span class=\"filterSpan\">FRONT</span> 
         </div>
     </div>
     <div class=\"row text-center justify-content-center mb-2\">
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard mb-2\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard mb-2\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
     </div>
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
     </div>
 </div>
@@ -237,7 +315,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row blocContact justify-content-center\" id=\"ankor_contact\">
         <div class=\"col-md-4 text-center color titleColor  mr-5\">
         <img src=\"";
-        // line 155
+        // line 215
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/iconrocket.png"), "html", null, true);
         echo "\" 
             alt=\"banner\" class=\"w-100 img-responsive\">
@@ -316,14 +394,14 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
     }
 
-    // line 228
+    // line 288
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 229
+        // line 289
         echo "
 <script>
 console.log('copuiiu')
@@ -347,7 +425,7 @@ console.log('copuiiu')
 
     public function getDebugInfo()
     {
-        return array (  327 => 229,  320 => 228,  241 => 155,  143 => 60,  132 => 52,  121 => 44,  112 => 38,  100 => 29,  90 => 22,  86 => 21,  82 => 20,  68 => 9,  63 => 6,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  405 => 289,  398 => 288,  319 => 215,  279 => 178,  274 => 176,  235 => 140,  203 => 111,  164 => 75,  159 => 73,  143 => 60,  132 => 52,  121 => 44,  112 => 38,  100 => 29,  90 => 22,  86 => 21,  82 => 20,  68 => 9,  63 => 6,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -396,7 +474,7 @@ console.log('copuiiu')
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 tripleCard mr-2\">
             <img src=\"{{ asset('images/logo_print.png') }}\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
-            PRINT</br>
+            <span class=\"triplecard_txt\">PRINT</span></br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
                 Sed eleifend quis turpis id euismod. Morbi.
@@ -404,7 +482,7 @@ console.log('copuiiu')
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
             <img src=\"{{ asset('images/logo_dev.png') }}\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
-            DEV</br>
+            <span class=\"triplecard_txt\">DEV</span></br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
                 Sed eleifend quis turpis id euismod. Morbi.
@@ -412,7 +490,7 @@ console.log('copuiiu')
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
         <img src=\"{{ asset('images/logo_design.png') }}\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
-            DESIGN</br>
+            <span class=\"triplecard_txt\">DESIGN</span></br>
             <p class=\"mt-1\">
                 elementum, quis finibus nulla facilisis.</br> 
                 Sed eleifend quis turpis id euismod. Morbi.
@@ -423,82 +501,142 @@ console.log('copuiiu')
 
 <div class=\"container-fluid pb-5 pt-5\">
     <div class=\"row\">
+        <div class=\"col-md-12 text-center color titleColor mt-3\">
+            <img src=\"{{ asset('images/rosace.png') }}\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
+            <h4 class=\"titlecolor\"><b>QUELQUES</b> PROJET...</h4>
+            <img src=\"{{ asset('images/trait.png') }}\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
+        </div>
+    </div>
+    <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
-            <h4><b>QUELQUES</b> PROJET...</h4>
             <span class=\"filterSpan\">PRINT</span> <span class=\"filterSpan\">DEV</span> <span class=\"filterSpan\">DESIGN</span>
         </div>
     </div>
     <div class=\"row text-center justify-content-center mb-2\">
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard mb-2\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard mb-2\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
     </div>
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
     </div>
     
 </div>
 
 <div class=\"container-fluid pb-5 pt-5\">
-    <div class=\"row blocExp\">
-        <div class=\"col-md-4 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
-            <h4><b>EXPERIENCES</b> PROFESSIONNELLES...</h4>
+    <div class=\"row justify-content-center blocExp\">
+        <div class=\"col-md-3 color mt-5 mb-5\">
+            <img src=\"{{ asset('images/rosaceb_blanc.png') }}\" alt=\"\" style=\"width:22%\">
+            <h4><b>EXPERIENCES</b><br> PROFESSIONNELLES...</h4>
         </div>
-        <div class=\"col-md-8\"></div>
+        <div class=\"col-md-6 line_left mt-5 mb-5\">
+        <p><b>DEVELOPPEUR PHP | SYMFONY<br>
+        <span class=\"redfont\">DIGEAT</span></b><br>
+        MARS 2020</p>
+       
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Duis non 
+        volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.<br>
+        </p><p>Duis non volutpat arcu, eu mollis tellus.<br>
+        Quis consequat nulla effi citur at.<br>
+        Sed finibus aliquam neque sit.</p>
+
+        <p><b>WEB DESIGNER<br>
+        <span class=\"redfont\">METHODE ANCESTRALE</span></b><br>
+        AVRIL 2014</p>
+
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, <br>
+        </p><p>quis consequat nulla effi citur at.<br>
+        Duis non volutpat arcu, eu mollis tellus.<br>
+        Quis consequat nulla effi citur at<br>
+        Sed finibus aliquam neque sit.</p>
+        </div>
     </div>
-    <div class=\"row blocDip\">
-        <div class=\"col-md-4 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
-            <h4><b>DIPLOMES</b> CERTIFICATIONS...</h4>
+   
+         <div class=\"row justify-content-center blocDip\">
+        <div class=\"col-md-3 color mt-5 mb-5\">
+            <img src=\"{{ asset('images/rosace.png') }}\" alt=\"\" style=\"width:22%\">
+            <h4 class=\"gradientPurpleFont titleh4\"><b>DIPLOMES &</b><br> CERTIFICATIONS...</h4>
         </div>
-        <div class=\"col-md-8\"></div>
+        <div class=\"col-md-6 line_leftBlack mt-5 mb-5\">
+        <p><b>CONCEPTEUR DEVELOPPEUR D'APPLICATION Bac +4<br>
+        <span class=\"gradientPurpleFont\">OPEN CLASS ROOMS</span></b><br>
+        2020</p>
+       
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
+        quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, 
+        eu mollis tellus. Sed finibus aliquam neque sit amet sodales.</p>
+
+        <p><b>DEVELOPPEUR WEB Bac +2<br>
+        <span class=\"gradientPurpleFont\">SIMPLON.CO</span></b><br>
+        2020</p>
+       
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
+        quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, 
+        eu mollis tellus. Sed finibus aliquam neque sit amet sodales.</p>
+
+        <p><b>DESIGNER GRAPHIQUE<br>
+        <span class=\"gradientPurpleFont\">IDEM CREATIVE ARTS SCHOOL</span></b><br>
+        2014</p>
+
+        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
+        quis consequat nulla effi citur at. Maecenas sed massa</p>
+        </div>
     </div>
 </div>
 
 <div class=\"container-fluid pb-5 pt-5\">
     <div class=\"row\">
+        <div class=\"col-md-12 text-center color titleColor mt-3\">
+            <img src=\"{{ asset('images/rosace.png') }}\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
+            <h4 class=\"titlecolor\"><b>QUELQUES</b> TECHNOS...</h4>
+            <img src=\"{{ asset('images/trait.png') }}\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
+        </div>
+    </div>
+    <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3 mb-5\">
-            <img src=\"https://via.placeholder.com/70\" alt=\"\">
-            <h4><b>QUELQUES</b> SKILLS...</h4>
-            <span class=\"filterSpan\">BACK</span> <span class=\"filterSpan\">FRONT</span> <span class=\"filterSpan\">CONCEPTION</span>
+            <span class=\"filterSpan\">BACK</span> 
+            <span class=\"filterSpan\">CONCEPTION</span>
+            <span class=\"filterSpan\">FRONT</span> 
         </div>
     </div>
     <div class=\"row text-center justify-content-center mb-2\">
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard mb-2\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard mb-2\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
     </div>
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
         <div class=\"col-md-3 projectCard\">
-            <img src=\"https://via.placeholder.com/325\" alt=\"\">
+            <img src=\"https://picsum.photos/325/325\" alt=\"\">
         </div>
     </div>
 </div>

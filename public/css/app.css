@@ -1,3 +1,5 @@
+
+
 body{
     font-family: 'Rajdhani', sans-serif;
     background-color: rgb(244, 244, 244);
@@ -110,14 +112,17 @@ h1{
 }
 
 .tripleCard{
+    background: -webkit-linear-gradient(#4f9ed6, #642088);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     min-height: 300px;
     border-radius: 10px;
     font-weight: 900;
 }
 
-/* .tripleCard:nth-child(2){
-   
-} */
+.tripleCard span{
+ font-size: 1.5rem;
+}
 
 .tripleCard img{
     border-radius: 50%;
@@ -134,10 +139,20 @@ h1{
     padding-left: 24px;
     padding-right: 24px;
     border-radius: 29px;
-    border:3px solid purple;
+    border:3px solid #5c4ea4;
+    font-weight: 900;
 }
 
+.filterSpan:hover{
+    background: -webkit-linear-gradient(#4f9ed6, #642088);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color:white!important;
+}
+
+
 .blocExp{
+    color:white;
     min-height: 650px;
     background: rgba(65,35,191,1);
     background: -moz-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
@@ -149,10 +164,40 @@ h1{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4123bf', endColorstr='#500b76', GradientType=1 );
 }
 
+.line_left{
+    border-left:4px dotted white;
+}
+
+.line_leftBlack{
+    border-left:4px dotted rgb(0, 0, 0);
+}
+
+.line_left p:nth-child(3){
+    font-size: 1rem;
+}
+
+.line_leftBlack p:nth-child(3){
+    font-size: 1rem;
+}
+
+.redfont{
+    color:#ff0024;
+}
+
 .blocDip{
 
     min-height: 650px;
     background-color: white;
+}
+
+.gradientPurpleFont{
+    background: -webkit-linear-gradient(90deg, #4f9ed6, #642088);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 23px;
+}
+
+.titleh4{
 
 }
 
