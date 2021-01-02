@@ -49,22 +49,21 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
     }
 
-    // line 3
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
-        echo "
-";
-        // line 6
+        // line 5
+        $this->loadTemplate("NavBar.html.twig", "home.html.twig", 5)->display($context);
+        // line 7
         echo "<div class=\"container-fluid banner\">
     <div class=\"row text-center\">
         <div class=\"col-sm-5 col-md-5 blockBanner01 pb-3\">
             <img src=\"";
-        // line 9
+        // line 10
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logoround.png"), "html", null, true);
         echo "\" 
             alt=\"banner\" style=\"width:40%\" class=\"img-responsive img-center\">
@@ -78,15 +77,15 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
                 </div>
                 <div class=\"col-md-4\">
                     <a href=\"https://www.linkedin.com/in/rl-dev/\"><img src=\"";
-        // line 20
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_linkedin.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:23%\"></a>        
                     <a href=\"#ankor_contact\"><img src=\"";
-        // line 21
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_contact.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:23%\"></a> 
                     <a href=\"https://github.com/Yirzaraji\"><img src=\"";
-        // line 22
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_git.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:23%\"></a> 
                 </div> 
@@ -96,7 +95,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         </div>
         <div class=\"col-sm-7 col-md-7 bannerLowpolyImg\">
             <img src=\"";
-        // line 29
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/lowpoly_banner.jpg"), "html", null, true);
         echo "\" 
             alt=\"banner\" class=\"w-100 h-100 img-responsive cover\">
@@ -108,7 +107,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row justify-content-center\">
         <div class=\"col-md-4 text-center color titleColor mt-3 mb-5\">
             <img src=\"";
-        // line 38
+        // line 39
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:25%\" class=\"mb-2\">
             <h4><b>CE QUE JE</b> SAIS FAIRE...</h4>
@@ -117,7 +116,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 tripleCard mr-2\">
             <img src=\"";
-        // line 44
+        // line 45
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_print.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             <span class=\"triplecard_txt\">PRINT</span></br>
@@ -128,7 +127,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
             <img src=\"";
-        // line 52
+        // line 53
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_dev.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             <span class=\"triplecard_txt\">DEV</span></br>
@@ -139,7 +138,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
         <img src=\"";
-        // line 60
+        // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_design.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             <span class=\"triplecard_txt\">DESIGN</span></br>
@@ -155,12 +154,12 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3\">
             <img src=\"";
-        // line 73
+        // line 74
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
             <h4 class=\"titlecolor\"><b>QUELQUES</b> PROJET...</h4>
             <img src=\"";
-        // line 75
+        // line 76
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trait.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
         </div>
@@ -199,7 +198,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row justify-content-center blocExp\">
         <div class=\"col-md-3 color mt-5 mb-5\">
             <img src=\"";
-        // line 111
+        // line 112
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosaceb_blanc.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:22%\">
             <h4><b>EXPERIENCES</b><br> PROFESSIONNELLES...</h4>
@@ -231,7 +230,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
          <div class=\"row justify-content-center blocDip\">
         <div class=\"col-md-3 color mt-5 mb-5\">
             <img src=\"";
-        // line 140
+        // line 141
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:22%\">
             <h4 class=\"gradientPurpleFont titleh4\"><b>DIPLOMES &</b><br> CERTIFICATIONS...</h4>
@@ -270,12 +269,12 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3\">
             <img src=\"";
-        // line 176
+        // line 177
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
             <h4 class=\"titlecolor\"><b>QUELQUES</b> TECHNOS...</h4>
             <img src=\"";
-        // line 178
+        // line 179
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trait.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
         </div>
@@ -315,7 +314,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row blocContact justify-content-center\" id=\"ankor_contact\">
         <div class=\"col-md-4 text-center color titleColor  mr-5\">
         <img src=\"";
-        // line 215
+        // line 216
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/iconrocket.png"), "html", null, true);
         echo "\" 
             alt=\"banner\" class=\"w-100 img-responsive\">
@@ -394,14 +393,14 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
     }
 
-    // line 288
+    // line 289
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 289
+        // line 290
         echo "
 <script>
 console.log('copuiiu')
@@ -425,15 +424,16 @@ console.log('copuiiu')
 
     public function getDebugInfo()
     {
-        return array (  405 => 289,  398 => 288,  319 => 215,  279 => 178,  274 => 176,  235 => 140,  203 => 111,  164 => 75,  159 => 73,  143 => 60,  132 => 52,  121 => 44,  112 => 38,  100 => 29,  90 => 22,  86 => 21,  82 => 20,  68 => 9,  63 => 6,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  404 => 290,  397 => 289,  318 => 216,  278 => 179,  273 => 177,  234 => 141,  202 => 112,  163 => 76,  158 => 74,  142 => 61,  131 => 53,  120 => 45,  111 => 39,  99 => 30,  89 => 23,  85 => 22,  81 => 21,  67 => 10,  62 => 7,  60 => 5,  53 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block body %}
 
+{% block body %}
+{% include 'NavBar.html.twig' %}
 {# ========== BANNER BLOC ============ #}
 <div class=\"container-fluid banner\">
     <div class=\"row text-center\">

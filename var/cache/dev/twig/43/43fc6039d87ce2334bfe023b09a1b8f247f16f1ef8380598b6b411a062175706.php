@@ -55,11 +55,9 @@ class __TwigTemplate_62892b130b69837243a81f7aba3c2f133681320521c74b38da02d618b5d
         // line 14
         echo "    </head>
     <body>
+        
         ";
-        // line 16
-        $this->loadTemplate("NavBar.html.twig", "base.html.twig", 16)->display($context);
         // line 17
-        echo "        ";
         $this->displayBlock('body', $context, $blocks);
         // line 22
         echo "        ";
@@ -161,7 +159,7 @@ class __TwigTemplate_62892b130b69837243a81f7aba3c2f133681320521c74b38da02d618b5d
 
     public function getDebugInfo()
     {
-        return array (  145 => 28,  140 => 24,  133 => 23,  123 => 18,  116 => 17,  106 => 11,  100 => 7,  93 => 6,  80 => 5,  71 => 30,  68 => 23,  65 => 22,  62 => 17,  60 => 16,  56 => 14,  54 => 6,  50 => 5,  44 => 1,);
+        return array (  143 => 28,  138 => 24,  131 => 23,  121 => 18,  114 => 17,  104 => 11,  98 => 7,  91 => 6,  78 => 5,  69 => 30,  66 => 23,  63 => 22,  61 => 17,  56 => 14,  54 => 6,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -181,7 +179,7 @@ class __TwigTemplate_62892b130b69837243a81f7aba3c2f133681320521c74b38da02d618b5d
         {% endblock %}
     </head>
     <body>
-        {% include 'NavBar.html.twig' %}
+        
         {% block body %}
         
         
