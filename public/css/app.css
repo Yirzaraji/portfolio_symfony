@@ -240,6 +240,18 @@ h1{
 
 }
 
+.aboutBlock{
+    background: rgba(65,35,191,1);
+    background: -moz-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(65,35,191,1)), color-stop(12%, rgba(67,32,182,1)), color-stop(96%, rgba(80,11,118,1)));
+    background: -webkit-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -o-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: -ms-linear-gradient(left, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    background: linear-gradient(to right, rgba(65,35,191,1) 0%, rgba(67,32,182,1) 12%, rgba(80,11,118,1) 96%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4123bf', endColorstr='#500b76', GradientType=1 );
+    color:white;
+}
+
 .blocContact{
     min-height: 550px;
     background: rgba(65,35,191,1);

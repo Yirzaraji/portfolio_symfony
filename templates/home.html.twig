@@ -3,35 +3,7 @@
 
 {% block body %}
 {% include 'NavBar.html.twig' %}
-{# ========== BANNER BLOC ============ #}
-<div class="container-fluid banner">
-    <div class="row text-center">
-        <div class="col-sm-5 col-md-5 blockBanner01 pb-3">
-            <img src="{{ asset('images/logoround.png') }}" 
-            alt="banner" style="width:40%" class="img-responsive img-center">
-            <p>DEVELOPPEUR</p>
-            <p><span>&#60;?PHP créatif ?&#62;</span></p> 
-            <p><span>Remi Larrauri</span><br>
-            <span>06.29.61.53.66</span></p>
-            <button class="btn btnrounded btn-info mb-5">CV</button><br>
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                    <a href="https://www.linkedin.com/in/rl-dev/"><img src="{{ asset('images/logo_linkedin.png') }}" alt="" style="width:23%"></a>        
-                    <a href="#ankor_contact"><img src="{{ asset('images/logo_contact.png') }}" alt="" style="width:23%"></a> 
-                    <a href="https://github.com/Yirzaraji"><img src="{{ asset('images/logo_git.png') }}" alt="" style="width:23%"></a> 
-                </div> 
-                <div class="col-md-4">
-                </div>       
-            </div>
-        </div>
-        <div class="col-sm-7 col-md-7 bannerLowpolyImg">
-            <img src="{{ asset('images/lowpoly_banner.jpg') }}" 
-            alt="banner" class="w-100 h-100 img-responsive cover">
-        </div>
-    </div>
-</div>
+{% include 'banner.html.twig' %}
 
 <div class="container-fluid blockiDO pb-5 pt-5">
     <div class="row justify-content-center">
@@ -64,6 +36,25 @@
                 elementum, quis finibus nulla facilisis.</br> 
                 Sed eleifend quis turpis id euismod. Morbi.
             </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 aboutBlock">
+            <div class="row">
+                <div class="col-md-5 d-flex justify-content-end">
+                    <img src="https://picsum.photos/225/225" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-5 d-flex align-items-center">
+                ABOUT ME...<br>
+                Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que 
+                velit, quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat 
+                arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+                </div>      
+            </div>
         </div>
     </div>
 </div>
@@ -210,79 +201,9 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row blocContact justify-content-center" id="ankor_contact">
-        <div class="col-md-4 text-center color titleColor  mr-5">
-        <img src="{{ asset('images/iconrocket.png') }}" 
-            alt="banner" class="w-100 img-responsive">
-        </div>
-        <div class="col-md-4 text-center d-flex align-items-center color titleColor mt-3 mb-5">
-            <form action="">
-               <h3>CONTACTEZ MOI.</h3>
-                <div class="row mb-4">
-                    <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
-                    </div>
-                    <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Mail">
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col">
-                        <textarea class="form-control" rows="8" aria-label="With textarea" placeholder="Message"></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">ENVOYER</button>
-            </form>
-        </div>
-    </div>
-</div>
 
-<div class="container-fluid pb-5 pt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-2 footerCard"></div>
-        <div class="col-md-2 footerCard">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class="col-md-2 footerCard">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class="col-md-2 footerCard">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class="col-md-2 footerCard">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class="col-md-2 footerCard"></div>
-    </div>
-</div>
 
-<div class="container-fluid">
-    <div class="row text-center justify-content-center">
-        <div class="col-md-12 footerBlock mr-2 mb-2">Copyright ©2020 | Yirzaraji | All rights reserved</div>
-    </div>
-</div>
+{% include 'contact.html.twig' %}
 
 {% endblock %}
 

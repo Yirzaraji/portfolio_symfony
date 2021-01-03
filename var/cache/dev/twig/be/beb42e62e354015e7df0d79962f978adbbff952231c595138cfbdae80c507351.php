@@ -58,56 +58,15 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
         // line 5
         $this->loadTemplate("NavBar.html.twig", "home.html.twig", 5)->display($context);
+        // line 6
+        $this->loadTemplate("banner.html.twig", "home.html.twig", 6)->display($context);
         // line 7
-        echo "<div class=\"container-fluid banner\">
-    <div class=\"row text-center\">
-        <div class=\"col-sm-5 col-md-5 blockBanner01 pb-3\">
-            <img src=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logoround.png"), "html", null, true);
-        echo "\" 
-            alt=\"banner\" style=\"width:40%\" class=\"img-responsive img-center\">
-            <p>DEVELOPPEUR</p>
-            <p><span>&#60;?PHP créatif ?&#62;</span></p> 
-            <p><span>Remi Larrauri</span><br>
-            <span>06.29.61.53.66</span></p>
-            <button class=\"btn btnrounded btn-info mb-5\">CV</button><br>
-            <div class=\"row justify-content-center\">
-                <div class=\"col-md-4\">
-                </div>
-                <div class=\"col-md-4\">
-                    <a href=\"https://www.linkedin.com/in/rl-dev/\"><img src=\"";
-        // line 21
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_linkedin.png"), "html", null, true);
-        echo "\" alt=\"\" style=\"width:23%\"></a>        
-                    <a href=\"#ankor_contact\"><img src=\"";
-        // line 22
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_contact.png"), "html", null, true);
-        echo "\" alt=\"\" style=\"width:23%\"></a> 
-                    <a href=\"https://github.com/Yirzaraji\"><img src=\"";
-        // line 23
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_git.png"), "html", null, true);
-        echo "\" alt=\"\" style=\"width:23%\"></a> 
-                </div> 
-                <div class=\"col-md-4\">
-                </div>       
-            </div>
-        </div>
-        <div class=\"col-sm-7 col-md-7 bannerLowpolyImg\">
-            <img src=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/lowpoly_banner.jpg"), "html", null, true);
-        echo "\" 
-            alt=\"banner\" class=\"w-100 h-100 img-responsive cover\">
-        </div>
-    </div>
-</div>
-
+        echo "
 <div class=\"container-fluid blockiDO pb-5 pt-5\">
     <div class=\"row justify-content-center\">
         <div class=\"col-md-4 text-center color titleColor mt-3 mb-5\">
             <img src=\"";
-        // line 39
+        // line 11
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:25%\" class=\"mb-2\">
             <h4><b>CE QUE JE</b> SAIS FAIRE...</h4>
@@ -116,7 +75,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row text-center justify-content-center\">
         <div class=\"col-md-3 tripleCard mr-2\">
             <img src=\"";
-        // line 45
+        // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_print.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             <span class=\"triplecard_txt\">PRINT</span></br>
@@ -127,7 +86,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
             <img src=\"";
-        // line 53
+        // line 25
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_dev.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             <span class=\"triplecard_txt\">DEV</span></br>
@@ -138,7 +97,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
         </div>
         <div class=\"col-md-3 tripleCard mr-2\">
         <img src=\"";
-        // line 61
+        // line 33
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_design.png"), "html", null, true);
         echo "\" alt=\"\" class=\"mb-4\" style=\"width:21%\"></br>
             <span class=\"triplecard_txt\">DESIGN</span></br>
@@ -150,16 +109,35 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     </div>
 </div>
 
+<div class=\"container-fluid\">
+    <div class=\"row\">
+        <div class=\"col-md-12 aboutBlock\">
+            <div class=\"row\">
+                <div class=\"col-md-5 d-flex justify-content-end\">
+                    <img src=\"https://picsum.photos/225/225\" class=\"img-fluid\" alt=\"\">
+                </div>
+                <div class=\"col-md-5 d-flex align-items-center\">
+                ABOUT ME...<br>
+                Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que 
+                velit, quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat 
+                arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+                </div>      
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class=\"container-fluid pb-5 pt-5\">
     <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3\">
             <img src=\"";
-        // line 74
+        // line 65
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
             <h4 class=\"titlecolor\"><b>QUELQUES</b> PROJET...</h4>
             <img src=\"";
-        // line 76
+        // line 67
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trait.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
         </div>
@@ -198,7 +176,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row justify-content-center blocExp\">
         <div class=\"col-md-3 color mt-5 mb-5\">
             <img src=\"";
-        // line 112
+        // line 103
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosaceb_blanc.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:22%\">
             <h4><b>EXPERIENCES</b><br> PROFESSIONNELLES...</h4>
@@ -230,7 +208,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
          <div class=\"row justify-content-center blocDip\">
         <div class=\"col-md-3 color mt-5 mb-5\">
             <img src=\"";
-        // line 141
+        // line 132
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:22%\">
             <h4 class=\"gradientPurpleFont titleh4\"><b>DIPLOMES &</b><br> CERTIFICATIONS...</h4>
@@ -269,12 +247,12 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3\">
             <img src=\"";
-        // line 177
+        // line 168
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
             <h4 class=\"titlecolor\"><b>QUELQUES</b> TECHNOS...</h4>
             <img src=\"";
-        // line 179
+        // line 170
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trait.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
         </div>
@@ -310,97 +288,27 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     </div>
 </div>
 
-<div class=\"container-fluid\">
-    <div class=\"row blocContact justify-content-center\" id=\"ankor_contact\">
-        <div class=\"col-md-4 text-center color titleColor  mr-5\">
-        <img src=\"";
-        // line 216
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/iconrocket.png"), "html", null, true);
-        echo "\" 
-            alt=\"banner\" class=\"w-100 img-responsive\">
-        </div>
-        <div class=\"col-md-4 text-center d-flex align-items-center color titleColor mt-3 mb-5\">
-            <form action=\"\">
-               <h3>CONTACTEZ MOI.</h3>
-                <div class=\"row mb-4\">
-                    <div class=\"col\">
-                    <input type=\"text\" class=\"form-control\" placeholder=\"First name\">
-                    </div>
-                    <div class=\"col\">
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Last name\">
-                    </div>
-                </div>
-                <div class=\"row mb-4\">
-                    <div class=\"col\">
-                        <input type=\"text\" class=\"form-control\" placeholder=\"Mail\">
-                    </div>
-                </div>
-                <div class=\"row mb-4\">
-                    <div class=\"col\">
-                        <textarea class=\"form-control\" rows=\"8\" aria-label=\"With textarea\" placeholder=\"Message\"></textarea>
-                    </div>
-                </div>
-                <button type=\"submit\" class=\"btn btn-primary\">ENVOYER</button>
-            </form>
-        </div>
-    </div>
-</div>
 
-<div class=\"container-fluid pb-5 pt-5\">
-    <div class=\"row justify-content-center\">
-        <div class=\"col-md-2 footerCard\"></div>
-        <div class=\"col-md-2 footerCard\">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class=\"col-md-2 footerCard\">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class=\"col-md-2 footerCard\">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class=\"col-md-2 footerCard\">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class=\"col-md-2 footerCard\"></div>
-    </div>
-</div>
 
-<div class=\"container-fluid\">
-    <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-12 footerBlock mr-2 mb-2\">Copyright ©2020 | Yirzaraji | All rights reserved</div>
-    </div>
-</div>
-
+";
+        // line 206
+        $this->loadTemplate("contact.html.twig", "home.html.twig", 206)->display($context);
+        // line 207
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 289
+    // line 210
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 290
+        // line 211
         echo "
 <script>
 console.log('copuiiu')
@@ -424,7 +332,7 @@ console.log('copuiiu')
 
     public function getDebugInfo()
     {
-        return array (  404 => 290,  397 => 289,  318 => 216,  278 => 179,  273 => 177,  234 => 141,  202 => 112,  163 => 76,  158 => 74,  142 => 61,  131 => 53,  120 => 45,  111 => 39,  99 => 30,  89 => 23,  85 => 22,  81 => 21,  67 => 10,  62 => 7,  60 => 5,  53 => 4,  36 => 1,);
+        return array (  312 => 211,  305 => 210,  297 => 207,  295 => 206,  256 => 170,  251 => 168,  212 => 132,  180 => 103,  141 => 67,  136 => 65,  101 => 33,  90 => 25,  79 => 17,  70 => 11,  64 => 7,  62 => 6,  60 => 5,  53 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -434,35 +342,7 @@ console.log('copuiiu')
 
 {% block body %}
 {% include 'NavBar.html.twig' %}
-{# ========== BANNER BLOC ============ #}
-<div class=\"container-fluid banner\">
-    <div class=\"row text-center\">
-        <div class=\"col-sm-5 col-md-5 blockBanner01 pb-3\">
-            <img src=\"{{ asset('images/logoround.png') }}\" 
-            alt=\"banner\" style=\"width:40%\" class=\"img-responsive img-center\">
-            <p>DEVELOPPEUR</p>
-            <p><span>&#60;?PHP créatif ?&#62;</span></p> 
-            <p><span>Remi Larrauri</span><br>
-            <span>06.29.61.53.66</span></p>
-            <button class=\"btn btnrounded btn-info mb-5\">CV</button><br>
-            <div class=\"row justify-content-center\">
-                <div class=\"col-md-4\">
-                </div>
-                <div class=\"col-md-4\">
-                    <a href=\"https://www.linkedin.com/in/rl-dev/\"><img src=\"{{ asset('images/logo_linkedin.png') }}\" alt=\"\" style=\"width:23%\"></a>        
-                    <a href=\"#ankor_contact\"><img src=\"{{ asset('images/logo_contact.png') }}\" alt=\"\" style=\"width:23%\"></a> 
-                    <a href=\"https://github.com/Yirzaraji\"><img src=\"{{ asset('images/logo_git.png') }}\" alt=\"\" style=\"width:23%\"></a> 
-                </div> 
-                <div class=\"col-md-4\">
-                </div>       
-            </div>
-        </div>
-        <div class=\"col-sm-7 col-md-7 bannerLowpolyImg\">
-            <img src=\"{{ asset('images/lowpoly_banner.jpg') }}\" 
-            alt=\"banner\" class=\"w-100 h-100 img-responsive cover\">
-        </div>
-    </div>
-</div>
+{% include 'banner.html.twig' %}
 
 <div class=\"container-fluid blockiDO pb-5 pt-5\">
     <div class=\"row justify-content-center\">
@@ -495,6 +375,25 @@ console.log('copuiiu')
                 elementum, quis finibus nulla facilisis.</br> 
                 Sed eleifend quis turpis id euismod. Morbi.
             </p>
+        </div>
+    </div>
+</div>
+
+<div class=\"container-fluid\">
+    <div class=\"row\">
+        <div class=\"col-md-12 aboutBlock\">
+            <div class=\"row\">
+                <div class=\"col-md-5 d-flex justify-content-end\">
+                    <img src=\"https://picsum.photos/225/225\" class=\"img-fluid\" alt=\"\">
+                </div>
+                <div class=\"col-md-5 d-flex align-items-center\">
+                ABOUT ME...<br>
+                Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que 
+                velit, quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat 
+                arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+                </div>      
+            </div>
         </div>
     </div>
 </div>
@@ -641,79 +540,9 @@ console.log('copuiiu')
     </div>
 </div>
 
-<div class=\"container-fluid\">
-    <div class=\"row blocContact justify-content-center\" id=\"ankor_contact\">
-        <div class=\"col-md-4 text-center color titleColor  mr-5\">
-        <img src=\"{{ asset('images/iconrocket.png') }}\" 
-            alt=\"banner\" class=\"w-100 img-responsive\">
-        </div>
-        <div class=\"col-md-4 text-center d-flex align-items-center color titleColor mt-3 mb-5\">
-            <form action=\"\">
-               <h3>CONTACTEZ MOI.</h3>
-                <div class=\"row mb-4\">
-                    <div class=\"col\">
-                    <input type=\"text\" class=\"form-control\" placeholder=\"First name\">
-                    </div>
-                    <div class=\"col\">
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Last name\">
-                    </div>
-                </div>
-                <div class=\"row mb-4\">
-                    <div class=\"col\">
-                        <input type=\"text\" class=\"form-control\" placeholder=\"Mail\">
-                    </div>
-                </div>
-                <div class=\"row mb-4\">
-                    <div class=\"col\">
-                        <textarea class=\"form-control\" rows=\"8\" aria-label=\"With textarea\" placeholder=\"Message\"></textarea>
-                    </div>
-                </div>
-                <button type=\"submit\" class=\"btn btn-primary\">ENVOYER</button>
-            </form>
-        </div>
-    </div>
-</div>
 
-<div class=\"container-fluid pb-5 pt-5\">
-    <div class=\"row justify-content-center\">
-        <div class=\"col-md-2 footerCard\"></div>
-        <div class=\"col-md-2 footerCard\">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class=\"col-md-2 footerCard\">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class=\"col-md-2 footerCard\">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class=\"col-md-2 footerCard\">
-            <b>PANDEMONIUM</b></br>
-            elementum</br>
-            finibus </br>
-            nulla facilisis.</br>
-            Sed eleifend</br>
-        </div>
-        <div class=\"col-md-2 footerCard\"></div>
-    </div>
-</div>
 
-<div class=\"container-fluid\">
-    <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-12 footerBlock mr-2 mb-2\">Copyright ©2020 | Yirzaraji | All rights reserved</div>
-    </div>
-</div>
+{% include 'contact.html.twig' %}
 
 {% endblock %}
 

@@ -36,6 +36,47 @@ class __TwigTemplate_cf88607e601682dd0fb1e253fbe750d239dec8060b5ab4661ad7ec1abc9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Footer.html.twig"));
 
+        // line 1
+        echo "<div class=\"container-fluid pb-5 pt-5\">
+    <div class=\"row justify-content-center\">
+        <div class=\"col-md-2 footerCard\"></div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\"></div>
+    </div>
+</div>
+
+<div class=\"container-fluid\">
+    <div class=\"row text-center justify-content-center\">
+        <div class=\"col-md-12 footerBlock\">Copyright ©2020 | Yirzaraji | All rights reserved | Made with Symfony</div>
+    </div>
+</div>";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -48,11 +89,50 @@ class __TwigTemplate_cf88607e601682dd0fb1e253fbe750d239dec8060b5ab4661ad7ec1abc9
 
     public function getDebugInfo()
     {
-        return array ();
+        return array (  40 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "Footer.html.twig", "B:\\dev stuff\\portfolio_symfony\\templates\\Footer.html.twig");
+        return new Source("<div class=\"container-fluid pb-5 pt-5\">
+    <div class=\"row justify-content-center\">
+        <div class=\"col-md-2 footerCard\"></div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\">
+            <b>PANDEMONIUM</b></br>
+            elementum</br>
+            finibus </br>
+            nulla facilisis.</br>
+            Sed eleifend</br>
+        </div>
+        <div class=\"col-md-2 footerCard\"></div>
+    </div>
+</div>
+
+<div class=\"container-fluid\">
+    <div class=\"row text-center justify-content-center\">
+        <div class=\"col-md-12 footerBlock\">Copyright ©2020 | Yirzaraji | All rights reserved | Made with Symfony</div>
+    </div>
+</div>", "Footer.html.twig", "B:\\dev stuff\\portfolio_symfony\\templates\\Footer.html.twig");
     }
 }
