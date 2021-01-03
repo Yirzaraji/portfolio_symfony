@@ -173,6 +173,7 @@ h1{
 
 
 .filterSpan{
+    cursor: pointer;
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 24px;
@@ -188,6 +189,66 @@ h1{
     -webkit-text-fill-color: transparent;
     color:white!important;
 }
+
+/* .printBox{
+    display:none;
+}
+.designBox{
+    display:none;
+} */
+
+/* .box.active{
+    display: block;
+}
+
+.box.hide{
+    display: none;
+} */
+
+.navTabs{
+    list-style:none;
+    
+    
+  }
+
+  
+.navTabsTech{
+    list-style:none;
+    
+    
+  }
+  
+  li{
+    display:inline;
+    
+  }
+  li a{
+    text-decoration:none;
+  color:#5c4ea4;
+    cursor: pointer;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 24px;
+      padding-right: 24px;
+      border-radius: 29px;
+      border:3px solid #5c4ea4;
+      font-weight: 900;
+      transition: 0.4s;
+  }
+
+  li a:hover{
+    transition: 0.4s;
+    text-decoration:none;
+    background-color:#5c4ea4;
+    color:white;
+  }
+  .box.active { display: block; }
+  .box.hide { display: none; }
+
+  .boxTech.active { display: block; }
+  .boxTech.hide { display: none; }
+
+
 
 
 .blocExp{

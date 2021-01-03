@@ -74,7 +74,7 @@ class __TwigTemplate_cf88607e601682dd0fb1e253fbe750d239dec8060b5ab4661ad7ec1abc9
 
 <div class=\"container-fluid\">
     <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-12 footerBlock\">Copyright ©2020 | Yirzaraji | All rights reserved | Made with Symfony</div>
+        <div class=\"col-md-12 footerBlock\">Copyright ©2020 | Yirzaraji | All rights reserved | Symfony project</div>
     </div>
 </div>";
         
@@ -131,7 +131,7 @@ class __TwigTemplate_cf88607e601682dd0fb1e253fbe750d239dec8060b5ab4661ad7ec1abc9
 
 <div class=\"container-fluid\">
     <div class=\"row text-center justify-content-center\">
-        <div class=\"col-md-12 footerBlock\">Copyright ©2020 | Yirzaraji | All rights reserved | Made with Symfony</div>
+        <div class=\"col-md-12 footerBlock\">Copyright ©2020 | Yirzaraji | All rights reserved | Symfony project</div>
     </div>
 </div>", "Footer.html.twig", "B:\\dev stuff\\portfolio_symfony\\templates\\Footer.html.twig");
     }
