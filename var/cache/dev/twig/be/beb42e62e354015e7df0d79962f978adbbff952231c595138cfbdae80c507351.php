@@ -112,16 +112,23 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 <div class=\"container-fluid\">
     <div class=\"row\">
         <div class=\"col-md-12 aboutBlock\">
-            <div class=\"row\">
+            <div class=\"row pb-5 pt-5\">
                 <div class=\"col-md-5 d-flex justify-content-end\">
-                    <img src=\"https://picsum.photos/225/225\" class=\"img-fluid\" alt=\"\">
+                    <img src=\"";
+        // line 48
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/avatar1_small.jpg"), "html", null, true);
+        echo "\" class=\"img-fluid avatar\"  alt=\"\">
                 </div>
-                <div class=\"col-md-5 d-flex align-items-center\">
-                ABOUT ME...<br>
-                Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que 
-                velit, quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat 
-                arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+                <div class=\"col-md-5 line_left ml-2 pt-4\" style=\"text-justify: auto;\">
+                    <b>ABOUT ME...</b><br>
+                    <br>
+                    <p>A la recherche d’un poste de Développeur Web dans le cadre d’une alternance Bac +3 
+                    Concepteur développeur d’application
+                    Actuellement en Freelance dans deux activités différentes je propose mes services 
+                    dans le design graphique & le Développement web.
+                    J’ai une appétence pour les nouvelles technologies, je suis très curieux et 
+                    j’ai une grande soif d’apprendre.
+                    J’ai des connaissances en Anglais, je suis B2 certifié Efset.</p>
                 </div>      
             </div>
         </div>
@@ -132,12 +139,12 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3 ml-3\">
             <img src=\"";
-        // line 65
+        // line 69
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
             <h4 class=\"titlecolor\"><b>QUELQUES</b> PROJET...</h4>
             <img src=\"";
-        // line 67
+        // line 71
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trait.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
         </div>
@@ -154,49 +161,51 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     </div>
 
     <div id=\"tab1\" class=\"box devBox active\">
+    
         <div class=\"row text-center justify-content-center mb-2\">
-            <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 projectCard mb-2 mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
-            <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 projectCard mb-2 mr-2\" id=\"projectCard02\">
+                <img src=\"#\" class=\"infoProject02\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
-            <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 col-xs-2 projectCard mb-2 mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
         <div class=\"row text-center justify-content-center\">
-            <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 col-xs-2 projectCard mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
-            <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 col-xs-2 projectCard mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
-            <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 col-xs-2 projectCard mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
     </div>
     <div id=\"tab2\" class=\"box designBox hide\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
     </div>
     <div id=\"tab3\" class=\"box printBox hide\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
         </div>
@@ -207,7 +216,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row justify-content-center blocExp\">
         <div class=\"col-md-3 color mt-5 mb-5\">
             <img src=\"";
-        // line 134
+        // line 140
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosaceb_blanc.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:22%\">
             <h4><b>EXPERIENCES</b><br> PROFESSIONNELLES...</h4>
@@ -239,7 +248,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
          <div class=\"row justify-content-center blocDip\">
         <div class=\"col-md-3 color mt-5 mb-5\">
             <img src=\"";
-        // line 163
+        // line 169
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:22%\">
             <h4 class=\"gradientPurpleFont titleh4\"><b>DIPLOMES &</b><br> CERTIFICATIONS...</h4>
@@ -278,12 +287,12 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div class=\"row\">
         <div class=\"col-md-12 text-center color titleColor mt-3 ml-3\">
             <img src=\"";
-        // line 199
+        // line 205
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/rosace.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:8.5%\" class=\"mb-2\">
             <h4 class=\"titlecolor\"><b>QUELQUES</b> TECHNOS...</h4>
             <img src=\"";
-        // line 201
+        // line 207
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trait.png"), "html", null, true);
         echo "\" alt=\"\" style=\"width:14%\" class=\"mb-2\">
         </div>
@@ -301,47 +310,47 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div id=\"tab4\" class=\"boxTech active\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
         <div class=\"row text-center justify-content-center\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
     </div>
     <div id=\"tab5\" class=\"boxTech hide\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
     </div>
     <div id=\"tab6\" class=\"boxTech hide\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
         </div>
@@ -351,9 +360,9 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
 
 ";
-        // line 266
-        $this->loadTemplate("contact.html.twig", "home.html.twig", 266)->display($context);
-        // line 267
+        // line 272
+        $this->loadTemplate("contact.html.twig", "home.html.twig", 272)->display($context);
+        // line 273
         echo "
 ";
         
@@ -361,31 +370,37 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
     }
 
-    // line 270
+    // line 276
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 271
+        // line 277
         echo "
 <script>
 
+//--------Display hide cards----------//
+
 \$(document).ready(function() {
     \$('.navTabs > li > a').click(function(event) {
-    event.preventDefault(); //stop browser to take action for clicked anchor
+    event.preventDefault();
+
     //get displaying tab content jQuery selector
     let activeTabsSelector = \$('.navTabs > li.active > a').attr('href');
-    //find actived navigation and remove 'active' css
-    let activedNav = \$('.navTabs > li.active');
 
+    //find active tabs and remove 'active'
+    let activedNav = \$('.navTabs > li.active');
     activedNav.removeClass('active');
-    //add 'active' css into clicked navigation
+
+    //add 'active' into clicked navigation
     \$(this).parents('li').addClass('active');
+
     //hide displaying tab content
     \$(activeTabsSelector).removeClass('active');
     \$(activeTabsSelector).addClass('hide');
+
     //show target tab content
     let targetTabsSelector = \$(this).attr('href');
     \$(targetTabsSelector).removeClass('hide');
@@ -395,24 +410,52 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
 \$(document).ready(function() {
     \$('.navTabsTech > li > a').click(function(event) {
-    event.preventDefault(); //stop browser to take action for clicked anchor
+    event.preventDefault();
+
     //get displaying tab content jQuery selector
     let activeTabsSelector = \$('.navTabsTech > li.active > a').attr('href');
+
     //find actived navigation and remove 'active' css
     let activedNav = \$('.navTabsTech > li.active');
-
     activedNav.removeClass('active');
+
     //add 'active' css into clicked navigation
     \$(this).parents('li').addClass('active');
+
     //hide displaying tab content
     \$(activeTabsSelector).removeClass('active');
     \$(activeTabsSelector).addClass('hide');
+
     //show target tab content
     let targetTabsSelector = \$(this).attr('href');
     \$(targetTabsSelector).removeClass('hide');
     \$(targetTabsSelector).addClass('active');
     });
 });
+
+//-----------display hide infos from a card project------------//
+\$( document ).ready(function() {
+    \$('#projectCard01').hover(
+
+        function() {
+            \$('.infoProject').fadeIn();
+        }, 
+        function() {
+            \$('.infoProject').fadeOut();
+        }
+    );
+
+    \$('#projectCard02').hover(
+        function() {
+            \$('.infoProject02').fadeIn();
+        }, 
+        function() {
+            \$('.infoProject02').fadeOut();
+        }
+    );
+});
+
+//END SCRIPT JS//
 </script>
 
 ";
@@ -433,7 +476,7 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
     public function getDebugInfo()
     {
-        return array (  372 => 271,  365 => 270,  357 => 267,  355 => 266,  287 => 201,  282 => 199,  243 => 163,  211 => 134,  141 => 67,  136 => 65,  101 => 33,  90 => 25,  79 => 17,  70 => 11,  64 => 7,  62 => 6,  60 => 5,  53 => 4,  36 => 1,);
+        return array (  381 => 277,  374 => 276,  366 => 273,  364 => 272,  296 => 207,  291 => 205,  252 => 169,  220 => 140,  148 => 71,  143 => 69,  119 => 48,  101 => 33,  90 => 25,  79 => 17,  70 => 11,  64 => 7,  62 => 6,  60 => 5,  53 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -483,16 +526,20 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 <div class=\"container-fluid\">
     <div class=\"row\">
         <div class=\"col-md-12 aboutBlock\">
-            <div class=\"row\">
+            <div class=\"row pb-5 pt-5\">
                 <div class=\"col-md-5 d-flex justify-content-end\">
-                    <img src=\"https://picsum.photos/225/225\" class=\"img-fluid\" alt=\"\">
+                    <img src=\"{{ asset('images/avatar1_small.jpg') }}\" class=\"img-fluid avatar\"  alt=\"\">
                 </div>
-                <div class=\"col-md-5 d-flex align-items-center\">
-                ABOUT ME...<br>
-                Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que 
-                velit, quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat 
-                arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.
+                <div class=\"col-md-5 line_left ml-2 pt-4\" style=\"text-justify: auto;\">
+                    <b>ABOUT ME...</b><br>
+                    <br>
+                    <p>A la recherche d’un poste de Développeur Web dans le cadre d’une alternance Bac +3 
+                    Concepteur développeur d’application
+                    Actuellement en Freelance dans deux activités différentes je propose mes services 
+                    dans le design graphique & le Développement web.
+                    J’ai une appétence pour les nouvelles technologies, je suis très curieux et 
+                    j’ai une grande soif d’apprendre.
+                    J’ai des connaissances en Anglais, je suis B2 certifié Efset.</p>
                 </div>      
             </div>
         </div>
@@ -519,49 +566,51 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     </div>
 
     <div id=\"tab1\" class=\"box devBox active\">
+    
         <div class=\"row text-center justify-content-center mb-2\">
-            <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 projectCard mb-2 mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
-            <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 projectCard mb-2 mr-2\" id=\"projectCard02\">
+                <img src=\"#\" class=\"infoProject02\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
-            <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 col-xs-2 projectCard mb-2 mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
         <div class=\"row text-center justify-content-center\">
-            <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 col-xs-2 projectCard mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
-            <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 col-xs-2 projectCard mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
-            <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+            <div class=\"col-xs-2 col-md-3 col-xs-2 projectCard mr-2\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
     </div>
     <div id=\"tab2\" class=\"box designBox hide\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
     </div>
     <div id=\"tab3\" class=\"box printBox hide\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
         </div>
@@ -654,47 +703,47 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
     <div id=\"tab4\" class=\"boxTech active\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
         <div class=\"row text-center justify-content-center\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
     </div>
     <div id=\"tab5\" class=\"boxTech hide\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
     </div>
     <div id=\"tab6\" class=\"boxTech hide\">
         <div class=\"row text-center justify-content-center mb-2\">
             <div class=\"col-md-3 projectCard\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
             <div class=\"col-md-3 projectCard mb-2\">
-                <img src=\"https://picsum.photos/325/325\" alt=\"\">
+                <img src=\"https://picsum.photos/290/240\" alt=\"\">
             </div>
         </div>
         </div>
@@ -711,20 +760,26 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
 <script>
 
+//--------Display hide cards----------//
+
 \$(document).ready(function() {
     \$('.navTabs > li > a').click(function(event) {
-    event.preventDefault(); //stop browser to take action for clicked anchor
+    event.preventDefault();
+
     //get displaying tab content jQuery selector
     let activeTabsSelector = \$('.navTabs > li.active > a').attr('href');
-    //find actived navigation and remove 'active' css
-    let activedNav = \$('.navTabs > li.active');
 
+    //find active tabs and remove 'active'
+    let activedNav = \$('.navTabs > li.active');
     activedNav.removeClass('active');
-    //add 'active' css into clicked navigation
+
+    //add 'active' into clicked navigation
     \$(this).parents('li').addClass('active');
+
     //hide displaying tab content
     \$(activeTabsSelector).removeClass('active');
     \$(activeTabsSelector).addClass('hide');
+
     //show target tab content
     let targetTabsSelector = \$(this).attr('href');
     \$(targetTabsSelector).removeClass('hide');
@@ -734,24 +789,52 @@ class __TwigTemplate_fd4f2315ca597df06f3a0eae03a52b97cc4d61052392257dd01ce64ba0d
 
 \$(document).ready(function() {
     \$('.navTabsTech > li > a').click(function(event) {
-    event.preventDefault(); //stop browser to take action for clicked anchor
+    event.preventDefault();
+
     //get displaying tab content jQuery selector
     let activeTabsSelector = \$('.navTabsTech > li.active > a').attr('href');
+
     //find actived navigation and remove 'active' css
     let activedNav = \$('.navTabsTech > li.active');
-
     activedNav.removeClass('active');
+
     //add 'active' css into clicked navigation
     \$(this).parents('li').addClass('active');
+
     //hide displaying tab content
     \$(activeTabsSelector).removeClass('active');
     \$(activeTabsSelector).addClass('hide');
+
     //show target tab content
     let targetTabsSelector = \$(this).attr('href');
     \$(targetTabsSelector).removeClass('hide');
     \$(targetTabsSelector).addClass('active');
     });
 });
+
+//-----------display hide infos from a card project------------//
+\$( document ).ready(function() {
+    \$('#projectCard01').hover(
+
+        function() {
+            \$('.infoProject').fadeIn();
+        }, 
+        function() {
+            \$('.infoProject').fadeOut();
+        }
+    );
+
+    \$('#projectCard02').hover(
+        function() {
+            \$('.infoProject02').fadeIn();
+        }, 
+        function() {
+            \$('.infoProject02').fadeOut();
+        }
+    );
+});
+
+//END SCRIPT JS//
 </script>
 
 {% endblock %}", "home.html.twig", "B:\\dev stuff\\portfolio_symfony\\templates\\home.html.twig");

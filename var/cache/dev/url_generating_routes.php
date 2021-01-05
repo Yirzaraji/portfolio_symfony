@@ -5,5 +5,6 @@
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::home'], [], [['text', '/admin']], [], []],
+    'article' => [[], ['_controller' => 'App\\Controller\\ArticleController::home'], [], [['text', '/article']], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::home'], [], [['text', '/']], [], []],
 ];
