@@ -5,7 +5,11 @@
             alt="banner" class="w-100 img-responsive">
         </div>
         <div class="col-md-4 text-center d-flex align-items-center color titleColor mt-3 mb-5">
-            <form action="">
+        <h3>CONTACTEZ MOI.</h3>
+        {{form_start(form)}}
+        {{form_widget(form)}}
+        {{form_end(form)}}
+            {# <form action="">
                <h3>CONTACTEZ MOI.</h3>
                 <div class="row mb-4">
                     <div class="col">
@@ -26,7 +30,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">ENVOYER</button>
-            </form>
+            </form> #}
         </div>
     </div>
 </div>
