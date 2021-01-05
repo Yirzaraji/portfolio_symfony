@@ -17,7 +17,7 @@ class HomePageController extends AbstractController
     * @route("/", name="homepage")
     * @return Response
     */
-    public function home(Request $request){
+    public function home(Request $request, \Swift_Mailer $mailer){
         $test = "coucou";
 
         $contact = new Contact;     
@@ -39,13 +39,30 @@ class HomePageController extends AbstractController
             $name = $form['name']->getData();
             $email = $form['email']->getData();
             $subject = $form['subject']->getData();
-            $message = $form['message']->getData(); 
+            $message = $form['message']->getData();
+
+            //dump($name);
 
             // l'auteur est utilisateur connecté au moment d ela creation d'annonce
             $contact->setName($name);
             $contact->setEmail($email);          
             $contact->setSubject($subject);     
             $contact->setMessage($message);      
+
+            //mail marche po
+            $message = (new \Swift_Message('Nouveau contact'))
+                ->setSubject($subject)
+                ->setFrom($email)
+                ->setTo('not.iremy@gmail.com')
+                ->setBody(
+                    $this->renderView(
+                        'emails/contact.html.twig', compact('contact')
+                    ),
+                    'text/html'
+                )
+            ;
+            
+            $mailer->send($message);
 
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($contact);
