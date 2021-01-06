@@ -15,7 +15,8 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
-    'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::home'], [], [['text', '/admin']], [], []],
+    'account_login' => [[], ['_controller' => 'App\\Controller\\AccountController::admin'], [], [['text', '/admin']], [], []],
+    'account_logout' => [[], ['_controller' => 'App\\Controller\\AccountController::logout'], [], [['text', '/logout']], [], []],
     'article' => [[], ['_controller' => 'App\\Controller\\ArticleController::home'], [], [['text', '/article']], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::home'], [], [['text', '/']], [], []],
 ];
