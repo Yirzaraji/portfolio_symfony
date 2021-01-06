@@ -4,33 +4,30 @@
         <img src="{{ asset('images/iconrocket.png') }}" 
             alt="banner" class="w-100 img-responsive">
         </div>
-        <div class="col-md-4 text-center d-flex align-items-center color titleColor mt-3 mb-5">
-        <h3>CONTACTEZ MOI.</h3>
-        {{form_start(form)}}
-        {{form_widget(form)}}
-        {{form_end(form)}}
-            {# <form action="">
-               <h3>CONTACTEZ MOI.</h3>
-                <div class="row mb-4">
+        <div class="col-md-4 text-center d-flex align-items-center mt-3 mb-5">
+        
+            {{form_start(contactForm)}}
+                <h3 class="titleFormColor mb-4"><b>CONTACTEZ MOI.</b></h3>
+                <div class="row mb-1">
+                    {# {{form_widget(contactForm)}} #}
                     <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
+                        {{ form_row(contactForm.name)}}
                     </div>
                     <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
+                        {{ form_row(contactForm.email)}}
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-1">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Mail">
+                        {{ form_row(contactForm.subject)}}
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-1">
                     <div class="col">
-                        <textarea class="form-control" rows="8" aria-label="With textarea" placeholder="Message"></textarea>
+                        {{ form_row(contactForm.message)}}
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">ENVOYER</button>
-            </form> #}
+            {{form_end(contactForm)}}
         </div>
     </div>
 </div>
