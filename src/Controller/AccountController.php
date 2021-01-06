@@ -17,11 +17,11 @@ class AccountController extends AbstractController
     {
         $error = $utils->getLastAuthenticationError();
 
+        //return $this->redirectToRoute('/admin');
+
         return $this->render('account/admin.html.twig', [
             'hasError' => $error !== null
         ]);
-
-        return $this->redirectToRoute('/admin');
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use Faker\Factory;
+use App\Entity\Post;
 use App\Entity\User;
 use App\Entity\Contact;
 use Doctrine\Persistence\ObjectManager;
@@ -48,6 +49,21 @@ class AppFixtures extends Fixture
                     ->setEmail($email)
                     ->setSubject($subject)
                     ->setMessage($message);
+
+            $manager->persist($contact);
+            $manager->flush();
+        }
+
+        for($i = 1; $i<= 30; $i++){   
+
+            $contact = new Post;
+            $randomImage = 'https://picsum.photos/290/240?random='.$i;
+
+            $contact->setTitle($faker->word())
+                    ->setTechnos($faker->word($nb = 3))
+                    ->setLien('http://google.fr')
+                    ->setCategorie('dev'.$i)
+                    ->setProjectImage($randomImage);
 
             $manager->persist($contact);
             $manager->flush();

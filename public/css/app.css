@@ -1,9 +1,21 @@
 
 
+html {
+    height: 100%;
+}
 body{
     font-family: 'Rajdhani', sans-serif;
     background-color: rgb(244, 244, 244);
+    min-height: 100%;
+    position:relative;
 }
+
+footer {
+    /* position: absolute;  */
+    bottom: 0; 
+    width:100%
+}
+
 
 .NavDesktop{
     display: flex;
@@ -170,8 +182,11 @@ h1{
 .projectCard{
     border-radius: 10px;
 }
-
 .infoProject{
+    position:absolute;
+}
+
+/* .infoProject1{
     position:absolute;
     width:100%;
     height:100%;
@@ -202,7 +217,7 @@ h1{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4123bf', endColorstr='#500b76', GradientType=1 );
     display:none;
     border-radius: 10px;
-}
+} */
 
 
 
