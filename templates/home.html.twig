@@ -83,53 +83,40 @@
     </div>
 
     <div id="tab1" class="box devBox active">
-    
-        <div class="row text-center justify-content-center mb-2">
-            <div class="col-xs-2 col-md-3 projectCard mb-2 mr-2">
-                <img src="https://picsum.photos/290/240" alt="">
+        <div class="row text-center mb-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 flex-wrap">
+                {% for element in 0..11 %}
+                    {# <img src="#" class="img-fluid mr-2 mb-2 infoProject"> #}
+                    <img src="https://picsum.photos/290/240" class="img-fluid mr-2 mb-2 projectCard0{{element}} projectCard" alt="">
+                {% endfor %} 
             </div>
-            <div class="col-xs-2 col-md-3 projectCard mb-2 mr-2" id="projectCard02">
-                <img src="#" class="infoProject02" alt="">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-            <div class="col-xs-2 col-md-3 col-xs-2 projectCard mb-2 mr-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
+            <div class="col-md-1"></div>
         </div>
-        <div class="row text-center justify-content-center">
-            <div class="col-xs-2 col-md-3 col-xs-2 projectCard mr-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-            <div class="col-xs-2 col-md-3 col-xs-2 projectCard mr-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-            <div class="col-xs-2 col-md-3 col-xs-2 projectCard mr-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-        </div>
+
     </div>
     <div id="tab2" class="box designBox hide">
-        <div class="row text-center justify-content-center mb-2">
-            <div class="col-md-3 projectCard">
-                <img src="https://picsum.photos/290/240" alt="">
+        <div class="row text-center mb-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 flex-wrap">
+                {% for element in 0..3 %}
+                    {# <img src="#" class="img-fluid mr-2 mb-2 infoProject"> #}
+                    <img src="https://picsum.photos/290/240" class="img-fluid mr-2 mb-2 projectCard0{{element}} projectCard" alt="">
+                {% endfor %} 
             </div>
-            <div class="col-md-3 projectCard mb-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
     <div id="tab3" class="box printBox hide">
-        <div class="row text-center justify-content-center mb-2">
-            <div class="col-md-3 projectCard">
-                <img src="https://picsum.photos/290/240" alt="">
+        <div class="row text-center mb-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 flex-wrap">
+                {% for element in 0..6 %}
+                    {# <img src="#" class="img-fluid mr-2 mb-2 infoProject"> #}
+                    <img src="https://picsum.photos/290/240" class="img-fluid mr-2 mb-2 projectCard0{{element}} projectCard" alt="">
+                {% endfor %} 
             </div>
-            <div class="col-md-3 projectCard mb-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-            <div class="col-md-3 projectCard mb-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-        </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 </div>
@@ -164,7 +151,7 @@
         </div>
     </div>
    
-         <div class="row justify-content-center blocDip">
+    <div class="row justify-content-center blocDip">
         <div class="col-md-3 color mt-5 mb-5">
             <img src="{{ asset('images/rosace.png') }}" alt="" style="width:22%">
             <h4 class="gradientPurpleFont titleh4"><b>DIPLOMES &</b><br> CERTIFICATIONS...</h4>
@@ -218,51 +205,39 @@
     </div>
 
     <div id="tab4" class="boxTech active">
-        <div class="row text-center justify-content-center mb-2">
-            <div class="col-md-3 projectCard">
-                <img src="https://picsum.photos/290/240" alt="">
+        <div class="row text-center mb-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 flex-wrap">
+                {% for element in 0..11 %}
+                    {# <img src="#" class="img-fluid mr-2 mb-2 infoProject"> #}
+                    <img src="https://picsum.photos/290/240" class="img-fluid mr-2 mb-2 projectCard0{{element}} projectCard" alt="">
+                {% endfor %} 
             </div>
-            <div class="col-md-3 projectCard mb-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-            <div class="col-md-3 projectCard mb-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-        </div>
-        <div class="row text-center justify-content-center">
-            <div class="col-md-3 projectCard">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-            <div class="col-md-3 projectCard">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-            <div class="col-md-3 projectCard">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
     <div id="tab5" class="boxTech hide">
-        <div class="row text-center justify-content-center mb-2">
-            <div class="col-md-3 projectCard">
-                <img src="https://picsum.photos/290/240" alt="">
+        <div class="row text-center mb-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 flex-wrap">
+                {% for element in 0..4 %}
+                    {# <img src="#" class="img-fluid mr-2 mb-2 infoProject"> #}
+                    <img src="https://picsum.photos/290/240" class="img-fluid mr-2 mb-2 projectCard0{{element}} projectCard" alt="">
+                {% endfor %} 
             </div>
-            <div class="col-md-3 projectCard mb-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
     <div id="tab6" class="boxTech hide">
-        <div class="row text-center justify-content-center mb-2">
-            <div class="col-md-3 projectCard">
-                <img src="https://picsum.photos/290/240" alt="">
+       <div class="row text-center mb-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 flex-wrap">
+                {% for element in 0..7 %}
+                    {# <img src="#" class="img-fluid mr-2 mb-2 infoProject"> #}
+                    <img src="https://picsum.photos/290/240" class="img-fluid mr-2 mb-2 projectCard0{{element}} projectCard" alt="">
+                {% endfor %} 
             </div>
-            <div class="col-md-3 projectCard mb-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-            <div class="col-md-3 projectCard mb-2">
-                <img src="https://picsum.photos/290/240" alt="">
-            </div>
-        </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 </div>
@@ -331,7 +306,8 @@ $(document).ready(function() {
 
 //-----------display hide infos from a card project------------//
 $( document ).ready(function() {
-    $('#projectCard01').hover(
+    
+    $('.projectCard01').hover(
 
         function() {
             $('.infoProject').fadeIn();

@@ -167,7 +167,7 @@ h1{
     border-radius: 50%;
 }
 
-.projectCard img{
+.projectCard{
     border-radius: 10px;
 }
 
@@ -251,7 +251,7 @@ h1{
   }
   
 li{
-display:inline;    
+    display:inline;    
 }
 
 li a{
