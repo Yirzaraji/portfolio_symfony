@@ -59,10 +59,14 @@ class AppFixtures extends Fixture
             $contact = new Post;
             $randomImage = 'https://picsum.photos/290/240?random='.$i;
 
+            //random category array_rand
+            $input = array("Dev", "Print", "Design",'e');
+            $rand_category = array_rand($input, 2);
+
             $contact->setTitle($faker->word())
                     ->setTechnos($faker->word($nb = 3))
                     ->setLien('http://google.fr')
-                    ->setCategorie('dev'.$i)
+                    ->setCategorie($input[$rand_category[0]])
                     ->setProjectImage($randomImage);
 
             $manager->persist($contact);

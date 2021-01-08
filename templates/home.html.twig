@@ -75,35 +75,44 @@
     <div class="row">
         <div class="col-md-12 text-center mb-5">
             <ul class="navTabs">
-                <li class="active"><a href="#tab1">Print</a></li>
-                <li><a href="#tab2">Dev</a></li>
-                <li><a href="#tab3">Design</a></li>
+                <li class="active"><a href="#tab1">Dev</a></li>
+                <li><a href="#tab2">Design</a></li>
+                <li><a href="#tab3">Print</a></li>
             </ul>
         </div>
     </div>
-
+</div>
+<div class="container">
     <div id="tab1" class="box devBox active">
-        <div class="row text-center mb-2">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 flex-wrap">
-                {% for element in 0..11 %}
+        <div class="row text-center justify-content-center flex-wrap">
+            {% for devPost in devPosts %}
                 {# {{dump(element)}} #}
-                    <img src="" class="img-fluid mr-2 mb-2 infoProject" id="infoProject{{element}}">
-                    <img src="https://picsum.photos/290/240?random={{element}}" 
-                    class="img-fluid mr-2 mb-2 projectCard" id="projectCard{{element}}" alt="">
-                {% endfor %} 
-            </div>
-            <div class="col-md-1"></div>
-        </div>
+                {# <img src="{{ devPost.projectImage }}" 
+                class="img-fluid mr-2 mb-2 projectCard" id="projectCard{{devPost.id}}" 
+                data-post="{{devPost.id}}" alt="">   
+                <img src="" class="img-fluid mr-2 mb-2 infoProject test1" id="infoProject{{devPost.id}}"> #}
 
+                <div class='newsCard news-Slide-up m-1'>
+                    <img src="{{ devPost.projectImage }}" />
+                    <div class='newsCaption'>
+                        <h2 class='newsCaption-title'>{{ devPost.title }}</h2>
+                        <p class='newsCaption-content'>{{ devPost.technos }} </p>
+                        <p><a class='newsCaption-link' href='{{ devPost.lien }}'>DEMO</a>
+                        <a class='newsCaption-link' href='{{ devPost.lien }}'>GIT</a></p>    
+                    </div>
+                </div>
+            {% endfor %} 
+        </div>
     </div>
+</div>
+<div class="container-fluid pb-5 pt-5">
     <div id="tab2" class="box designBox hide">
         <div class="row text-center mb-2">
             <div class="col-md-1"></div>
-            <div class="col-md-10 flex-wrap">
-                {% for element in 0..3 %}
-                    
-                    <img src="https://picsum.photos/290/240?random={{element}}" class="img-fluid mr-2 mb-2 projectCard" alt="">
+            <div class="col-md-10 flex-wrap"> 
+                {% for designPost in designPosts %}
+                    <img src="{{ designPost.projectImage }}" 
+                    class="img-fluid mr-2 mb-2 projectCard" alt="">
                 {% endfor %} 
             </div>
             <div class="col-md-1"></div>
@@ -113,10 +122,10 @@
         <div class="row text-center mb-2">
             <div class="col-md-1"></div>
             <div class="col-md-10 flex-wrap">
-                {% for element in 0..6 %}
-                    {# <img src="#" class="img-fluid mr-2 mb-2 infoProject"> #}
-                    <img src="https://picsum.photos/290/240?random={{element}}" class="img-fluid mr-2 mb-2 projectCard0{{element}} projectCard" alt="">
-                {% endfor %} 
+                {% for printPost in printPosts %}
+                    <img src="{{ printPost.projectImage }}" 
+                    class="img-fluid mr-2 mb-2 projectCard" id="projectCard{{printPost.id}}" alt="">
+                {% endfor %}  
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -307,22 +316,24 @@ $(document).ready(function() {
 });
 
 //-----------display hide infos from a card project------------//
-{# 
-let i = 0;
+ 
+{# let i = 0;
 
+var el = document.querySelector('.projectCard');
+
+console.log(el.dataset.post)
 $( document ).ready(function() {
-    for(let i = 0; i < 15; i++){
-        console.log(i)
-        $('#projectCard'+ i).hover(
+    
+        $('.teste' + el.dataset.post).hover(
             
             function() {
-                $('.infoProject' + i).fadeIn();
+                $('#infoProject' + el.dataset.post).fadeIn();
             }, 
             function() {
-                $('.infoProject' + i).fadeOut();
+                $('#infoProject' + el.dataset.post).fadeOut();
             }
         );
-    }
+    
 }); #}
 //END SCRIPT JS//
 </script>

@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\Post;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,10 +19,19 @@ class HomePageController extends AbstractController
     public function home(Request $request, \Swift_Mailer $mailer){
         $test = "coucou";
 
+        /* $repo = $this->getDoctrine()->getRepository(Post::class);
+        $posts = $repo->findAll(); */
+
+        //Get data from entity Post using query builder
+        $devPost = $this->getDoctrine()->getRepository(Post::class)->findPostsCategory("dev");
+        $printPost = $this->getDoctrine()->getRepository(Post::class)->findPostsCategory("print");
+        $designPost = $this->getDoctrine()->getRepository(Post::class)->findPostsCategory("design");
+        //dump($designPost);
+
         //$contact = new Contact;     
-      # Add form fields from ContactType in repository folder
+        # Add form fields from ContactType in repository folder
         $form = $this->createForm(ContactType::class);
-      # Handle form response
+        # Handle form response
         $form->handleRequest($request);
 
 
@@ -39,10 +49,9 @@ class HomePageController extends AbstractController
                     $this->renderView(
                         'emails/contact.html.twig', compact('contact')
                     ),
-                    'text/html'
+                    'text/html',
                 )
             ;
-            
             $mailer->send($message);
 
             /* $manager = $this->getDoctrine()->getManager();
@@ -52,7 +61,11 @@ class HomePageController extends AbstractController
 
         return $this->render('home.html.twig',
             ['contactForm' => $form->createView(),
-            'test' => $test]);
+            'test' => $test,
+            'devPosts' => $devPost,
+            'printPosts' => $printPost,
+            'designPosts' => $designPost
+            ]);
     }
 
 }
