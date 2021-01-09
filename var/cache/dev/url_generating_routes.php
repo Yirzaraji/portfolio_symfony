@@ -19,4 +19,5 @@ return [
     'account_logout' => [[], ['_controller' => 'App\\Controller\\AccountController::logout'], [], [['text', '/logout']], [], []],
     'article' => [[], ['_controller' => 'App\\Controller\\ArticleController::home'], [], [['text', '/article']], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::home'], [], [['text', '/']], [], []],
+    'post' => [[], ['_controller' => 'App\\Controller\\PostController::index'], [], [['text', '/post/new']], [], []],
 ];

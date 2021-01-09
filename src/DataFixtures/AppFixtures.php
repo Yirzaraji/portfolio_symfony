@@ -65,9 +65,10 @@ class AppFixtures extends Fixture
 
             $contact->setTitle($faker->word())
                     ->setTechnos($faker->word($nb = 3))
-                    ->setLien('http://google.fr')
+                    ->setLien('http://remidelarue.ovh/simlon/sw_battle/')
                     ->setCategorie($input[$rand_category[0]])
-                    ->setProjectImage($randomImage);
+                    ->setProjectImage($randomImage)
+                    ->setGit('https://github.com/Yirzaraji');
 
             $manager->persist($contact);
             $manager->flush();

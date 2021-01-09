@@ -17,6 +17,7 @@ return [
         '/logout' => [[['_route' => 'account_logout', '_controller' => 'App\\Controller\\AccountController::logout'], null, null, null, false, false, null]],
         '/article' => [[['_route' => 'article', '_controller' => 'App\\Controller\\ArticleController::home'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomePageController::home'], null, null, null, false, false, null]],
+        '/post/new' => [[['_route' => 'post', '_controller' => 'App\\Controller\\PostController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

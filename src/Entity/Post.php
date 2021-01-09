@@ -15,7 +15,7 @@ class Post
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -66,6 +66,11 @@ class Post
      * @ORM\Column(type="string", length=255)
      */
     private $categorie;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $git;
 
     public function getId(): ?int
     {
@@ -188,6 +193,18 @@ class Post
     public function setCategorie(string $categorie): self
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getGit(): ?string
+    {
+        return $this->git;
+    }
+
+    public function setGit(?string $git): self
+    {
+        $this->git = $git;
 
         return $this;
     }
