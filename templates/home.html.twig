@@ -84,50 +84,65 @@
 </div>
 <div class="container">
     <div id="tab1" class="box devBox active">
-        <div class="row text-center justify-content-center flex-wrap">
+        <div class="row justify-content-center flex-wrap">
             {% for devPost in devPosts %}
-                {# {{dump(element)}} #}
-                {# <img src="{{ devPost.projectImage }}" 
-                class="img-fluid mr-2 mb-2 projectCard" id="projectCard{{devPost.id}}" 
-                data-post="{{devPost.id}}" alt="">   
-                <img src="" class="img-fluid mr-2 mb-2 infoProject test1" id="infoProject{{devPost.id}}"> #}
-
                 <div class='newsCard news-Slide-up m-1'>
                     <img src="{{ devPost.projectImage }}" />
                     <div class='newsCaption'>
-                        <h2 class='newsCaption-title'>{{ devPost.title }}</h2>
+                        <div class='newsCaption-title'>project</div>
+                        <span class="projectTitle">{{ devPost.title }}</span>
+                        <div class="dottedLine mb-1"></div>
+                        <span class="techTxt">technologies</span>
                         <p class='newsCaption-content'>{{ devPost.technos }} </p>
-                        <p><a class='newsCaption-link' href='{{ devPost.lien }}'>DEMO</a>
-                        <a class='newsCaption-link' href='{{ devPost.lien }}'>GIT</a></p>    
+                        <div class="newsCaption-link">
+                            <p><a href='{{ devPost.lien }}'>DEMO</a>
+                            <a href='{{ devPost.lien }}'>GIT</a></p>    
+                        </div>
                     </div>
                 </div>
             {% endfor %} 
         </div>
     </div>
 </div>
-<div class="container-fluid pb-5 pt-5">
+<div class="container">
     <div id="tab2" class="box designBox hide">
-        <div class="row text-center mb-2">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 flex-wrap"> 
-                {% for designPost in designPosts %}
-                    <img src="{{ designPost.projectImage }}" 
-                    class="img-fluid mr-2 mb-2 projectCard" alt="">
-                {% endfor %} 
-            </div>
-            <div class="col-md-1"></div>
+        <div class="row justify-content-center flex-wrap"> 
+            {% for designPost in designPosts %}
+                <div class='newsCard news-Slide-up m-1'>
+                    <img src="{{ designPost.projectImage }}" />
+                    <div class='newsCaption'>
+                        <div class='newsCaption-title'>project</div>
+                        <span class="projectTitle">{{ designPost.title }}</span>
+                        <div class="dottedLine mb-1"></div>
+                        <span class="techTxt">technologies</span>
+                        <p class='newsCaption-content'>{{ designPost.technos }} </p>
+                        <div class="newsCaption-link">
+                            <p><a href='{{ designPost.lien }}'>DEMO</a>
+                            <a href='{{ designPost.lien }}'>GIT</a></p>    
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}        
         </div>
     </div>
     <div id="tab3" class="box printBox hide">
-        <div class="row text-center mb-2">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 flex-wrap">
-                {% for printPost in printPosts %}
-                    <img src="{{ printPost.projectImage }}" 
-                    class="img-fluid mr-2 mb-2 projectCard" id="projectCard{{printPost.id}}" alt="">
-                {% endfor %}  
-            </div>
-            <div class="col-md-1"></div>
+        <div class="row justify-content-center flex-wrap">
+            {% for printPost in printPosts %}
+                <div class='newsCard news-Slide-up m-1'>
+                    <img src="{{ printPost.projectImage }}" />
+                    <div class='newsCaption'>
+                        <div class='newsCaption-title'>project</div>
+                        <span class="projectTitle">{{ printPost.title }}</span>
+                        <div class="dottedLine mb-1"></div>
+                        <span class="techTxt">technologies</span>
+                        <p class='newsCaption-content'>{{ printPost.technos }} </p>
+                        <div class="newsCaption-link">
+                            <p><a href='{{ printPost.lien }}'>DEMO</a>
+                            <a href='{{ printPost.lien }}'>GIT</a></p>    
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}        
         </div>
     </div>
 </div>
