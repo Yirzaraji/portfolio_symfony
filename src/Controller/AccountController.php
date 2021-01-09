@@ -19,15 +19,15 @@ class AccountController extends AbstractController
     public function admin(Request $request, PaginatorInterface $paginator, AuthenticationUtils $utils)
     {
 
-        $posts = $this->getDoctrine()
+        $dataPosts = $this->getDoctrine()
                     ->getRepository(Post::class)
-                    ->findAll();
+                    ->findBy([],['id' => 'desc']);
 
         //$paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $posts,
+        $posts = $paginator->paginate(
+            $dataPosts,
             $request->query->getInt('page', 1),
-            4
+            10
         );
 
         $error = $utils->getLastAuthenticationError();
@@ -36,7 +36,6 @@ class AccountController extends AbstractController
         return $this->render('account/admin.html.twig', [
             'hasError' => $error !== null,
             'posts' => $posts,
-            'pagination' => $pagination
         ]);
 
 
