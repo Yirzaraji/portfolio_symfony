@@ -3,57 +3,9 @@
 
 {% block body %}
     {% if app.user %}
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-md-12 text-center mt-5 mb-5">
-                <h1 class="titleColor mb-5"> Vous etes connecté<br>
-                Bienvenue <b>{{ app.user.login }}</b></h1>
-                <p>
-                <table class="table table-striped">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Technos</th>
-                            <th scope="col">Project_Image</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Categorie</th>
-                            <th scope="col">Demo Lien</th>
-                            <th scope="col">Github Lien</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for post in posts %}
-                        <tr>
-                            <th scope="row">{{post.id}}</th>
-                            <td>{{post.title}}</td>
-                            <td>{{post.technos}}</td>
-                            <td>{{post.projectImage}}</td>
-                            <td>Vide</td>
-                            <td>{{post.categorie}}</td>
-                            <td>{{post.lien}}</td>
-                            <td>{{post.git}}</td>
-                            <td>
-                                <button type="button" class="btn-primary rounded font-weight-bold">
-                                <i class="fab fa-readme"></i></button> 
-                                <button type="button" class="btn-warning rounded font-weight-bold">
-                                <i class="far fa-edit"></i></button> 
-                                <button type="button" class="btn-danger rounded font-weight-bold">
-                                <i class="far fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-                {{knp_pagination_render(posts)}}
-                </p>
-            </div>
-        </div>
-    </div>
+    
     {% else %}
     {% include 'navBarSimple.html.twig' %}
-
     <div class="container">
         <div class="row">
             <div class="col-md-3">&nbsp;</div>

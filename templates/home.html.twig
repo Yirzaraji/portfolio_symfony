@@ -47,7 +47,7 @@
                 <div class="col-md-5 d-flex justify-content-end">
                     <img src="{{ asset('images/avatar1_small.jpg') }}" class="img-fluid avatar"  alt="">
                 </div>
-                <div class="col-md-5 line_left ml-2 pt-4" style="text-justify: auto;">
+                <div class="col-md-5 line_left ml-2 pt-4" id="ankor_aboutMe" style="text-justify: auto;">
                     <b>ABOUT ME...</b><br>
                     <br>
                     <p>A la recherche d’un poste de Développeur Web dans le cadre d’une alternance Bac +3 
@@ -87,7 +87,7 @@
         <div class="row justify-content-center flex-wrap">
             {% for devPost in devPosts %}
                 <div class='newsCard news-Slide-up m-1'>
-                    <img src="{{ devPost.projectImage }}" />
+                    <img src="{{ devPost.projectImage }}"/>
                     <div class='newsCaption'>
                         <div class='newsCaption-title'>project</div>
                         <span class="projectTitle">{{ devPost.title }}</span>

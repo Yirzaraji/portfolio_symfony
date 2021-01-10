@@ -17,7 +17,9 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'account_login' => [[], ['_controller' => 'App\\Controller\\AccountController::admin'], [], [['text', '/admin']], [], []],
     'account_logout' => [[], ['_controller' => 'App\\Controller\\AccountController::logout'], [], [['text', '/logout']], [], []],
+    'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::backoffice'], [], [['text', '/backoffice']], [], []],
     'article' => [[], ['_controller' => 'App\\Controller\\ArticleController::home'], [], [['text', '/article']], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::home'], [], [['text', '/']], [], []],
+    'cv' => [[], ['_controller' => 'App\\Controller\\HomePageController::cv'], [], [['text', '/cv']], [], []],
     'post' => [[], ['_controller' => 'App\\Controller\\PostController::index'], [], [['text', '/post/new']], [], []],
 ];

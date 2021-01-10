@@ -68,4 +68,14 @@ class HomePageController extends AbstractController
             ]);
     }
 
+    /**
+    * @route("/cv", name="cv")
+    * @return Response
+    */
+    public function cv(){
+
+
+        return $this->render('cv.html.twig');
+    }
+
 }

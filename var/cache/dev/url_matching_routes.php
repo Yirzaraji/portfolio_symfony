@@ -15,8 +15,10 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'account_login', '_controller' => 'App\\Controller\\AccountController::admin'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'account_logout', '_controller' => 'App\\Controller\\AccountController::logout'], null, null, null, false, false, null]],
+        '/backoffice' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::backoffice'], null, null, null, false, false, null]],
         '/article' => [[['_route' => 'article', '_controller' => 'App\\Controller\\ArticleController::home'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomePageController::home'], null, null, null, false, false, null]],
+        '/cv' => [[['_route' => 'cv', '_controller' => 'App\\Controller\\HomePageController::cv'], null, null, null, false, false, null]],
         '/post/new' => [[['_route' => 'post', '_controller' => 'App\\Controller\\PostController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
