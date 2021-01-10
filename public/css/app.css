@@ -197,8 +197,8 @@ h1{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 10px;
     cursor: pointer;
-    width: 290px;
-    height: 240px;
+    width: 320px;
+    height: 257px;
 
   }
 
@@ -377,7 +377,10 @@ li a:hover{
     transition: 0.4s;
 }
 
-
+.iconSkills{
+    font-size: 4rem;
+    color: #5c4ea4;
+}
 
 
 .blocExp{
@@ -459,7 +462,7 @@ li a:hover{
 }
 
 .blocContact img{
-    width: 90%!important;
+  /*   width: 100%; */
 }
 
 .titleFormColor{
@@ -484,6 +487,8 @@ li a:hover{
    
     justify-content: center;
 }
+
+
 
 /* .pagination span{
    
@@ -521,3 +526,20 @@ li a:hover{
     color:rgb(255, 255, 255);
     transition: 0.4s;
 } */
+
+/* ####### Mobile responsive ######### */
+@media screen and (max-width: 342px) {
+    li a{
+        text-decoration:none;
+        color:#5c4ea4;
+        cursor: pointer;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 14px;
+        padding-right: 14px;
+        border-radius: 29px;
+        border:3px solid #5c4ea4;
+        font-weight: 900;
+        transition: 0.4s;
+    }
+}
