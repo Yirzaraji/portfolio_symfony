@@ -383,6 +383,19 @@ li a:hover{
 }
 
 
+.iconSkills i{
+    margin-right: 5%;
+   
+}
+
+.iconSkills p{
+    font-size: 1rem;
+    color: #5c4ea4;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 900;
+    margin-top: 3%;
+}
+
 .blocExp{
     color:white;
     min-height: 650px;
