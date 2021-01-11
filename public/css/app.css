@@ -122,13 +122,6 @@ footer {
     letter-spacing: 4px;
 }
 
-.blockBanner01 img:nth-child(7), img:nth-child(8), img:nth-child(9){
-  
-    /*color: rgb(0, 255, 21);
-     border: 2px solid white; 
-    border-radius: 50%; */
-}
-
 .blockBanner01 p:nth-child(4) span:nth-child(3){
     font-size: 1.4rem;
     background-color: white;
@@ -143,6 +136,25 @@ footer {
 .bannerLowpolyImg{
     padding-left: 0;
     padding-right: 0;
+}
+
+.cv_icon i{
+    color:rgb(255, 255, 255);
+    font-size: 2.9rem;
+    transition:0.4s;
+    line-height: 30%;
+}
+
+.cv_icon i:hover{
+    color:#4f9dd5;
+    transition:0.4s;
+}
+
+.cv_icon p{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem!important;
+    font-weight: 600;
+    transition:0.4s;
 }
 
 .blockiDO{
@@ -181,7 +193,7 @@ h1{
 }
 
 .tripleCard img{
-    border-radius: 50%;
+    width: 70px;
 }
 
 .projectCard{
@@ -332,11 +344,11 @@ h1{
     list-style:none;  
 }
   
-li{
+.list_js li{
     display:inline;    
 }
 
-li a{
+.list_js li a{
     text-decoration:none;
     color:#5c4ea4;
     cursor: pointer;
@@ -350,7 +362,7 @@ li a{
     transition: 0.4s;
 }
 
-li a:hover{
+.list_js li a:hover{
     transition: 0.4s;
     text-decoration:none;
     background-color:#5c4ea4;
@@ -444,6 +456,10 @@ li a:hover{
 
 .titleh4{
 
+}
+
+.about-title b{
+    font-size: 1.2rem;
 }
 
 .aboutBlock{

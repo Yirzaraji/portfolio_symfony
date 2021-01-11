@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="row text-center justify-content-center">
-        <div class="col-md-3 tripleCard mr-2">
+        <div class="col-md-3 tripleCard">
             <img src="{{ asset('images/logo_print.png') }}" alt="" class="mb-4"></br>
             <span class="triplecard_txt">PRINT</span></br>
             <p class="mt-1">
@@ -21,7 +21,7 @@
                 Sed eleifend quis turpis id euismod. Morbi.
             </p>
         </div>
-        <div class="col-md-3 tripleCard mr-2">
+        <div class="col-md-3 tripleCard">
             <img src="{{ asset('images/logo_dev.png') }}" alt="" class="mb-4"></br>
             <span class="triplecard_txt">DEV</span></br>
             <p class="mt-1">
@@ -29,7 +29,7 @@
                 Sed eleifend quis turpis id euismod. Morbi.
             </p>
         </div>
-        <div class="col-md-3 tripleCard mr-2">
+        <div class="col-md-3 tripleCard">
         <img src="{{ asset('images/logo_design.png') }}" alt="" class="mb-4"></br>
             <span class="triplecard_txt">DESIGN</span></br>
             <p class="mt-1">
@@ -47,7 +47,7 @@
                 <div class="col-md-5 d-none d-md-flex justify-content-end">
                     <img src="{{ asset('images/avatar1_small.jpg') }}" class="img-fluid avatar"  alt="">
                 </div>
-                <div class="col-md-5 line_left ml-2 pt-4" id="ankor_aboutMe" style="text-justify: auto;">
+                <div class="col-md-5 line_left ml-2 pt-4 about-title" id="ankor_aboutMe" style="text-justify: auto;">
                     <b>ABOUT ME...</b><br>
                     <br>
                     <p>A la recherche d’un poste de Développeur Web dans le cadre d’une alternance Bac +3 
@@ -55,8 +55,7 @@
                     Actuellement en Freelance dans deux activités différentes je propose mes services 
                     dans le design graphique & le Développement web.
                     J’ai une appétence pour les nouvelles technologies, je suis très curieux et 
-                    j’ai une grande soif d’apprendre.
-                    J’ai des connaissances en Anglais, je suis B2 certifié Efset.</p>
+                    j’ai une grande soif d’apprendre.</p>
                 </div>      
             </div>
         </div>
@@ -74,7 +73,7 @@
 
     <div class="row">
         <div class="col-md-12 text-center mb-5">
-            <ul class="navTabs">
+            <ul class="navTabs list_js">
                 <li class="active"><a href="#tab1">Dev</a></li>
                 <li><a href="#tab2">Design</a></li>
                 <li><a href="#tab3">Print</a></li>
@@ -154,33 +153,46 @@
             <h4><b>EXPERIENCES</b><br> PROFESSIONNELLES...</h4>
         </div>
         <div class="col-md-6 line_left mt-5 mb-5">
-        <p><b>DEVELOPPEUR PHP | SYMFONY<br>
-        <span class="redfont">DIGEAT</span></b><br>
-        MARS 2020</p>
-       
-        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Duis non 
-        volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales.<br>
-        </p><p>Duis non volutpat arcu, eu mollis tellus.<br>
-        Quis consequat nulla effi citur at.<br>
-        Sed finibus aliquam neque sit.</p>
+            <p><b>DEVELOPPEUR PHP | SYMFONY<br>
+            <span class="redfont">DIGEAT</span></b><br>
+            MARS 2020</p>
+        
+            <p>Dans le cadre d'un stage de 3 mois j'ai pu m'initier au fonctionnement du framework PHP Symfony 3 & 4.
+            En l'espace d'un mois j'ai pu maitriser ce nouvel environnement de travail et par la suite pu
+            developper mes premiers composant d'acces aux données sur l'application de l'entreprise Digeat et Sacre Fernand.<br>
+            </p>
 
-        <p><b>WEB DESIGNER<br>
-        <span class="redfont">METHODE ANCESTRALE</span></b><br>
-        AVRIL 2014</p>
+            <p>
+                <ul>
+                    <li>Javascript, Jquery, Ajax</li>
+                    <li>Html, Css, Twig, Boostrap</li>
+                    <li>Php, Sql, Uml, Doctrine, gitlab</li>
+                </ul>
+            </p>
+            <div class="mt-5"></div>
+            <p><b>DEVELOPPEUR VUE.JS<br>
+            <span class="redfont">SIMPLON TOULOUSE</span></b><br>
+            JANVIER 2020</p>
 
-        <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, <br>
-        </p><p>quis consequat nulla effi citur at.<br>
-        Duis non volutpat arcu, eu mollis tellus.<br>
-        Quis consequat nulla effi citur at<br>
-        Sed finibus aliquam neque sit.</p>
+            <p>
+            Dans me cadre d'un projet client, j'ai developpé une application pedagogique avec le framework Vue.js.
+            Elle été composée d'un quiz dynamique permettant d'evaluer le niveau de l'utilisateur et le rediriger
+            vers la page correspondante.
+            </p>
+            <p>
+                <ul>
+                    <li>Javascript</li>
+                    <li>Vue.js</li>
+                    <li>Html Css bootstrap</li>
+                </ul>
+            </p>
         </div>
     </div>
    
     <div class="row justify-content-center blocDip">
         <div class="col-md-3 color mt-5 mb-5">
             <img src="{{ asset('images/rosace.png') }}" alt="" style="width:22%">
-            <h4 class="gradientPurpleFont titleh4"><b>DIPLOMES &</b><br> CERTIFICATIONS...</h4>
+            <h4 class="gradientPurpleFont titleh4"><b>PARCOURS &</b><br> CURSUS SCOLAIRE...</h4>
         </div>
         <div class="col-md-6 line_leftBlack mt-5 mb-5">
         <p><b>CONCEPTEUR DEVELOPPEUR D'APPLICATION Bac +4<br>
@@ -191,7 +203,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
         quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, 
         eu mollis tellus. Sed finibus aliquam neque sit amet sodales.</p>
-
+        <div class="mt-2"></div>
         <p><b>DEVELOPPEUR WEB Bac +2<br>
         <span class="gradientPurpleFont">SIMPLON.CO</span></b><br>
         2020</p>
@@ -200,7 +212,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
         quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, 
         eu mollis tellus. Sed finibus aliquam neque sit amet sodales.</p>
-
+        <div class="mt-2"></div>
         <p><b>DESIGNER GRAPHIQUE<br>
         <span class="gradientPurpleFont">IDEM CREATIVE ARTS SCHOOL</span></b><br>
         2014</p>
@@ -222,7 +234,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 text-center mb-5">
-            <ul class="navTabsTech">
+            <ul class="navTabsTech list_js">
                 <li class="active"><a href="#tab4">Front</a></li>
                 <li><a href="#tab5">Environnement</a></li>
                 <li><a href="#tab6">Back</a></li>
@@ -250,8 +262,7 @@
             <div class="col-md-4"></div>
             <div class="col-md-4 flex-wrap">
                 <i class="fab fa-github"><p>Git</p></i>
-                <i class="fab fa-gitlab"><p>Gitlab</p></i>
-                <i class="fab fa-bitbucket"><p>Bitbucket</p></i>
+                <i class="fab fa-unity"><p>Unity C#</p></i>
                 <i class="fab fa-trello"><p>Trello</p></i>
                 <i class="fab fa-ubuntu"><p>Ubuntu</p></i>
                 <i class="fab fa-linux"><p>Linux</p></i>
