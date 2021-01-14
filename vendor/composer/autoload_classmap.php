@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\AccountController' => $baseDir . '/src/Controller/AccountController.php',
+    'App\\Controller\\AdminController' => $baseDir . '/src/Controller/AdminController.php',
     'App\\Controller\\ArticleController' => $baseDir . '/src/Controller/ArticleController.php',
     'App\\Controller\\HomePageController' => $baseDir . '/src/Controller/HomePageController.php',
     'App\\Controller\\PostController' => $baseDir . '/src/Controller/PostController.php',
@@ -15,6 +16,7 @@ return array(
     'App\\Entity\\Post' => $baseDir . '/src/Entity/Post.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
     'App\\Form\\ContactType' => $baseDir . '/src/Form/ContactType.php',
+    'App\\Form\\CreateFormType' => $baseDir . '/src/Form/CreateFormType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\ContactRepository' => $baseDir . '/src/Repository/ContactRepository.php',
     'App\\Repository\\PostRepository' => $baseDir . '/src/Repository/PostRepository.php',

@@ -4,7 +4,7 @@
     <parameter key="kernel.project_dir">B:\dev stuff\portfolio_symfony</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.cache_dir">B:\dev stuff\portfolio_symfony\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">B:/dev stuff/portfolio_symfony/var/cache/dev</parameter>
     <parameter key="kernel.logs_dir">B:\dev stuff\portfolio_symfony\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -117,7 +117,7 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">B:\dev stuff\portfolio_symfony\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">B:/dev stuff/portfolio_symfony/var/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
@@ -128,9 +128,9 @@
     <parameter key="translator.default_path">B:\dev stuff\portfolio_symfony/translations</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:B:\dev stuff\portfolio_symfony\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:B:/dev stuff/portfolio_symfony/var/cache/dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">B:\dev stuff\portfolio_symfony\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">B:/dev stuff/portfolio_symfony/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -207,12 +207,12 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">B:\dev stuff\portfolio_symfony\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">B:/dev stuff/portfolio_symfony/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.name">dynamic</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">B:\dev stuff\portfolio_symfony\var\cache\dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">B:/dev stuff/portfolio_symfony/var/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -432,7 +432,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -918,7 +918,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -947,7 +947,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -1057,7 +1057,7 @@
       <argument>false</argument>
     </service>
     <service id=".1_NativeFileSessionHandler~8vxdTKD" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/sessions</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -1091,7 +1091,7 @@
       <deprecated package="symfony/framework-bundle" version="5.1">The "%service_id%" service is deprecated, use "$session-&gt;getAttributeBag()" instead.</deprecated>
     </service>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/sessions</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -1310,7 +1310,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">B:\dev stuff\portfolio_symfony\var\cache\dev/translations</argument>
+        <argument key="cache_dir">B:/dev stuff/portfolio_symfony/var/cache/dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
@@ -1846,7 +1846,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:B:\dev stuff\portfolio_symfony\var\cache\dev/profiler</argument>
+      <argument>file:B:/dev stuff/portfolio_symfony/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -1884,7 +1884,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/App_KernelDevDebugContainer</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
@@ -2537,7 +2537,7 @@
       <argument type="service" id=".service_locator.vEnWPsK.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">B:\dev stuff\portfolio_symfony\var\cache\dev</argument>
+        <argument key="cache_dir">B:/dev stuff/portfolio_symfony/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -2602,7 +2602,7 @@
       <argument type="service" id="routing.loader.annotation"/>
     </service>
     <service id=".2_PhpArrayAdapter~e2o4Tv1" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/annotations.php</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -2631,7 +2631,7 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/annotations.php</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
@@ -2700,7 +2700,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">B:\dev stuff\portfolio_symfony\var\cache\dev/twig</argument>
+        <argument key="cache">B:/dev stuff/portfolio_symfony/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -3501,7 +3501,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -5428,7 +5428,7 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
       <argument>XKG6QzzsCg</argument>
       <argument>0</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -5438,7 +5438,7 @@
       <argument>PFIDBV0LCK</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5446,7 +5446,7 @@
       <argument>xs8mBL0aK7</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5454,7 +5454,7 @@
       <argument>O0-S0RGuSZ</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5462,7 +5462,7 @@
       <argument>plZKzo-No8</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5470,7 +5470,7 @@
       <argument>Imae41JFdN</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5481,7 +5481,7 @@
       <argument>XZvpsRL7EP</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>B:\dev stuff\portfolio_symfony\var\cache\dev/pools</argument>
+      <argument>B:/dev stuff/portfolio_symfony/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>

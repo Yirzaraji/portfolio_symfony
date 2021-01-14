@@ -473,6 +473,7 @@ class ComposerStaticInit0cf17e70f01e9fe02780e9e99195e895
 
     public static $classMap = array (
         'App\\Controller\\AccountController' => __DIR__ . '/../..' . '/src/Controller/AccountController.php',
+        'App\\Controller\\AdminController' => __DIR__ . '/../..' . '/src/Controller/AdminController.php',
         'App\\Controller\\ArticleController' => __DIR__ . '/../..' . '/src/Controller/ArticleController.php',
         'App\\Controller\\HomePageController' => __DIR__ . '/../..' . '/src/Controller/HomePageController.php',
         'App\\Controller\\PostController' => __DIR__ . '/../..' . '/src/Controller/PostController.php',
@@ -481,6 +482,7 @@ class ComposerStaticInit0cf17e70f01e9fe02780e9e99195e895
         'App\\Entity\\Post' => __DIR__ . '/../..' . '/src/Entity/Post.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Form\\ContactType' => __DIR__ . '/../..' . '/src/Form/ContactType.php',
+        'App\\Form\\CreateFormType' => __DIR__ . '/../..' . '/src/Form/CreateFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\ContactRepository' => __DIR__ . '/../..' . '/src/Repository/ContactRepository.php',
         'App\\Repository\\PostRepository' => __DIR__ . '/../..' . '/src/Repository/PostRepository.php',
