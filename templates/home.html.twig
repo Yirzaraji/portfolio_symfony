@@ -350,6 +350,26 @@ $(document).ready(function() {
     });
 });
 
+let navbar = document.querySelector(".navbar-mobile")
+let ham = document.querySelector(".ham")
+
+ham.addEventListener("click", toggleHamburger)
+
+// toggles hamburger menu in and out when clicking on the hamburger
+function toggleHamburger(){
+  navbar.classList.toggle("showNav")
+  ham.classList.toggle("showClose")
+}
+
+let menuLinks = document.querySelectorAll(".menuLink")
+
+menuLinks.forEach( 
+  function(menuLink) { 
+    menuLink.addEventListener("click", toggleHamburger) 
+  }
+)
+
+
 //-----------display hide infos from a card project------------//
  
 {# let i = 0;
