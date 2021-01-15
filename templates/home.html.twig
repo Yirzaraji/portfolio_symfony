@@ -2,9 +2,12 @@
 
 
 {% block body %}
+
 {% include 'NavBar.html.twig' %}
 {% include 'banner.html.twig' %}
 
+
+{# {{dump(app)}}    #}
 <div class="container-fluid blockiDO pb-5 pt-5">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center color titleColor mt-3 mb-5">
@@ -287,10 +290,10 @@
         </div>
     </div>
 </div>
+ {% include 'contact.html.twig' %}
 
 
 
-{% include 'contact.html.twig' %}
 
 {% endblock %}
 

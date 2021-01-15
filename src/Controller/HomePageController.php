@@ -34,7 +34,6 @@ class HomePageController extends AbstractController
         # Handle form response
         $form->handleRequest($request);
 
-
         //si le form est soumis && si il est valid ->execute
         if ($form->isSubmitted() && $form->isValid()) {
 
@@ -54,6 +53,12 @@ class HomePageController extends AbstractController
             ;
             $mailer->send($message);
 
+            // add flash probleme affichage marche pas
+            $this->addFlash(
+                'success',
+                'Votre mail a bien été <b<enregistré</b>'
+            );
+            
             /* $manager = $this->getDoctrine()->getManager();
             $manager->persist($contact);
             $manager->flush(); */
