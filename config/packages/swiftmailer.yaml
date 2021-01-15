@@ -1,5 +1,6 @@
 swiftmailer:
     url: '%env(MAILER_URL)%'
+    transport: mail
     auth_mode: login
     port: 465
     encryption: ssl

@@ -38,6 +38,9 @@ class HomePageController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $contact = $form->getData();    
+            //dump($contact['message']));
+
+            $messageBody = $contact['message'];
 
             //mail marche po
             $message = (new \Swift_Message('Nouveau contact'))
@@ -59,6 +62,7 @@ class HomePageController extends AbstractController
                 'Votre mail a bien été <b<enregistré</b>'
             );
             
+            return $this->redirectToRoute('homepage');
             /* $manager = $this->getDoctrine()->getManager();
             $manager->persist($contact);
             $manager->flush(); */
