@@ -271,13 +271,15 @@ h1{
   }
 
   .newsCaption-content {
-    height:90px;
     font-size: 1.2rem;
-    
+  }
+
+  .newsCaption-link{
+    position: absolute;
+    bottom:0;
   }
   
   .newsCaption-link a{
-    bottom:0;
     border:4px solid white;
     border-radius: 30px;
     padding-left: 15px;
@@ -531,6 +533,10 @@ h1{
 /* ####### Mobile responsive ######### */
 
 @media screen and (max-width: 575px) {
+
+    .simpleNavBar{
+        display:none;
+    }
 
     #mobile-burger{
         display:block;

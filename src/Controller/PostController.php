@@ -2,19 +2,22 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Post;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class PostController extends AbstractController
 {
-    /**
-     * @Route("/post/new", name="post")
+     /**
+     * @Route("/{id}", name="post_show")
      */
-    public function index(): Response
+    public function post($id)
     {
-        return $this->render('post/add.html.twig', [
-            'controller_name' => 'PostController',
+        $post = $this->getDoctrine()->getRepository(Post::class)->findOneBy(array('id' => $id));
+
+        return $this->render('post/post.html.twig', [
+            'post' => $post
         ]);
     }
 }

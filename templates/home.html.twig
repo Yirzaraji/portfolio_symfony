@@ -88,20 +88,23 @@
     <div id="tab1" class="box devBox active">
         <div class="row justify-content-center flex-wrap">
             {% for devPost in devPosts %}
-                <div class='newsCard news-Slide-up m-1'>
-                    <img src="{{ devPost.projectImage }}"/>
-                    <div class='newsCaption'>
-                        <div class='newsCaption-title'>project</div>
-                        <span class="projectTitle">{{ devPost.title }}</span>
-                        <div class="dottedLine mb-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content'>{{ devPost.technos }} </p>
-                        <div class="newsCaption-link">
-                            <p><a href='{{ devPost.lien }} ' target="_blank">DEMO</a>
-                            <a href='{{ devPost.git }}' target="_blank">GIT</a></p>    
+                    <div class='newsCard news-Slide-up m-1'>
+                            <img src="{{ devPost.projectImage }}"/>
+                        <div class='newsCaption'>
+                            <div class='newsCaption-title'>project</div>
+                            <span class="projectTitle">{{ devPost.title }}</span>
+                            <div class="dottedLine mb-1"></div>
+                            <span class="techTxt">technologies</span>
+                            <p class='newsCaption-content'>{{ devPost.technos | raw}} </p>
+                            <div class="newsCaption-link">
+                                <p>
+                                    <a href="{{ path('post_show', {'id': devPost.id}) }}"><i class="fas fa-eye"></i> AFFICHER</a>
+                                    <a href='{{ devPost.lien }} ' target="_blank">DEMO</a>
+                                    <a href='{{ devPost.git }}' target="_blank">GIT</a>
+                                </p>    
+                            </div>
                         </div>
                     </div>
-                </div>
             {% endfor %} 
         </div>
     </div>
@@ -119,8 +122,11 @@
                         <span class="techTxt">technologies</span>
                         <p class='newsCaption-content'>{{ designPost.technos }} </p>
                         <div class="newsCaption-link">
-                            <p><a href='{{ designPost.lien }}'>DEMO</a>
-                            <a href='{{ designPost.lien }}'>GIT</a></p>    
+                            <p>
+                                <a href="{{ path('post_show', {'id': designPost.id}) }}"><i class="fas fa-eye"></i> AFFICHER</a>
+                                <a href='{{ designPost.lien }} ' target="_blank">DEMO</a>
+                                <a href='{{ designPost.git }}' target="_blank">GIT</a>
+                            </p>    
                         </div>
                     </div>
                 </div>
@@ -139,8 +145,11 @@
                         <span class="techTxt">technologies</span>
                         <p class='newsCaption-content'>{{ printPost.technos }} </p>
                         <div class="newsCaption-link">
-                            <p><a href='{{ printPost.lien }}'>DEMO</a>
-                            <a href='{{ printPost.lien }}'>GIT</a></p>    
+                            <p>
+                                <a href="{{ path('post_show', {'id': printPost.id}) }}"><i class="fas fa-eye"></i> AFFICHER</a>
+                                <a href='{{ printPost.lien }} ' target="_blank">DEMO</a>
+                                <a href='{{ printPost.git }}' target="_blank">GIT</a>
+                            </p>     
                         </div>
                     </div>
                 </div>
@@ -290,110 +299,6 @@
         </div>
     </div>
 </div>
- {% include 'contact.html.twig' %}
 
-
-
-
-{% endblock %}
-
-{% block javascripts %}
-
-<script>
-
-//--------Display hide cards----------//
-
-$(document).ready(function() {
-    $('.navTabs > li > a').click(function(event) {
-    event.preventDefault();
-
-    //get displaying tab content jQuery selector
-    let activeTabsSelector = $('.navTabs > li.active > a').attr('href');
-
-    //find active tabs and remove 'active'
-    let activedNav = $('.navTabs > li.active');
-    activedNav.removeClass('active');
-
-    //add 'active' into clicked navigation
-    $(this).parents('li').addClass('active');
-
-    //hide displaying tab content
-    $(activeTabsSelector).removeClass('active');
-    $(activeTabsSelector).addClass('hide');
-
-    //show target tab content
-    let targetTabsSelector = $(this).attr('href');
-    $(targetTabsSelector).removeClass('hide');
-    $(targetTabsSelector).addClass('active');
-    });
-});
-
-$(document).ready(function() {
-    $('.navTabsTech > li > a').click(function(event) {
-    event.preventDefault();
-
-    //get displaying tab content jQuery selector
-    let activeTabsSelector = $('.navTabsTech > li.active > a').attr('href');
-
-    //find actived navigation and remove 'active' css
-    let activedNav = $('.navTabsTech > li.active');
-    activedNav.removeClass('active');
-
-    //add 'active' css into clicked navigation
-    $(this).parents('li').addClass('active');
-
-    //hide displaying tab content
-    $(activeTabsSelector).removeClass('active');
-    $(activeTabsSelector).addClass('hide');
-
-    //show target tab content
-    let targetTabsSelector = $(this).attr('href');
-    $(targetTabsSelector).removeClass('hide');
-    $(targetTabsSelector).addClass('active');
-    });
-});
-
-let navbar = document.querySelector(".navbar-mobile")
-let ham = document.querySelector(".ham")
-
-ham.addEventListener("click", toggleHamburger)
-
-// toggles hamburger menu in and out when clicking on the hamburger
-function toggleHamburger(){
-  navbar.classList.toggle("showNav")
-  ham.classList.toggle("showClose")
-}
-
-let menuLinks = document.querySelectorAll(".menuLink")
-
-menuLinks.forEach( 
-  function(menuLink) { 
-    menuLink.addEventListener("click", toggleHamburger) 
-  }
-)
-
-
-//-----------display hide infos from a card project------------//
- 
-{# let i = 0;
-
-var el = document.querySelector('.projectCard');
-
-console.log(el.dataset.post)
-$( document ).ready(function() {
-    
-        $('.teste' + el.dataset.post).hover(
-            
-            function() {
-                $('#infoProject' + el.dataset.post).fadeIn();
-            }, 
-            function() {
-                $('#infoProject' + el.dataset.post).fadeOut();
-            }
-        );
-    
-}); #}
-//END SCRIPT JS//
-</script>
-
+{% include 'contact.html.twig' %}
 {% endblock %}

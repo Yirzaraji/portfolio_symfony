@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{post.title}}
+{% endblock %}
+
+{% block body %}
+{% include 'NavBarSimple.html.twig' %}
+
+<div class="container">
+
+    <h1>{{ post.title }}</h1><br>
+    <h2>{{ post.id }}</h2>
+
+</div>
+{% endblock %}

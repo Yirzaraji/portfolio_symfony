@@ -16,7 +16,7 @@ class CreateFormType extends AbstractType
     {
         $builder
         ->add('title', TextType::class, array('label' => false, 'attr' => array('class' => '', 'style' => '', 'placeholder' => 'Titre du projet')))
-        ->add('technos', TextareaType::class, array('label' => false, 'attr' => array('class' => '', 'style' => '', 'placeholder' => 'Technos utilisées')))
+        ->add('technos', TextareaType::class, array('label' => false, 'attr' => array('class' => '', 'style' => '', 'placeholder' => 'Technos utilisées', 'value' => 'coucou')))
         ->add('projectImage', TextType::class, array('label' => false, 'attr' => array('class' => '', 'style' => '', 'placeholder' => 'Image Link')))
         ->add('categorie', TextType::class, array('label' => false, 'attr' => array('class' => '', 'placeholder' => 'Categorie')))
         ->add('lien', TextType::class, array('label' => false, 'attr' => array('class' => '', 'placeholder' => 'Lien')))
