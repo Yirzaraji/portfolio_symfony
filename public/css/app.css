@@ -138,6 +138,16 @@ footer {
     padding-right: 0;
 }
 
+.bandeauContact{
+    position:absolute;
+    bottom:0;
+}
+
+.bandeauContact img{
+    width: 7%;
+    margin-bottom:2%;
+}
+
 .cv_icon i{
     color:rgb(255, 255, 255);
     font-size: 2.9rem;
