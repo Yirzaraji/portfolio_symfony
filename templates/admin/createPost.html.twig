@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+{# 
+{% form_theme createPostForm _self %} #}
+
+{% block body %}
+
+{% if app.user %}
+{% include 'NavBarSimple.html.twig' %}
+
+<div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10 light text-center mt-3 mb-5">
+                {{form_start(createPostForm)}}
+                    <h3 class="mb-4 titleColor"><b><i class="fas fa-edit"></i> CREER UN POST.</b></h3>
+                    <div class="row mb-1">
+                        {# {{form_widget(createPostForm)}} #}
+                        <div class="col">
+                            {{ form_row(createPostForm.title)}}
+                        </div>
+                        <div class="col-md-12">
+                            {{ form_row(createPostForm.technos)}}
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col">
+                            {{ form_row(createPostForm.projectDescription)}}
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col-6">
+                            {{ form_row(createPostForm.lien)}}
+                        </div>
+                        <div class="col-6">
+                            {{ form_row(createPostForm.git)}}
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col-6">
+                            {{ form_row(createPostForm.projectImage)}}
+                        </div>
+                        <div class="col-6">
+                            {{ form_row(createPostForm.categorie)}}
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col">
+                            <button type="button" id="add-image" class"btn btn-primary">Add image</button>
+                        </div>
+                    </div>
+                   {#  {{ dump(form_row(createPostForm.images))}} #}
+                {{form_end(createPostForm)}}
+            </div>
+        </div>
+    </div>
+{{dump(app.flashes)}}
+{% endif %}
+{% endblock %}
+{% block javascripts %}
+<script>
+    $('#add-image').click(function(){
+        const index = $('#create_form_images div.form-group').length;
+        console.log(index);
+        const tmpl = $('#create_form_images').data('prototype').replace(/__name__/g, index);
+
+        $('#create_form_images').append(tmpl);
+    });
+
+</script>
+{% endblock %}

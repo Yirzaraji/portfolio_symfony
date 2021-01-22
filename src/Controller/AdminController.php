@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Post;
+use App\Entity\Image;
 use App\Form\EditFormType;
+use App\Form\ImageFormType;
 use App\Form\CreateFormType;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,25 +32,48 @@ class AdminController extends AbstractController
             10
         );
 
-        $form = $this->createForm(CreateFormType::class);
+        return $this->render('admin/backoffice.html.twig', [
+            'posts' => $posts
+        ]);
+    }
+
+    /**
+     * Edit le post
+     * 
+     * @Route("/backoffice/edit-{id}", name="admin_edit")
+     * @return Response
+     */
+    public function edit(Request $request, $id)
+    {
+        $post = new Post();
+        $editPost = $this->getDoctrine()->getRepository(Post::class)->find($id);
+        $form = $this->createForm(CreateFormType::class, $editPost);
         $form->handleRequest($request);
 
 
         //si le form est soumis && si il est valid ->execute
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $dataForm = $form->getData();     
+            $dataForm = $form->getData(); 
+
+            foreach($post->getImages() as $image){
+                $image->setPost($post);
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($image);
+            }
+
+            /* dump($dataForm); 
+            dump($id); */
+        
             $manager = $this->getDoctrine()->getManager();
-            $manager->persist($dataForm);
+            $manager->persist($editPost);
             $manager->flush();
 
             return $this->redirectToRoute('admin');
         }
 
-
-        return $this->render('admin/backoffice.html.twig', [
-            'createPostForm' => $form->createView(),
-            'posts' => $posts
+        return $this->render('admin/edit.html.twig', [
+            'editPostForm' => $form->createView()
         ]);
     }
 
@@ -72,43 +97,44 @@ class AdminController extends AbstractController
 
     
 
+    
+
     /**
-     * Edit le post
-     * 
-     * @Route("/backoffice/edit-{id}", name="admin_edit")
-     * @return Response
+     * @Route("/backoffice/create", name="post_create")
      */
-    public function edit(Request $request, $id)
+    public function createPost(Request $request)
     {
+        $post = new Post();
+        $post->setTechnos('<ul><li>technos</li><li>technos</li></ul>');
+        //dump($post);
 
-        $form = $this->createForm(EditFormType::class);
+        $form = $this->createForm(CreateFormType::class, $post);
         $form->handleRequest($request);
-
+        //dump($form);
 
         //si le form est soumis && si il est valid ->execute
         if ($form->isSubmitted() && $form->isValid()) {
-
-            $dataForm = $form->getData(); 
-            dump($dataForm); 
             
-            dump($id);
-            $editPost = $this->getDoctrine()->getRepository(Post::class)->find($id);
-            $editPost->setTitle('New titre')
-                     ->setProjectImage('image lien')
-                     ->setLien('Lien demo')
-                     ->setCategorie('categorie')
-                     ->setGit('git lien')
-                     ->setProjectDescription('Description')
-            ;
+            //permet de persister la collection d'image 
+            //(peut aussi se faire en precisant la cascade persist dans les annotations orm
+            foreach($post->getImages() as $image){
+                $image->setPost($post);
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($image);
+            }
 
-
+            $dataForm = $form->getData();     
             $manager = $this->getDoctrine()->getManager();
-            $manager = $this->persist($editPost);
+            $manager->persist($dataForm);
             $manager->flush();
+
+            $this->addFlash('success', 'Article Created! power is power!');
+
+            return $this->redirectToRoute('admin');
         }
 
-        return $this->render('admin/edit.html.twig', [
-            'editPostForm' => $form->createView()
+        return $this->render('admin/createPost.html.twig', [
+            'createPostForm' => $form->createView()
         ]);
     }
 }

@@ -15,17 +15,8 @@ class EditFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class, array('label' => false, 'attr' => array('class' => '', 'style' => '', 'placeholder' => 'Titre du projet', 'required'=>false)))
+            ->add('title', TextareaType::class, array('label' => false, 'attr' => array('class' => '', 'style' => '', 'placeholder' => 'titre', 'value' => 'coucou', 'required'=>false)))
             ->add('technos', TextareaType::class, array('label' => false, 'attr' => array('class' => '', 'style' => '', 'placeholder' => 'Technos utilisées', 'value' => 'coucou', 'required'=>false)))
-            ->add('projectImage', TextType::class, array('label' => false, 'attr' => array('class' => '', 'style' => '', 'placeholder' => 'Image Link', 'required'=>false)))
-            ->add('categorie', TextType::class, array('label' => false, 'attr' => array('class' => '', 'placeholder' => 'Categorie', 'required'=>false)))
-            ->add('lien', TextType::class, array('label' => false, 'attr' => array('class' => '', 'placeholder' => 'Lien', 'required'=>false)))
-            ->add('git', TextType::class, array('label' => false, 'attr' => array('class' => 'e', 'placeholder' => 'Git Link', 'required'=>false)))
-            ->add('projectDescription', TextareaType::class, array('label' => false, 'attr' => array('class' => '', 'placeholder' => 'Description', 'required'=>false)))
-            ->add('premierParagraphe', TextareaType::class, ['required'=>false])
-            ->add('secondParagraphe', TextareaType::class, ['required'=>false])
-            ->add('premiereImage', TextType::class, ['required'=>false])
-            ->add('secondeImage', TextType::class, ['required'=>false])
             ->add('Save', SubmitType::class, array('attr' => array('class' => 'btn btn-danger', 'style' => 'color:white; font-weight:bold')))
         ;
     }

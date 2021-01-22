@@ -15,6 +15,7 @@ class PostController extends AbstractController
     public function post($id)
     {
         $post = $this->getDoctrine()->getRepository(Post::class)->findOneBy(array('id' => $id));
+        //dump($post);
 
         return $this->render('post/post.html.twig', [
             'post' => $post
