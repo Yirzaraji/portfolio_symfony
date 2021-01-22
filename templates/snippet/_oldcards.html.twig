@@ -1,0 +1,86 @@
+<div class="container-fluid pb-5 pt-5">
+    <div class="row">
+        <div class="col-md-12 text-center color titleColor mt-3 ml-3">
+            <img src="{{ asset('images/rosace-title.png') }}" alt="" class="mb-2">
+            <h4 class="titlecolor"><b>QUELQUES</b> PROJET...</h4>
+            <img src="{{ asset('images/trait.png') }}" alt="" style="width:14%" class="mb-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center mb-5">
+            <ul class="navTabs list_js">
+                <li class="active"><a href="#tab1">Dev</a></li>
+                <li><a href="#tab2">Design</a></li>
+                <li><a href="#tab3">Print</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="tab1" class="box devBox active">
+        <div class="row justify-content-center flex-wrap">
+            {% for devPost in devPosts %}
+                    <div class='newsCard news-Slide-up m-1'>
+                            <img src="{{ devPost.projectImage }}"/>
+                        <div class='newsCaption'>
+                            <div class='newsCaption-title'>project</div>
+                            <span class="projectTitle">{{ devPost.title }}</span>
+                            <div class="dottedLine mb-1"></div>
+                            <span class="techTxt">technologies</span>
+                            <p class='newsCaption-content'>{{ devPost.technos | raw}} </p>
+                            <div class="newsCaption-link">
+                                <p>
+                                    <a href="{{ path('post_show', {'id': devPost.id}) }}"><i class="fas fa-eye"></i></a>
+                                </p>    
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %} 
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="tab2" class="box designBox hide">
+        <div class="row justify-content-center flex-wrap"> 
+            {% for designPost in designPosts %}
+                <div class='newsCard news-Slide-up m-1'>
+                    <img src="{{ designPost.projectImage }}" />
+                    <div class='newsCaption'>
+                        <div class='newsCaption-title'>project</div>
+                        <span class="projectTitle">{{ designPost.title }}</span>
+                        <div class="dottedLine mb-1"></div>
+                        <span class="techTxt">technologies</span>
+                        <p class='newsCaption-content'>{{ designPost.technos }} </p>
+                        <div class="newsCaption-link">
+                            <p>
+                                <a href="{{ path('post_show', {'id': designPost.id}) }}"><i class="fas fa-eye"></i></a>
+                            </p>    
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}        
+        </div>
+    </div>
+    <div id="tab3" class="box printBox hide">
+        <div class="row justify-content-center flex-wrap">
+            {% for printPost in printPosts %}
+                <div class='newsCard news-Slide-up m-1'>
+                    <img src="{{ printPost.projectImage }}" />
+                    <div class='newsCaption'>
+                        <div class='newsCaption-title'>project</div>
+                        <span class="projectTitle">{{ printPost.title }}</span>
+                        <div class="dottedLine mb-1"></div>
+                        <span class="techTxt">technologies</span>
+                        <p class='newsCaption-content'>{{ printPost.technos }} </p>
+                        <div class="newsCaption-link">
+                            <p>
+                                <a href="{{ path('post_show', {'id': printPost.id}) }}"><i class="fas fa-eye"></i></a>
+                            </p>     
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}        
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-
+{% form_theme editPostForm 'post/_collection.html.twig' %}
 
 {% block body %}
 
@@ -10,22 +10,14 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-9 text-center mt-5 mb-5">
             {{form_start(editPostForm)}}
-
+                {{ form_widget(editPostForm) }}
             {{form_end(editPostForm)}}
         </div>
     </div>
 </div>
 {% endif %}
 {% endblock %}
-{% block javascripts %}
-<script>
-    $('#add-image').click(function(){
-        const index = $('#create_form_images div.form-group').length;
-        console.log(index);
-        const tmpl = $('#create_form_images').data('prototype').replace(/__name__/g, index);
 
-        $('#create_form_images').append(tmpl);
-    });
 
-</script>
-{% endblock %}
+
+

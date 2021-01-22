@@ -1,0 +1,100 @@
+<div class="container-fluid pt-5">
+    <div class="row">
+        <div class="col-md-12 text-center color titleColor mt-3 ml-3">
+            <img src="{{ asset('images/rosace-title.png') }}" alt="" class="mb-2">
+            <h4 class="titlecolor"><b>QUELQUES</b> PROJET...</h4>
+            <img src="{{ asset('images/trait.png') }}" alt="" style="width:14%" class="mb-2">
+        </div>
+    </div>
+</div>
+    
+<div class="row justify-content-center">
+    <div class="col-md-5 text-center">
+        <div class="button-groupCards filters-button-groupCards mb-5">
+            <button class="buttonCards is-checkedCards isotopButton" data-filterCards=".dev">Dev</button>
+            <button class="buttonCards isotopButton" data-filterCards=".design">Design</button>
+            <button class="buttonCards isotopButton" data-filterCards=".print">Print</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="gridCards col-md-12">
+            <div class="box devBox">
+                <div class="row justify-content-center flex-wrap">
+                    {% for devPost in devPosts %}
+                        <div class="element-itemCards dev iconSkills" data-category="dev">
+                            <div class='newsCard news-Slide-up m-1'>
+                                    <img src="{{ devPost.projectImage }}"/>
+                                <div class='newsCaption'>
+                                    <div class='newsCaption-title'>project</div>
+                                    <span class="projectTitle">{{ devPost.title }}</span>
+                                    <div class="dottedLine mb-1"></div>
+                                    <span class="techTxt">technologies</span>
+                                    <p class='newsCaption-content'>{{ devPost.technos | raw}} </p>
+                                    <div class="newsCaption-link">
+                                        <p>
+                                            <a href="{{ path('post_show', {'id': devPost.id}) }}"><i class="fas fa-eye"></i></a>
+                                        </p>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %} 
+                </div>
+            </div>
+            <div class="container">
+                <div class="box devBox">
+                    <div class="row justify-content-center flex-wrap">
+                        {% for designPost in designPosts %}
+                            <div class="element-itemCards design iconSkills" data-category="design">
+                                <div class='newsCard news-Slide-up m-1'>
+                                    <img src="{{ designPost.projectImage }}" />
+                                    <div class='newsCaption'>
+                                        <div class='newsCaption-title'>project</div>
+                                        <span class="projectTitle">{{ designPost.title }}</span>
+                                        <div class="dottedLine mb-1"></div>
+                                        <span class="techTxt">technologies</span>
+                                        <p class='newsCaption-content'>{{ designPost.technos }} </p>
+                                        <div class="newsCaption-link">
+                                            <p>
+                                                <a href="{{ path('post_show', {'id': designPost.id}) }}"><i class="fas fa-eye"></i></a>
+                                            </p>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="box devBox">
+                    <div class="row justify-content-center flex-wrap">
+                        {% for printPost in printPosts %}
+                            <div class="element-itemCards print iconSkills" data-category="print"> 
+                                <div class='newsCard news-Slide-up m-1'>
+                                    <img src="{{ printPost.projectImage }}" />
+                                    <div class='newsCaption'>
+                                        <div class='newsCaption-title'>project</div>
+                                        <span class="projectTitle">{{ printPost.title }}</span>
+                                        <div class="dottedLine mb-1"></div>
+                                        <span class="techTxt">technologies</span>
+                                        <p class='newsCaption-content'>{{ printPost.technos }} </p>
+                                        <div class="newsCaption-link">
+                                            <p>
+                                                <a href="{{ path('post_show', {'id': printPost.id}) }}">
+                                                <i class="fas fa-eye"></i></a>
+                                            </p>     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

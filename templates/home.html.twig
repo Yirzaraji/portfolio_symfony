@@ -64,94 +64,10 @@
         </div>
     </div>
 </div>
-
 <div class="container-fluid pb-5 pt-5">
-    <div class="row">
-        <div class="col-md-12 text-center color titleColor mt-3 ml-3">
-            <img src="{{ asset('images/rosace-title.png') }}" alt="" class="mb-2">
-            <h4 class="titlecolor"><b>QUELQUES</b> PROJET...</h4>
-            <img src="{{ asset('images/trait.png') }}" alt="" style="width:14%" class="mb-2">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 text-center mb-5">
-            <ul class="navTabs list_js">
-                <li class="active"><a href="#tab1">Dev</a></li>
-                <li><a href="#tab2">Design</a></li>
-                <li><a href="#tab3">Print</a></li>
-            </ul>
-        </div>
-    </div>
+    {# {% include 'snippet/_cards.html.twig'%} #}
+    {% include 'snippet/_oldcards.html.twig'%}
 </div>
-<div class="container">
-    <div id="tab1" class="box devBox active">
-        <div class="row justify-content-center flex-wrap">
-            {% for devPost in devPosts %}
-                    <div class='newsCard news-Slide-up m-1'>
-                            <img src="{{ devPost.projectImage }}"/>
-                        <div class='newsCaption'>
-                            <div class='newsCaption-title'>project</div>
-                            <span class="projectTitle">{{ devPost.title }}</span>
-                            <div class="dottedLine mb-1"></div>
-                            <span class="techTxt">technologies</span>
-                            <p class='newsCaption-content'>{{ devPost.technos | raw}} </p>
-                            <div class="newsCaption-link">
-                                <p>
-                                    <a href="{{ path('post_show', {'id': devPost.id}) }}"><i class="fas fa-eye"></i></a>
-                                </p>    
-                            </div>
-                        </div>
-                    </div>
-            {% endfor %} 
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div id="tab2" class="box designBox hide">
-        <div class="row justify-content-center flex-wrap"> 
-            {% for designPost in designPosts %}
-                <div class='newsCard news-Slide-up m-1'>
-                    <img src="{{ designPost.projectImage }}" />
-                    <div class='newsCaption'>
-                        <div class='newsCaption-title'>project</div>
-                        <span class="projectTitle">{{ designPost.title }}</span>
-                        <div class="dottedLine mb-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content'>{{ designPost.technos }} </p>
-                        <div class="newsCaption-link">
-                            <p>
-                                <a href="{{ path('post_show', {'id': designPost.id}) }}"><i class="fas fa-eye"></i></a>
-                            </p>    
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}        
-        </div>
-    </div>
-    <div id="tab3" class="box printBox hide">
-        <div class="row justify-content-center flex-wrap">
-            {% for printPost in printPosts %}
-                <div class='newsCard news-Slide-up m-1'>
-                    <img src="{{ printPost.projectImage }}" />
-                    <div class='newsCaption'>
-                        <div class='newsCaption-title'>project</div>
-                        <span class="projectTitle">{{ printPost.title }}</span>
-                        <div class="dottedLine mb-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content'>{{ printPost.technos }} </p>
-                        <div class="newsCaption-link">
-                            <p>
-                                <a href="{{ path('post_show', {'id': printPost.id}) }}"><i class="fas fa-eye"></i></a>
-                            </p>     
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}        
-        </div>
-    </div>
-</div>
-
 <div class="container-fluid pb-5 pt-5 mt-5">
     <div class="row justify-content-center blocExp">
         <div class="col-md-3 color mt-5 mb-5">
@@ -231,67 +147,7 @@
 </div>
 
 <div class="container-fluid pb-5">
-    <div class="row">
-        <div class="col-md-12 text-center color titleColor mt-3 ml-3">
-            <img src="{{ asset('images/rosace-title.png') }}" alt="" class="mb-2">
-            <h4 class="titlecolor"><b>SOME</b> SKILLS.</h4>
-            <img src="{{ asset('images/trait.png') }}" alt="" style="width:14%" class="mb-2">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 text-center mb-5">
-            <ul class="navTabsTech list_js">
-                <li class="active"><a href="#tab4">Front</a></li>
-                <li><a href="#tab5">Env</a></li>
-                <li><a href="#tab6">Back</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="tab4" class="boxTech active">
-        <div class="row text-center mb-2">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 flex-wrap iconSkills">
-               <i class="fab fa-vuejs"><p>Vue.Js</p></i>
-               <i class="fab fa-js-square"><p>Javascript</p></i>
-               <i class="fab fa-html5"><p>Html 5</p></i>
-               <i class="fab fa-css3-alt"><p>Css 3</p></i>
-               <i class="fab fa-bootstrap"><p>Bootsrap</p></i>
-               <i class="fab fa-symfony"><p>Symfony 5</p></i>
-               <i class="fab fa-react"><p>React.js</p></i>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
-    <div id="tab5" class="boxTech hide iconSkills">
-        <div class="row text-center mb-2">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 flex-wrap">
-                <i class="fab fa-github"><p>Git</p></i>
-                <i class="fab fa-unity"><p>Unity C#</p></i>
-                <i class="fab fa-trello"><p>Trello</p></i>
-                <i class="fab fa-ubuntu"><p>Ubuntu</p></i>
-                <i class="fab fa-linux"><p>Linux</p></i>
-                <i class="fab fa-windows"><p>Windows</p></i>
-                <i class="fab fa-codepen"><p>Codepen</p></i>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
-    <div id="tab6" class="boxTech hide iconSkills">
-       <div class="row text-center mb-2">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 flex-wrap">
-                <i class="fab fa-symfony"><p>Symfony 5</p></i>
-                <i class="fab fa-php"><p>Php</p></i>
-                <i class="fab fa-node"><p>Node.js</p></i>
-                <i class="fas fa-database"><p>Sql Doctrine</p></i>
-                <i class="fas fa-project-diagram"><p>Uml</p></i>
-                <i class="fas fa-tools"><p>Ovh</p></i>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
+    {% include 'snippet/_skills.html.twig' %}
 </div>
 
 {% include 'contact.html.twig' %}
