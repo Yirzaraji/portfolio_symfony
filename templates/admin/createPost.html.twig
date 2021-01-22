@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+{% form_theme createPostForm 'post/_collection.html.twig' %}
+{# 
+{% form_theme createPostForm _self %} #}
+
+{% block body %}
+
+{% if app.user %}
+{% include 'NavBarSimple.html.twig' %}
+
+<div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8 light text-center mt-3 mb-5">
+                {{form_start(createPostForm)}}
+                    <h3 class="mb-4 titleColor"><b><i class="fas fa-edit"></i> CREER UN POST.</b></h3>
+                            {{ form_widget(createPostForm) }}            
+                {{form_end(createPostForm)}}
+            </div>
+        </div>
+    </div>
+{{dump(app.flashes)}}
+{% endif %}
+{% endblock %}

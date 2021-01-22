@@ -11,12 +11,12 @@
 <div class="container-fluid blockiDO pb-5 pt-5">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center color titleColor mt-3 mb-5">
-            <img src="{{ asset('images/rosace.png') }}" alt="" style="width:25%" class="mb-2">
+            <img src="{{ asset('images/rosace-title.png') }}" alt="" class="mb-2">
             <h4><b>CE QUE JE</b> SAIS FAIRE...</h4>
         </div>
     </div>
     <div class="row text-center justify-content-center">
-        <div class="col-md-3 tripleCard">
+        <div class="col-sm-4 col-md-3 tripleCard">
             <img src="{{ asset('images/logo_print.png') }}" alt="" class="mb-4"></br>
             <span class="triplecard_txt">PRINT</span></br>
             <p class="mt-1">
@@ -24,7 +24,7 @@
                 Je peux mener a bien votre commmunication imprimée
             </p>
         </div>
-        <div class="col-md-3 tripleCard">
+        <div class="col-sm-4 col-md-3 tripleCard">
             <img src="{{ asset('images/logo_dev.png') }}" alt="" class="mb-4"></br>
             <span class="triplecard_txt">DEV</span></br>
             <p class="mt-1">
@@ -32,7 +32,7 @@
                 J'ai de large competence dans le domaine du web
             </p>
         </div>
-        <div class="col-md-3 tripleCard">
+        <div class="col-sm-4 col-md-3 tripleCard">
         <img src="{{ asset('images/logo_design.png') }}" alt="" class="mb-4"></br>
             <span class="triplecard_txt">DESIGN</span></br>
             <p class="mt-1">
@@ -64,91 +64,10 @@
         </div>
     </div>
 </div>
-
 <div class="container-fluid pb-5 pt-5">
-    <div class="row">
-        <div class="col-md-12 text-center color titleColor mt-3 ml-3">
-            <img src="{{ asset('images/rosace.png') }}" alt="" style="width:8.5%" class="mb-2">
-            <h4 class="titlecolor"><b>QUELQUES</b> PROJET...</h4>
-            <img src="{{ asset('images/trait.png') }}" alt="" style="width:14%" class="mb-2">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 text-center mb-5">
-            <ul class="navTabs list_js">
-                <li class="active"><a href="#tab1">Dev</a></li>
-                <li><a href="#tab2">Design</a></li>
-                <li><a href="#tab3">Print</a></li>
-            </ul>
-        </div>
-    </div>
+    {# {% include 'snippet/_cards.html.twig'%} #}
+    {% include 'snippet/_oldcards.html.twig'%}
 </div>
-<div class="container">
-    <div id="tab1" class="box devBox active">
-        <div class="row justify-content-center flex-wrap">
-            {% for devPost in devPosts %}
-                <div class='newsCard news-Slide-up m-1'>
-                    <img src="{{ devPost.projectImage }}"/>
-                    <div class='newsCaption'>
-                        <div class='newsCaption-title'>project</div>
-                        <span class="projectTitle">{{ devPost.title }}</span>
-                        <div class="dottedLine mb-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content'>{{ devPost.technos }} </p>
-                        <div class="newsCaption-link">
-                            <p><a href='{{ devPost.lien }} ' target="_blank">DEMO</a>
-                            <a href='{{ devPost.git }}' target="_blank">GIT</a></p>    
-                        </div>
-                    </div>
-                </div>
-            {% endfor %} 
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div id="tab2" class="box designBox hide">
-        <div class="row justify-content-center flex-wrap"> 
-            {% for designPost in designPosts %}
-                <div class='newsCard news-Slide-up m-1'>
-                    <img src="{{ designPost.projectImage }}" />
-                    <div class='newsCaption'>
-                        <div class='newsCaption-title'>project</div>
-                        <span class="projectTitle">{{ designPost.title }}</span>
-                        <div class="dottedLine mb-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content'>{{ designPost.technos }} </p>
-                        <div class="newsCaption-link">
-                            <p><a href='{{ designPost.lien }}'>DEMO</a>
-                            <a href='{{ designPost.lien }}'>GIT</a></p>    
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}        
-        </div>
-    </div>
-    <div id="tab3" class="box printBox hide">
-        <div class="row justify-content-center flex-wrap">
-            {% for printPost in printPosts %}
-                <div class='newsCard news-Slide-up m-1'>
-                    <img src="{{ printPost.projectImage }}" />
-                    <div class='newsCaption'>
-                        <div class='newsCaption-title'>project</div>
-                        <span class="projectTitle">{{ printPost.title }}</span>
-                        <div class="dottedLine mb-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content'>{{ printPost.technos }} </p>
-                        <div class="newsCaption-link">
-                            <p><a href='{{ printPost.lien }}'>DEMO</a>
-                            <a href='{{ printPost.lien }}'>GIT</a></p>    
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}        
-        </div>
-    </div>
-</div>
-
 <div class="container-fluid pb-5 pt-5 mt-5">
     <div class="row justify-content-center blocExp">
         <div class="col-md-3 color mt-5 mb-5">
@@ -228,172 +147,8 @@
 </div>
 
 <div class="container-fluid pb-5">
-    <div class="row">
-        <div class="col-md-12 text-center color titleColor mt-3 ml-3">
-            <img src="{{ asset('images/rosace.png') }}" alt="" style="width:8.5%" class="mb-2">
-            <h4 class="titlecolor"><b>SOME</b> SKILLS.</h4>
-            <img src="{{ asset('images/trait.png') }}" alt="" style="width:14%" class="mb-2">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 text-center mb-5">
-            <ul class="navTabsTech list_js">
-                <li class="active"><a href="#tab4">Front</a></li>
-                <li><a href="#tab5">Env</a></li>
-                <li><a href="#tab6">Back</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="tab4" class="boxTech active">
-        <div class="row text-center mb-2">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 flex-wrap iconSkills">
-               <i class="fab fa-vuejs"><p>Vue.Js</p></i>
-               <i class="fab fa-js-square"><p>Javascript</p></i>
-               <i class="fab fa-html5"><p>Html 5</p></i>
-               <i class="fab fa-css3-alt"><p>Css 3</p></i>
-               <i class="fab fa-bootstrap"><p>Bootsrap</p></i>
-               <i class="fab fa-symfony"><p>Symfony 5</p></i>
-               <i class="fab fa-react"><p>React.js</p></i>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
-    <div id="tab5" class="boxTech hide iconSkills">
-        <div class="row text-center mb-2">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 flex-wrap">
-                <i class="fab fa-github"><p>Git</p></i>
-                <i class="fab fa-unity"><p>Unity C#</p></i>
-                <i class="fab fa-trello"><p>Trello</p></i>
-                <i class="fab fa-ubuntu"><p>Ubuntu</p></i>
-                <i class="fab fa-linux"><p>Linux</p></i>
-                <i class="fab fa-windows"><p>Windows</p></i>
-                <i class="fab fa-codepen"><p>Codepen</p></i>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
-    <div id="tab6" class="boxTech hide iconSkills">
-       <div class="row text-center mb-2">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 flex-wrap">
-                <i class="fab fa-symfony"><p>Symfony 5</p></i>
-                <i class="fab fa-php"><p>Php</p></i>
-                <i class="fab fa-node"><p>Node.js</p></i>
-                <i class="fas fa-database"><p>Sql Doctrine</p></i>
-                <i class="fas fa-project-diagram"><p>Uml</p></i>
-                <i class="fas fa-tools"><p>Ovh</p></i>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
+    {% include 'snippet/_skills.html.twig' %}
 </div>
- {% include 'contact.html.twig' %}
 
-
-
-
-{% endblock %}
-
-{% block javascripts %}
-
-<script>
-
-//--------Display hide cards----------//
-
-$(document).ready(function() {
-    $('.navTabs > li > a').click(function(event) {
-    event.preventDefault();
-
-    //get displaying tab content jQuery selector
-    let activeTabsSelector = $('.navTabs > li.active > a').attr('href');
-
-    //find active tabs and remove 'active'
-    let activedNav = $('.navTabs > li.active');
-    activedNav.removeClass('active');
-
-    //add 'active' into clicked navigation
-    $(this).parents('li').addClass('active');
-
-    //hide displaying tab content
-    $(activeTabsSelector).removeClass('active');
-    $(activeTabsSelector).addClass('hide');
-
-    //show target tab content
-    let targetTabsSelector = $(this).attr('href');
-    $(targetTabsSelector).removeClass('hide');
-    $(targetTabsSelector).addClass('active');
-    });
-});
-
-$(document).ready(function() {
-    $('.navTabsTech > li > a').click(function(event) {
-    event.preventDefault();
-
-    //get displaying tab content jQuery selector
-    let activeTabsSelector = $('.navTabsTech > li.active > a').attr('href');
-
-    //find actived navigation and remove 'active' css
-    let activedNav = $('.navTabsTech > li.active');
-    activedNav.removeClass('active');
-
-    //add 'active' css into clicked navigation
-    $(this).parents('li').addClass('active');
-
-    //hide displaying tab content
-    $(activeTabsSelector).removeClass('active');
-    $(activeTabsSelector).addClass('hide');
-
-    //show target tab content
-    let targetTabsSelector = $(this).attr('href');
-    $(targetTabsSelector).removeClass('hide');
-    $(targetTabsSelector).addClass('active');
-    });
-});
-
-let navbar = document.querySelector(".navbar-mobile")
-let ham = document.querySelector(".ham")
-
-ham.addEventListener("click", toggleHamburger)
-
-// toggles hamburger menu in and out when clicking on the hamburger
-function toggleHamburger(){
-  navbar.classList.toggle("showNav")
-  ham.classList.toggle("showClose")
-}
-
-let menuLinks = document.querySelectorAll(".menuLink")
-
-menuLinks.forEach( 
-  function(menuLink) { 
-    menuLink.addEventListener("click", toggleHamburger) 
-  }
-)
-
-
-//-----------display hide infos from a card project------------//
- 
-{# let i = 0;
-
-var el = document.querySelector('.projectCard');
-
-console.log(el.dataset.post)
-$( document ).ready(function() {
-    
-        $('.teste' + el.dataset.post).hover(
-            
-            function() {
-                $('#infoProject' + el.dataset.post).fadeIn();
-            }, 
-            function() {
-                $('#infoProject' + el.dataset.post).fadeOut();
-            }
-        );
-    
-}); #}
-//END SCRIPT JS//
-</script>
-
+{% include 'contact.html.twig' %}
 {% endblock %}

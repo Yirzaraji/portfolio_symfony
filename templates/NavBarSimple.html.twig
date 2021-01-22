@@ -1,16 +1,28 @@
 <div class="container-fluid simpleNavBar">
     <div class="row justify-content-between">
-        <div class="md-2 NavDesktopSimple align-items-center ml-5"> 
-            <div class="dzde">  
-            <a href="{{ path('homepage') }}"><img src="{{ asset('images/logoround.png') }}" 
-            alt="banner" style="width:10%"></a>
-            </div> 
+        <div class="md-5 NavDesktopSimple align-items-center ml-5">  
+            <a href="{{ path('homepage') }}"><img src="{{ asset('images/logoround-simple.png') }}" 
+            alt="banner"></a> 
         </div>
-        <div class="md-10 NavDesktopSimple align-items-center mr-5">    
+        <div class="md-5 NavDesktopSimple align-items-center mr-5">    
             <div class="navButton"><a href="{{ path('homepage') }}">HOME</a></div>
             <div class="navButton"><a href="{{ path('cv') }}">CV</a></div>
             <div class="navButton"><a href="#ankor_aboutMe">ABOUT</a></div>
             <div class="navButton"><a href="#ankor_contact">CONTACT</a></div>
         </div>
     </div>
+</div>
+
+<div class="container" id="mobile-burger">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <button class="ham"></button>
+      <nav class="navbar-mobile pt-5">
+          <li><a class="menuLink mb-5" href="{{ path('homepage') }}"><i class="fas fa-home"></i> Home</a></li>
+          <li><a class="menuLink mb-5" href="{{ path('cv') }}"><i class="fas fa-file-pdf"></i> Cv</a></li>
+          <li><a class="menuLink mb-5" href="#ankor_aboutMe"><i class="fas fa-address-card"></i> About</a></li>
+          <li><a class="menuLink mb-5" href="#ankor_contact"><i class="fas fa-envelope-open-text"></i> Contact</a></li>
+      </nav>
+    </div>
+  </div>
 </div>

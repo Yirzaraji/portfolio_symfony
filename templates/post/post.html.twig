@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{post.title}}
+{% endblock %}
+
+{% block body %}
+{% include 'NavBarSimple.html.twig' %}
+
+
+<div class="container-fluid mx-0 mb-5">
+    <div class="row mt-5 mb-5 justify-content-center">
+        <div class="col-sm-10 col-md-7 col-lg-3 p-0 text-right">
+            <img src="{{post.projectImage}}" class="img-fluid" style="width:100%; height: 100%;" alt="Responsive image">
+        </div>
+        <div class="col-sm-10 col-md-5 col-lg-6 bg-white">
+            <div class="row justify-content-center">
+                <div class="col-md-12 d-flex justify-content-between bg-info">
+                    <div class="project-title ml-5">
+                        <b class="project">PROJECT:</b> <br><b class="projtitle text-uppercase">{{ post.title }}</b>
+                    </div>
+                    <div class="img-icon-post d-flex align-items-center">
+                        {# <i class="fab fa-github-square"></i> #}
+                    </div>   
+                </div>
+                <div class="col-md-9 line_leftBlack mt-4 mb-4 text-justify">
+                    {{ post.projectDescription }}
+                    {% if post.git is not null %}
+                        <br><br><a class="font-weight-bold" href="{{post.lien}}" target="_blank">DEMO LIVE <i class="fas fa-arrow-circle-right"></i></a>
+                        <br><a class="font-weight-bold" href="{{post.git}}" target="_blank">REPO GIT <i class="fas fa-arrow-circle-right"></i></a>
+                    {% endif %}
+                </div>              
+            </div>
+        </div>
+    </div>
+    {# <div class="row mt-5">
+        <div class="col-md-6 bg-white">
+            <div class="row justify-content-end">
+                <div class="col-md-8 pt-3">
+                    <div class="project-title">
+                        <b class="project-black titleColor">PART ONE</b><br>
+                        <b class="projtitle-black text-uppercase">{{ post.title }}</b><br>
+                    </div>
+                    <p class="text-justify pr-5">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Lorem 
+                    ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, quis 
+                    consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis
+                    tellus. Sed finibus aliquam neque sit amet sodales. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Nulla maximus pellentes que velit, quis consequat nulla effi citur at. 
+                    Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam 
+                    neque sit amet sodales.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 bg-white p-0">
+            <img src="https://picsum.photos/680/500" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-md-4 text-right bg-white p-0">
+            <img src="https://picsum.photos/680/500" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-md-6 pt-3 bg-white">
+            <div class="row">
+                <div class="col-md-8 justify-txt pl-5">
+                    <div class="project-title">
+                        <b class="project-black titleColor">PART TWO</b><br>
+                        <b class="projtitle-black text-uppercase">{{ post.title }}</b><br>
+                    </div>
+                    <p class="text-justify">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Lorem 
+                    ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, quis 
+                    consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis
+                    tellus. Sed finibus aliquam neque sit amet sodales. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Nulla maximus pellentes que velit, quis consequat nulla effi citur at. 
+                    Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam 
+                    neque sit amet sodales.</p>
+                </div>
+            </div>
+        </div>  
+    </div> #}
+</div>
+<div class="container-fluidp-5">
+    <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-11 col-lg-9">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for image in post.images %}
+                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index0 }}" 
+                        {% if loop.first %}class="active"{% endif %}></li>
+                    {% endfor %}
+                </ol>
+                <div class="carousel-inner">
+                    {% for image in post.images %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <img class="d-block w-100" src="{{ image.url }}" alt="First slide">
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
