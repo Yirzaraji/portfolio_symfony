@@ -7,56 +7,60 @@
 {% block body %}
 
 {% if app.user %}
-{% include 'NavBarSimple.html.twig' %}
+{% include 'snippet/_NavBarAdmin.html.twig' %}
 
 <div class="container-fluid">
-        <div class="row justify-content-center">
-        
-            <div class="col-md-12 text-center mt-5 mb-5">
-                <h1 class="titleColor mb-5"> <i class="fas fa-user-shield"></i><br>
-                Bienvenue <b>{{ app.user.login }}</b></h1>
-                <p>
-                <table class="table table-striped">
-                    <a class="titleColor" href="{{ path('post_create') }}" style="position:absolute; left:22px; top: 102px; font-size:1.4rem">
-                    <i class="far fa-edit"></i><b>Creer un post</b></a>
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Technos</th>
-                            <th scope="col">Project_Image</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Categorie</th>
-                            <th scope="col">Demo Lien</th>
-                            <th scope="col">Github Lien</th>
-                            <th class="col-1" scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for post in posts %}
-                        <tr>
-                            <th scope="row">{{post.id}}</th>
-                            <td>{{post.title}}</td>
-                            <td>{{post.technos}}</td>
-                            <td>{{post.projectImage}}</td>
-                            <td>Vide</td>
-                            <td>{{post.categorie}}</td>
-                            <td>{{post.lien}}</td>
-                            <td>{{post.git}}</td>
-                            <td style="font-size:1.4rem;">
-                                <a class="mr-2" href="{{ path('post_show', {'id': post.id}) }}"><i class="far fa-eye"></i></a>
-                                <a class="mr-2" href="{{ path('admin_edit', {'id': post.id}) }}"><i class="far fa-edit"></i></a>
-                                <a class="mr-2" href="{{ path('admin_delete', {'id': post.id}) }}"><i class="far fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-                {{knp_pagination_render(posts)}}
-                </p>
-            </div>
+    <div class="row justify-content-center">
+        <div class="col-md-2 adminUserTitle">
+            <h3 class="mb-3 mt-4 text-white border-bottom border-white pb-2">
+            Bienvenue <b>{{ app.user.login }}</b></h3>
+            <ul>
+                <li><i class="fas fa-clone"></i> Liste Posts</li>
+                <li><i class="fas fa-users"></i> Liste Users</li>
+                <li><i class="fas fa-question-circle"></i> Aides</li>
+            </ul>
+        </div>
+        <div class="col-md-10 text-center mb-5 mt-5">
+            <table class="table table-striped tableStyle">
+                <a class="titleColor" href="{{ path('post_create') }}" style="position:absolute; left:22px; top:-36px; font-size:1.4rem">
+                <i class="far fa-edit"></i><b>Creer un post</b></a>
+                <thead class="table-white">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Technos</th>
+                        <th scope="col">Project_Image</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Categorie</th>
+                        <th scope="col">Demo Lien</th>
+                        <th scope="col">Github Lien</th>
+                        <th class="col-1" scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in posts %}
+                    <tr>
+                        <th scope="row">{{post.id}}</th>
+                        <td>{{post.title}}</td>
+                        <td>{{post.technos}}</td>
+                        <td>{{post.projectImage}}</td>
+                        <td>Vide</td>
+                        <td>{{post.categorie}}</td>
+                        <td>{{post.lien}}</td>
+                        <td>{{post.git}}</td>
+                        <td style="font-size:1.4rem;">
+                            <a class="mr-2" href="{{ path('post_show', {'id': post.id}) }}"><i class="far fa-eye"></i></a>
+                            <a class="mr-2" href="{{ path('admin_edit', {'id': post.id}) }}"><i class="far fa-edit"></i></a>
+                            <a class="mr-2" href="{{ path('admin_delete', {'id': post.id}) }}"><i class="far fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {{knp_pagination_render(posts)}}
         </div>
     </div>
+</div>
     
 
 

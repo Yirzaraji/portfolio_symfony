@@ -411,13 +411,13 @@ h1{
 }
 
 .iconSkills i{
-    margin-right: 5%;
+    font-size: 2.4rem;
    
 }
 
 .iconSkills p{
     font-size: 1rem;
-    color: #ffffff;
+    color: #5c4ea4;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 900;
     margin-top: 3%;
@@ -611,12 +611,55 @@ h1{
     display:none;
 }
 
+.adminTitle{
+    color:white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.adminUserTitle{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;  
+    background-color: #161616;
+    height: 100vh;
+}
+
+.adminUserTitle ul{
+    list-style: none;
+    padding-left: 0;
+    line-height: 45px;
+    font-size: 1.1rem;
+}
+
+.adminUserTitle ul li{
+    padding:5px;
+    border-radius: 10px;
+}
+
+.adminUserTitle ul li:hover{
+    background-color: #4c19da;
+    }
+.tableStyle{
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.44);
+    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.44);
+}
+
+
+
+
+
 /* ####### Mobile responsive ######### */
 
 @media screen and (max-width: 1920px) {
 
     .gridCards{
         left:6%;
+    }
+
+    .grid{
+        left: 16%;
     }
 
   
