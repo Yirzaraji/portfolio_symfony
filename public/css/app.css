@@ -566,7 +566,7 @@ h1{
 }
 
 .project{
-    color:white;
+    color:#f00e4e;
     font-size:1.7rem;
 }
 
@@ -601,10 +601,37 @@ h1{
     font-size: 1.4rem;
 }
 
+.PostDescription{
+    padding-top: 1.2%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.postTitle{
+    background-color: #451dac;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.text-justify a{
+    text-decoration: none;
+    color:white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:4px;
+    padding-bottom:4px;
+    background-color:  #451dac;
+    border-radius: 20px;
+}
+
+.text-justify a:hover{
+    background-color:  #9901ff;
+}
+
 /*############ Caroussel ############*/
 div.carousel-caption{
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
+}rgb(172, 29, 65)
 
 div.carousel-caption p{
     font-size: 1.1rem;

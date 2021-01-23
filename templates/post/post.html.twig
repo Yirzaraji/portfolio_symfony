@@ -13,9 +13,9 @@
         <div class="col-sm-10 col-md-7 col-lg-3 p-0 text-right">
             <img src="{{post.projectImage}}" class="img-fluid" style="width:100%; height: 100%;" alt="Responsive image">
         </div>
-        <div class="col-sm-10 col-md-5 col-lg-6 bg-white">
+        <div class="col-sm-10 col-md-5 col-lg-6 bg-white PostDescription">
             <div class="row justify-content-center">
-                <div class="col-md-12 d-flex justify-content-between bg-info">
+                <div class="col-md-12 d-flex justify-content-between postTitle">
                     <div class="project-title ml-5">
                         <b class="project">PROJECT:</b> <br><b class="projtitle text-uppercase">{{ post.title }}</b>
                     </div>
@@ -26,57 +26,13 @@
                 <div class="col-md-9 line_leftBlack mt-4 mb-4 text-justify">
                     {{ post.projectDescription }}
                     {% if post.git is not null %}
-                        <br><br><a class="font-weight-bold" href="{{post.lien}}" target="_blank">DEMO LIVE <i class="fas fa-arrow-circle-right"></i></a>
-                        <br><a class="font-weight-bold" href="{{post.git}}" target="_blank">REPO GIT <i class="fas fa-arrow-circle-right"></i></a>
+                        <br><br><a class="font-weight-bold" href="{{post.lien}}" target="_blank"><i class="fas fa-laptop-code"></i> DEMO LIVE</a>
+                        <a class="font-weight-bold" href="{{post.git}}" target="_blank"><i class="fab fa-github-alt"></i> REPO GIT</a>
                     {% endif %}
                 </div>              
             </div>
         </div>
     </div>
-    {# <div class="row mt-5">
-        <div class="col-md-6 bg-white">
-            <div class="row justify-content-end">
-                <div class="col-md-8 pt-3">
-                    <div class="project-title">
-                        <b class="project-black titleColor">PART ONE</b><br>
-                        <b class="projtitle-black text-uppercase">{{ post.title }}</b><br>
-                    </div>
-                    <p class="text-justify pr-5">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Lorem 
-                    ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, quis 
-                    consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis
-                    tellus. Sed finibus aliquam neque sit amet sodales. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Nulla maximus pellentes que velit, quis consequat nulla effi citur at. 
-                    Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam 
-                    neque sit amet sodales.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 bg-white p-0">
-            <img src="https://picsum.photos/680/500" class="img-fluid" alt="Responsive image">
-        </div>
-    </div>
-    <div class="row justify-content-end">
-        <div class="col-md-4 text-right bg-white p-0">
-            <img src="https://picsum.photos/680/500" class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="col-md-6 pt-3 bg-white">
-            <div class="row">
-                <div class="col-md-8 justify-txt pl-5">
-                    <div class="project-title">
-                        <b class="project-black titleColor">PART TWO</b><br>
-                        <b class="projtitle-black text-uppercase">{{ post.title }}</b><br>
-                    </div>
-                    <p class="text-justify">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Lorem 
-                    ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, quis 
-                    consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis
-                    tellus. Sed finibus aliquam neque sit amet sodales. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Nulla maximus pellentes que velit, quis consequat nulla effi citur at. 
-                    Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam 
-                    neque sit amet sodales.</p>
-                </div>
-            </div>
-        </div>  
-    </div> #}
 </div>
 <div class="container-fluidp-5">
     <div class="row justify-content-center">
