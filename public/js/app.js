@@ -25,31 +25,7 @@ $(document).ready(function() {
     });
 });
 
-/* $(document).ready(function() {
-    $('.navTabsTech > li > a').click(function(event) {
-    event.preventDefault();
 
-    //get displaying tab content jQuery selector
-    let activeTabsSelector = $('.navTabsTech > li.active > a').attr('href');
-
-    //find actived navigation and remove 'active' css
-    let activedNav = $('.navTabsTech > li.active');
-    activedNav.removeClass('active');
-
-    //add 'active' css into clicked navigation
-    $(this).parents('li').addClass('active');
-
-    //hide displaying tab content
-    $(activeTabsSelector).removeClass('active');
-    $(activeTabsSelector).addClass('hide');
-
-    //show target tab content
-    let targetTabsSelector = $(this).attr('href');
-    $(targetTabsSelector).removeClass('hide');
-    $(targetTabsSelector).addClass('active');
-    });
-});
- */
 let navbar = document.querySelector(".navbar-mobile")
 let ham = document.querySelector(".ham")
 
@@ -104,7 +80,16 @@ function updateCounter() {
 updateCounter();
 handleDeleteButtons();
 
-// ######## Block skill transiton onclick isotope.js librairy ##########
+
+//-------------------------------------------------------------------------//
+
+
+// ######## Block skill transition onclick isotope.js librairy ##########
+
+
+//------------------------------------------------------------------------//
+
+
  // init Isotope
  var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
@@ -129,7 +114,8 @@ $('.button-group').each( function( i, buttonGroup ) {
   });
 });
 
- // init Isotope
+
+ // init Isotope FOR CARDS BLOCK
  var $gridCards = $('.gridCards').isotope({
   itemSelector: '.element-itemCards',
   layoutMode: 'fitRows'
@@ -151,3 +137,30 @@ $('.button-groupCards').each( function( i, buttonGroup ) {
     $( this ).addClass('is-checkedCards');
   });
 });
+
+
+/* $(document).ready(function() {
+    $('.navTabsTech > li > a').click(function(event) {
+    event.preventDefault();
+
+    //get displaying tab content jQuery selector
+    let activeTabsSelector = $('.navTabsTech > li.active > a').attr('href');
+
+    //find actived navigation and remove 'active' css
+    let activedNav = $('.navTabsTech > li.active');
+    activedNav.removeClass('active');
+
+    //add 'active' css into clicked navigation
+    $(this).parents('li').addClass('active');
+
+    //hide displaying tab content
+    $(activeTabsSelector).removeClass('active');
+    $(activeTabsSelector).addClass('hide');
+
+    //show target tab content
+    let targetTabsSelector = $(this).attr('href');
+    $(targetTabsSelector).removeClass('hide');
+    $(targetTabsSelector).addClass('active');
+    });
+});
+ */
