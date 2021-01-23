@@ -603,14 +603,14 @@ h1{
 
 .PostDescription{
     padding-top: 1.2%;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .postTitle{
     background-color: #451dac;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .text-justify a{
@@ -628,10 +628,13 @@ h1{
     background-color:  #9901ff;
 }
 
+.imgPost{
+    border-radius: 20px;
+}
 /*############ Caroussel ############*/
 div.carousel-caption{
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}rgb(172, 29, 65)
+}
 
 div.carousel-caption p{
     font-size: 1.1rem;
