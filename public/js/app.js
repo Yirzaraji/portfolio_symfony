@@ -108,6 +108,7 @@ handleDeleteButtons();
  // init Isotope
  var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
+  filter:'.back',
   layoutMode: 'fitRows'
 });
 // filter functions
