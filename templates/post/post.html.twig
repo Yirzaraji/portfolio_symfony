@@ -24,7 +24,7 @@
                     </div>   
                 </div>
                 <div class="col-md-9 line_leftBlack mt-4 mb-4 text-justify">
-                    {{ post.projectDescription }}
+                    {{ post.projectDescription | raw }}
                     {% if post.git is not null %}
                         <br><br><a class="font-weight-bold" href="{{post.lien}}" target="_blank"><i class="fas fa-laptop-code"></i> DEMO LIVE</a>
                         <a class="font-weight-bold" href="{{post.git}}" target="_blank"><i class="fab fa-github-alt"></i> REPO GIT</a>
