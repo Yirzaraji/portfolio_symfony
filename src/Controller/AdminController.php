@@ -56,11 +56,11 @@ class AdminController extends AbstractController
 
             $dataForm = $form->getData(); 
 
-            foreach($post->getImages() as $image){
+            /* foreach($post->getImages() as $image){
                 $image->setPost($post);
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($image);
-            }
+            } */
 
             /* dump($dataForm); 
             dump($id); */
@@ -117,11 +117,11 @@ class AdminController extends AbstractController
             
             //permet de persister la collection d'image 
             //(peut aussi se faire en precisant la cascade persist dans les annotations orm
-            foreach($post->getImages() as $image){
+            /* foreach($post->getImages() as $image){
                 $image->setPost($post);
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($image);
-            }
+            } */
 
             $dataForm = $form->getData();     
             $manager = $this->getDoctrine()->getManager();
