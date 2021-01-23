@@ -8,7 +8,7 @@
 {% block body %}
 
 {% if app.user %}
-{% include 'NavBarSimple.html.twig' %}
+{% include 'snippet/_NavBarAdmin.html.twig' %}
 
 <div class="container">
         <div class="row d-flex justify-content-center">
@@ -20,6 +20,5 @@
             </div>
         </div>
     </div>
-{{dump(app.flashes)}}
 {% endif %}
 {% endblock %}
