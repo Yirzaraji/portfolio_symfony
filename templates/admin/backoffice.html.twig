@@ -12,13 +12,23 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-2 adminUserTitle">
-            <h3 class="mb-3 mt-4 text-white border-bottom border-white pb-2">
-            Bienvenue <b>{{ app.user.login }}</b></h3>
-            <ul>
-                <li><i class="fas fa-clone"></i> Liste Posts</li>
-                <li><i class="fas fa-users"></i> Liste Users</li>
-                <li><i class="fas fa-question-circle"></i> Aides</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-12 mt-2 pb-2 ml-2 line-bottom">
+                    <span class="mb-3 mt-4 pb-2 UserAdmin">
+                    Bienvenue <b>{{ app.user.login }}</b></span><br>
+                    <i class="fas fa-user-circle"></i>
+                    <a href="{{ path('account_profile') }}">Edit Profile</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mt-3">   
+                    <ul>
+                        <li><i class="fas fa-clone"></i> Liste Posts</li>
+                        <li><i class="fas fa-users"></i> Liste Users</li>
+                        <li><i class="fas fa-question-circle"></i> Aides</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="col-md-10 text-center mb-5 mt-5">
             <table class="table table-striped tableStyle">
