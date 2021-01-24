@@ -7,6 +7,7 @@ use App\Entity\Image;
 use App\Form\EditFormType;
 use App\Form\ImageFormType;
 use App\Form\CreateFormType;
+use Doctrine\Persistence\ObjectManager;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -43,37 +44,31 @@ class AdminController extends AbstractController
      * @Route("/backoffice/edit-{id}", name="admin_edit")
      * @return Response
      */
-    public function edit(Request $request, $id)
+    public function edit(Post $post, Request $request, ObjectManager $manager)
     {
-        $post = new Post();
-        $editPost = $this->getDoctrine()->getRepository(Post::class)->find($id);
-        $form = $this->createForm(CreateFormType::class, $editPost);
+        $form = $this->createForm(CreateFormType::class, $post);
         $form->handleRequest($request);
-
 
         //si le form est soumis && si il est valid ->execute
         if ($form->isSubmitted() && $form->isValid()) {
 
             $dataForm = $form->getData(); 
+            //dump($post->getImages());
 
-            /* foreach($post->getImages() as $image){
+            foreach($post->getImages() as $image){
                 $image->setPost($post);
-                $manager = $this->getDoctrine()->getManager();
                 $manager->persist($image);
-            } */
+            }
 
-            /* dump($dataForm); 
-            dump($id); */
-        
-            $manager = $this->getDoctrine()->getManager();
-            $manager->persist($editPost);
+            $manager->persist($post);
             $manager->flush();
 
             return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/edit.html.twig', [
-            'editPostForm' => $form->createView()
+            'editPostForm' => $form->createView(),
+            'post' => $post
         ]);
     }
 
@@ -117,11 +112,11 @@ class AdminController extends AbstractController
             
             //permet de persister la collection d'image 
             //(peut aussi se faire en precisant la cascade persist dans les annotations orm
-            /* foreach($post->getImages() as $image){
+            foreach($post->getImages() as $image){
                 $image->setPost($post);
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($image);
-            } */
+            }
 
             $dataForm = $form->getData();     
             $manager = $this->getDoctrine()->getManager();

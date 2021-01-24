@@ -72,7 +72,7 @@ function handleDeleteButtons() {
 }
 
 function updateCounter() {
-    const count = +$('#ad_images div.form-group').length;
+    const count = +$('#create_form_images div.form-group').length;
 
     $('#widgets-counter').val(count);
 }
