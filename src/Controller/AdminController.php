@@ -53,17 +53,19 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $dataForm = $form->getData(); 
-            //dump($post->getImages());
-
-            foreach($post->getImages() as $image){
-                $image->setPost($post);
-                $manager->persist($image);
-            }
-
-            $manager->persist($post);
-            $manager->flush();
-
-            return $this->redirectToRoute('admin');
+            //dump($form['git']->getData());
+            $lien = $form['lien']->getData();
+            $git = $form['git']->getData();
+    
+                foreach($post->getImages() as $image){
+                    $image->setPost($post);
+                    $manager->persist($image);
+                }
+    
+                $manager->persist($post);
+                $manager->flush();
+                
+                return $this->redirectToRoute('admin');      
         }
 
         return $this->render('admin/edit.html.twig', [
