@@ -634,10 +634,28 @@ h1{
 /*############ Caroussel ############*/
 div.carousel-caption{
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-align: left;
+    right: auto;
+    border-radius: 22px;
+    padding-bottom: 4px;
+    padding-top: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 1.1rem;
+}
+.captionCarouTitle{
+    background-color: #1b1b1b;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px -1px 6px 2px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px -1px 6px 2px rgba(0,0,0,0.16);
+    box-shadow: 0px -1px 6px 2px rgba(0,0,0,0.16);
+
 }
 
-div.carousel-caption p{
-    font-size: 1.1rem;
+.captionCarou{
+    background-color: #4332dd;
+    text-transform: uppercase;
 }
 
 /* ####### ADMIN SECTION ######### */
