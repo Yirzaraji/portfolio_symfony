@@ -26,6 +26,32 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+  $('.navTabsTech > li > a').click(function(event) {
+  event.preventDefault();
+
+  //get displaying tab content jQuery selector
+  let activeTabsSelector = $('.navTabsTech > li.active > a').attr('href');
+
+  //find actived navigation and remove 'active' css
+  let activedNavTech = $('.navTabsTech > li.active');
+  activedNavTech.removeClass('active');
+
+  //add 'active' css into clicked navigation
+  $(this).parents('li').addClass('active');
+
+  //hide displaying tab content
+  $(activeTabsSelector).removeClass('active');
+  $(activeTabsSelector).addClass('hide');
+
+  //show target tab content
+  let targetTabsSelector = $(this).attr('href');
+  $(targetTabsSelector).removeClass('hide');
+  $(targetTabsSelector).addClass('active');
+  });
+});
+
+//MENU BURGER
 let navbar = document.querySelector(".navbar-mobile")
 let ham = document.querySelector(".ham")
 
@@ -139,28 +165,3 @@ $('.button-groupCards').each( function( i, buttonGroup ) {
 });
 
 
-/* $(document).ready(function() {
-    $('.navTabsTech > li > a').click(function(event) {
-    event.preventDefault();
-
-    //get displaying tab content jQuery selector
-    let activeTabsSelector = $('.navTabsTech > li.active > a').attr('href');
-
-    //find actived navigation and remove 'active' css
-    let activedNav = $('.navTabsTech > li.active');
-    activedNav.removeClass('active');
-
-    //add 'active' css into clicked navigation
-    $(this).parents('li').addClass('active');
-
-    //hide displaying tab content
-    $(activeTabsSelector).removeClass('active');
-    $(activeTabsSelector).addClass('hide');
-
-    //show target tab content
-    let targetTabsSelector = $(this).attr('href');
-    $(targetTabsSelector).removeClass('hide');
-    $(targetTabsSelector).addClass('active');
-    });
-});
- */
