@@ -6,6 +6,7 @@ body {
   background-color: rgb(244, 244, 244);
   min-height: 100%;
   position: relative;
+  font-size: 1.2rem;
 }
 
 footer {
