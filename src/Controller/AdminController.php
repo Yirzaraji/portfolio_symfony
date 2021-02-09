@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class AdminController extends AbstractController
 {
@@ -82,7 +83,7 @@ class AdminController extends AbstractController
      */
     public function delete($id)
     {
-        dump($id);
+        //dump($id);
         $trashPost = $this->getDoctrine()->getRepository(Post::class)->find($id);
 
         $manager = $this->getDoctrine()->getManager();
@@ -91,10 +92,6 @@ class AdminController extends AbstractController
         
         return $this->redirectToRoute('admin');
     }
-
-    
-
-    
 
     /**
      * @Route("/backoffice/create", name="post_create")
@@ -111,16 +108,27 @@ class AdminController extends AbstractController
 
         //si le form est soumis && si il est valid ->execute
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
+            //get path form filetype datas
+            /*$file = $form->get('projectImage')->getData();
+            $originalFilename = "images/".$file->getClientOriginalName();
+            $PostImage = $post->setProjectImage($originalFilename);
+            $datas = $form->getData();
+            $images = $datas->getImages()->getUrl();
+            dd($images); */
+
             //permet de persister la collection d'image 
             //(peut aussi se faire en precisant la cascade persist dans les annotations orm
             foreach($post->getImages() as $image){
+                
+                //dd($image->getUrl());
                 $image->setPost($post);
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($image);
             }
 
-            $dataForm = $form->getData();     
+            $dataForm = $form->getData();
+            //dump($dataForm);     
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($dataForm);
             $manager->flush();
