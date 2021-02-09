@@ -55,10 +55,10 @@
                     {% for image in post.images %}
                         <div class="carousel-item {% if loop.first %}active{% endif %}">
                         <img class="d-block w-100" src="{{ image.url }}" alt="First slide">
-                            <div class="carousel-caption d-none d-md-block">
+                            {# <div class="carousel-caption d-none d-md-block">
                                 <span class="captionCarouTitle">{{ post.title }}</span>
                                 <span class="captionCarou">{{ image.caption }}</span>
-                            </div>
+                            </div> #}
                         </div>
                     {% endfor %}
                 </div>
