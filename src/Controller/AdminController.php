@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Tag;
 use App\Entity\Post;
 use App\Entity\Image;
 use App\Form\EditFormType;
@@ -12,8 +13,8 @@ use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminController extends AbstractController
 {
@@ -24,8 +25,8 @@ class AdminController extends AbstractController
     {
         
         $dataPosts = $this->getDoctrine()
-                    ->getRepository(Post::class)
-                    ->findBy([],['id' => 'desc']);
+                          ->getRepository(Post::class)
+                          ->findBy([],['id' => 'desc']);
 
         //pagination
         $posts = $paginator->paginate(
@@ -100,7 +101,6 @@ class AdminController extends AbstractController
     {
         $post = new Post();
         $post->setTechnos('<ul><li>technos</li><li>technos</li></ul>');
-        //dump($post);
 
         $form = $this->createForm(CreateFormType::class, $post);
         $form->handleRequest($request);
@@ -109,28 +109,27 @@ class AdminController extends AbstractController
         //si le form est soumis && si il est valid ->execute
         if ($form->isSubmitted() && $form->isValid()) {
 
-            //get path form filetype datas
-            /*$file = $form->get('projectImage')->getData();
-            $originalFilename = "images/".$file->getClientOriginalName();
-            $PostImage = $post->setProjectImage($originalFilename);
-            $datas = $form->getData();
-            $images = $datas->getImages()->getUrl();
-            dd($images); */
-
             //permet de persister la collection d'image 
             //(peut aussi se faire en precisant la cascade persist dans les annotations orm
             foreach($post->getImages() as $image){
-                
-                //dd($image->getUrl());
                 $image->setPost($post);
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($image);
             }
 
+            foreach($post->getTags() as $tag){
+                $tag->setPost($post);
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($tag);
+            }
+            
+            $time = new \DateTime();
+
             $dataForm = $form->getData();
             //dump($dataForm);     
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($dataForm);
+            $manager->persist($post->setDate($time));
             $manager->flush();
 
             $this->addFlash('success', 'Article Created! power is power!');

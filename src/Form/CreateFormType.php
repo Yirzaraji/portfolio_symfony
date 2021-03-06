@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Post;
+use App\Form\TagFormType;
 use App\Form\ImageFormType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpFoundation\File\File;
@@ -70,6 +71,16 @@ class CreateFormType extends AbstractType
             CollectionType::class,
             [
                 'entry_type' => ImageFormType::class,
+                'allow_add' => true,
+                'allow_delete' => true
+            ]
+        )
+
+        ->add(
+            'tags', 
+            CollectionType::class,
+            [
+                'entry_type' => TagFormType::class,
                 'allow_add' => true,
                 'allow_delete' => true
             ]

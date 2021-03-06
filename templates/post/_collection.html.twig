@@ -38,3 +38,42 @@
         </div>
     </div>
 {% endblock %}
+
+
+{# Tag #}
+{% block _create_form_tags_widget %}
+
+    {{ form_widget(form) }}
+
+    <input type="hidden" id="widgets-counter" value="0">
+
+    <div class="form-group text-left">
+        <button type="button" id="add-tag" class="btn btn-primary">
+            <i class="fas fa-plus"></i>
+            Ajouter un tag
+        </button>
+    </div>
+{% endblock %}
+
+{% block _create_form_tags_entry_row %}
+    {{ form_widget(form) }}
+{% endblock %}
+
+{% block _create_form_tags_entry_widget %}
+    <div class="form-group" id="block_{{id}}">
+    {{ form_errors(form) }}
+        <div class="row">
+            <div class="col-4">
+                <div class="row">
+                    <div class="col">
+                        {{ form_widget(form.name) }}
+                        {{ form_errors(form.name) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <button type="button" data-action="delete" data-target="#block_{{id}}" class="btn btn-danger">X</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -44,6 +44,7 @@
                         <th scope="col">Categorie</th>
                         <th scope="col">Demo Lien</th>
                         <th scope="col">Github Lien</th>
+                        <th scope="col">Date</th>
                         <th class="col-1" scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -58,6 +59,7 @@
                         <td>{{post.categorie}}</td>
                         <td>{{post.lien}}</td>
                         <td>{{post.git}}</td>
+                        <td>{{post.date|date('Y-m-d')}}</td>
                         <td style="font-size:1.4rem;">
                             <a class="mr-2" href="{{ path('post_show', {'id': post.id}) }}"><i class="far fa-eye"></i></a>
                             <a class="mr-2" href="{{ path('admin_edit', {'id': post.id}) }}"><i class="far fa-edit"></i></a>
