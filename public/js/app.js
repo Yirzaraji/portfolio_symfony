@@ -196,7 +196,7 @@ $(".button-groupCards").each(function (i, buttonGroup) {
 const spanTag = document.querySelectorAll("span.tagsPost");
 console.log(spanTag);
 
-function searchTag() {
+searchTag = () => {
   for (let i = 0; i < spanTag.length; i++) {
     spanTag[i].textContent;
     console.log(spanTag[i].textContent);
@@ -218,6 +218,6 @@ function searchTag() {
       spanTag[i].style.background = "rgb(255, 72, 0)";
     }
   }
-}
+};
 
 searchTag();
