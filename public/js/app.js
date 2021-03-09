@@ -192,3 +192,5 @@ $(".button-groupCards").each(function (i, buttonGroup) {
     $(this).addClass("is-checkedCards");
   });
 });
+
+let tagColor = document.getElementsByClassName("tagsPost");

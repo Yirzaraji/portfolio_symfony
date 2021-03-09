@@ -21,21 +21,18 @@
     <div id="tab1" class="box devBox active">
         <div class="row justify-content-center flex-wrap">
             {% for devPost in devPosts %}
-                    <div class='newsCard news-Slide-up m-1'>
-                            <img src="{{ devPost.projectImage }}"/>
-                        <div class='newsCaption'>
-                            <div class='newsCaption-title'>project</div>
-                            <span class="projectTitle">{{ devPost.title }}</span>
-                            <div class="dottedLine mb-1"></div>
-                            <span class="techTxt">technologies</span>
-                            <p class='newsCaption-content'>{% for tag in devPost.tags %}<span class="tagsCards">{{tag.name}}</span>{% endfor %} </p>
-                            <div class="newsCaption-link">
-                                <p>
-                                    <a href="{{ path('post_show', {'id': devPost.id}) }}"><i class="fas fa-eye"></i></a>
-                                </p>    
-                            </div>
-                        </div>
+            <a href="{{ path('post_show', {'id': devPost.id}) }}">
+                <div class='newsCard news-Slide-up m-1'>
+                        <img src="{{ devPost.projectImage }}"/>
+                    <div class='newsCaption'>
+                        <div class='newsCaption-title'>project</div>
+                        <span class="projectTitle">{{ devPost.title }}</span>
+                        <div class="dottedLine mb-3 mt-1"></div>
+                        <span class="techTxt">technologies</span>
+                        <p class='newsCaption-content mt-1'>{% for tag in devPost.tags %}<span class="tagsCards">{{tag.name}}</span>{% endfor %}</p>
                     </div>
+                </div>
+            </a>
             {% endfor %} 
         </div>
     </div>
@@ -44,42 +41,36 @@
     <div id="tab2" class="box designBox hide">
         <div class="row justify-content-center flex-wrap"> 
             {% for designPost in designPosts %}
+            <a href="{{ path('post_show', {'id': designPost.id}) }}">
                 <div class='newsCard news-Slide-up m-1'>
                     <img src="{{ designPost.projectImage }}" />
                     <div class='newsCaption'>
                         <div class='newsCaption-title'>project</div>
                         <span class="projectTitle">{{ designPost.title }}</span>
-                        <div class="dottedLine mb-1"></div>
+                        <div class="dottedLine mb-3 mt-1"></div>
                         <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content'>{{ designPost.technos | raw}} </p>
-                        <div class="newsCaption-link">
-                            <p>
-                                <a href="{{ path('post_show', {'id': designPost.id}) }}"><i class="fas fa-eye"></i></a>
-                            </p>    
-                        </div>
+                        <p class='newsCaption-content mt-1'>{{ designPost.technos | raw}} </p>
                     </div>
                 </div>
+            </a>
             {% endfor %}        
         </div>
     </div>
     <div id="tab3" class="box printBox hide">
         <div class="row justify-content-center flex-wrap">
             {% for printPost in printPosts %}
+            <a href="{{ path('post_show', {'id': printPost.id}) }}">
                 <div class='newsCard news-Slide-up m-1'>
                     <img src="{{ printPost.projectImage }}" />
                     <div class='newsCaption'>
                         <div class='newsCaption-title'>project</div>
                         <span class="projectTitle">{{ printPost.title }}</span>
-                        <div class="dottedLine mb-1"></div>
+                        <div class="dottedLine mb-3 mt-1"></div>
                         <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content'>{{ printPost.technos | raw}} </p>
-                        <div class="newsCaption-link">
-                            <p>
-                                <a href="{{ path('post_show', {'id': printPost.id}) }}"><i class="fas fa-eye"></i></a>
-                            </p>     
-                        </div>
+                        <p class='newsCaption-content mt-1'>{{ printPost.technos | raw}} </p>
                     </div>
                 </div>
+            </a>
             {% endfor %}        
         </div>
     </div>
