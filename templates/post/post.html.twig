@@ -48,9 +48,11 @@
 </div>
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-9 bg-white paragraphePost">
-            {{post.paragraphe}}
+        <div class="col-md-1 bg-white paragraphePost"></div>
+        <div class="col-md-7 bg-white paragraphePost p-3 text-justify">
+            {{post.paragraphe|raw}}
         </div>
+        <div class="col-md-1 bg-white paragraphePost"></div>
     </div>
 </div>
 <div class="container-fluid">
