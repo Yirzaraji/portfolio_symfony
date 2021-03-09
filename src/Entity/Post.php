@@ -27,11 +27,6 @@ class Post
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $technos;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $projectImage;
 
     /**
@@ -93,18 +88,6 @@ class Post
     public function setTitle(string $title): self
     {
         $this->title = $title;
-
-        return $this;
-    }
-
-    public function getTechnos(): ?string
-    {
-        return $this->technos;
-    }
-
-    public function setTechnos(string $technos): self
-    {
-        $this->technos = $technos;
 
         return $this;
     }
