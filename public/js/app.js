@@ -193,4 +193,31 @@ $(".button-groupCards").each(function (i, buttonGroup) {
   });
 });
 
-let tagColor = document.getElementsByClassName("tagsPost");
+const spanTag = document.querySelectorAll("span.tagsPost");
+console.log(spanTag);
+
+function searchTag() {
+  for (let i = 0; i < spanTag.length; i++) {
+    spanTag[i].textContent;
+    console.log(spanTag[i].textContent);
+    if (spanTag[i].textContent === "sql") {
+      console.log("tag : sql detected");
+      spanTag[i].style.background = "#ff8f00";
+    } else if (spanTag[i].textContent === "php") {
+      console.log("tag : php detected");
+      spanTag[i].style.background = "#004480";
+    } else if (spanTag[i].textContent === "symfony") {
+      spanTag[i].style.background = "#4242c8";
+    } else if (spanTag[i].textContent === "js") {
+      spanTag[i].style.background = "#ffef00";
+    } else if (spanTag[i].textContent === "photoshop") {
+      spanTag[i].style.background = "rgb(0, 112, 255)";
+    } else if (spanTag[i].textContent === "indesign") {
+      spanTag[i].style.background = "rgb(255, 0, 72)";
+    } else if (spanTag[i].textContent === "illustrator") {
+      spanTag[i].style.background = "rgb(255, 72, 0)";
+    }
+  }
+}
+
+searchTag();

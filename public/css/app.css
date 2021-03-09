@@ -363,6 +363,9 @@ h1 {
 
 .newsCaption-content {
   font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .newsCaption-link {
@@ -790,10 +793,15 @@ h1 {
   border-bottom-right-radius: 20px;
 }
 
+.paragraphePost {
+  min-height: 300px;
+  border-radius: 10px;
+}
+
 .postTitle {
   background-color: #451dac;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  /* border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px; */
 }
 
 .text-justify a {

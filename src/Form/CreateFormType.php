@@ -25,17 +25,17 @@ class CreateFormType extends AbstractType
             array('label' => false, 'attr' => 
             array('class' => '', 'style' => '', 'placeholder' => 'Titre du projet')
             ))
-
-        ->add('technos', 
-            TextareaType::class, 
-            array('label' => false, 'attr' => 
-            array('class' => '', 'style' => '', 'placeholder' => 'Technos utilisées', 'value' => 'coucou')
-            ))
         
         ->add('projectDescription', 
             TextareaType::class, 
             array('label' => false, 'attr' => 
             array('class' => '', 'style' => '', 'placeholder' => 'Description', 'value' => 'coucou')
+            ))
+        
+        ->add('paragraphe', 
+            TextareaType::class, 
+            array('label' => false, 'attr' => 
+            array('class' => '', 'style' => '', 'placeholder' => 'paragraphe', 'value' => 'coucou')
             ))
 
         ->add('projectImage', 

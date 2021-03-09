@@ -37,10 +37,10 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Title</th>
-                        <th scope="col">Technos</th>
                         <th scope="col">Tags</th>
                         <th scope="col">Project_Image</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Paragraphe</th>
                         <th scope="col">Categorie</th>
                         <th scope="col">Demo Lien</th>
                         <th scope="col">Github Lien</th>
@@ -53,10 +53,10 @@
                     <tr>
                         <th scope="row">{{post.id}}</th>
                         <td>{{post.title}}</td>
-                        <td>{{post.technos}}</td>
                         <td>{% for tag in post.tags %}{{tag.name}}{% endfor %}</td>
                         <td>{{post.projectImage}}</td>
-                        <td>Vide</td>
+                        <td>{{post.projectDescription}}</td>
+                        <td>{{post.paragraphe}}</td>
                         <td>{{post.categorie}}</td>
                         <td>{{post.lien}}</td>
                         <td>{{post.git}}</td>

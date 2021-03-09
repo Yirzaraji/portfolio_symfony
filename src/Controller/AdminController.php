@@ -32,7 +32,7 @@ class AdminController extends AbstractController
         $posts = $paginator->paginate(
             $dataPosts,
             $request->query->getInt('page', 1),
-            10
+            5
         );
 
         return $this->render('admin/backoffice.html.twig', [

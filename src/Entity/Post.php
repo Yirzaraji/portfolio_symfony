@@ -40,24 +40,9 @@ class Post
     private $projectDescription;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
-    private $premierParagraphe;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $secondParagraphe;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $premiereImage;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $secondeImage;
+    private $paragraphe;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -148,50 +133,14 @@ class Post
         return $this;
     }
 
-    public function getPremierParagraphe(): ?string
+    public function getParagraphe(): ?string
     {
-        return $this->premierParagraphe;
+        return $this->paragraphe;
     }
 
-    public function setPremierParagraphe(?string $premierParagraphe): self
+    public function setParagraphe(?string $paragraphe): self
     {
-        $this->premierParagraphe = $premierParagraphe;
-
-        return $this;
-    }
-
-    public function getSecondParagraphe(): ?string
-    {
-        return $this->secondParagraphe;
-    }
-
-    public function setSecondParagraphe(?string $secondParagraphe): self
-    {
-        $this->secondParagraphe = $secondParagraphe;
-
-        return $this;
-    }
-
-    public function getPremiereImage(): ?string
-    {
-        return $this->premiereImage;
-    }
-
-    public function setPremiereImage(?string $premiereImage): self
-    {
-        $this->premiereImage = $premiereImage;
-
-        return $this;
-    }
-
-    public function getSecondeImage(): ?string
-    {
-        return $this->secondeImage;
-    }
-
-    public function setSecondeImage(?string $secondeImage): self
-    {
-        $this->secondeImage = $secondeImage;
+        $this->paragraphe = $paragraphe;
 
         return $this;
     }

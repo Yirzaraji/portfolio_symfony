@@ -28,8 +28,17 @@
                         <div class='newsCaption-title'>project</div>
                         <span class="projectTitle">{{ devPost.title }}</span>
                         <div class="dottedLine mb-3 mt-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content mt-1'>{% for tag in devPost.tags %}<span class="tagsCards">{{tag.name}}</span>{% endfor %}</p>
+                        <span class="techTxt">Description</span>
+                        <p>{{devPost.projectDescription|slice(0, 180)}}...</p>
+                        <div class="mb-5 mt-1"></div>
+                        <div class="newsCaption-content col-12">
+                            <span class="techTxt">Technologies</span>
+                            <p class='mt-1'>
+                                {% for tag in devPost.tags %}
+                                <span class="tagsCards">{{tag.name}}</span>
+                                {% endfor %}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -48,8 +57,17 @@
                         <div class='newsCaption-title'>project</div>
                         <span class="projectTitle">{{ designPost.title }}</span>
                         <div class="dottedLine mb-3 mt-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content mt-1'>{{ designPost.technos | raw}} </p>
+                        <span class="techTxt">Description</span>
+                        <p>{{designPost.projectDescription|slice(0, 120)}}...</p>
+                        <div class="mb-5 mt-1"></div>
+                        <div class="newsCaption-content col-12">
+                            <span class="techTxt">Technologies</span>
+                            <p class='mt-1'>
+                                {% for tag in designPost.tags %}
+                                <span class="tagsCards">{{tag.name}}</span>
+                                {% endfor %}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -66,8 +84,17 @@
                         <div class='newsCaption-title'>project</div>
                         <span class="projectTitle">{{ printPost.title }}</span>
                         <div class="dottedLine mb-3 mt-1"></div>
-                        <span class="techTxt">technologies</span>
-                        <p class='newsCaption-content mt-1'>{{ printPost.technos | raw}} </p>
+                        <span class="techTxt">Description</span>
+                        <p>{{printPost.projectDescription|slice(0, 180)}}...</p>
+                        <div class="mb-5 mt-1"></div>
+                        <div class="newsCaption-content col-12">
+                            <span class="techTxt">Technologies</span>
+                            <p class='mt-1'>
+                                {% for tag in printPost.tags %}
+                                <span class="tagsCards">{{tag.name}}</span>
+                                {% endfor %}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </a>
