@@ -17,7 +17,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container-fluid">
     <div id="tab1" class="box devBox active">
         <div class="row justify-content-center flex-wrap">
             {% for devPost in devPosts %}
@@ -28,7 +28,7 @@
                             <span class="projectTitle">{{ devPost.title }}</span>
                             <div class="dottedLine mb-1"></div>
                             <span class="techTxt">technologies</span>
-                            <p class='newsCaption-content'>{{ devPost.technos | raw}} </p>
+                            <p class='newsCaption-content'>{% for tag in devPost.tags %}<span class="tagsCards">{{tag.name}}</span>{% endfor %} </p>
                             <div class="newsCaption-link">
                                 <p>
                                     <a href="{{ path('post_show', {'id': devPost.id}) }}"><i class="fas fa-eye"></i></a>
@@ -40,7 +40,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container-fluid">
     <div id="tab2" class="box designBox hide">
         <div class="row justify-content-center flex-wrap"> 
             {% for designPost in designPosts %}

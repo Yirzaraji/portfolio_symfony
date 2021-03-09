@@ -80,7 +80,7 @@ class Post
     private $images;
 
     /**
-     * @ORM\OneToMany(targetEntity=Tag::class, mappedBy="post")
+     * @ORM\OneToMany(targetEntity=Tag::class, mappedBy="post", orphanRemoval=true, cascade={"persist"})
      */
     private $tags;
 

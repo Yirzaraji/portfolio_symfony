@@ -63,6 +63,11 @@ class AdminController extends AbstractController
                     $image->setPost($post);
                     $manager->persist($image);
                 }
+
+                foreach($post->getTags() as $tag){
+                    $tag->setPost($post);
+                    $manager->persist($tag);
+                }
     
                 $manager->persist($post);
                 $manager->flush();
