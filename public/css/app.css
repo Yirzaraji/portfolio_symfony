@@ -841,6 +841,11 @@ h1 {
   font-size: 1rem;
 }
 
+.tagsBloc {
+  position: absolute;
+  bottom: 11px;
+}
+
 .contentPost {
   min-height: 150px;
 }
