@@ -29,7 +29,7 @@
                         <span class="projectTitle">{{ devPost.title }}</span>
                         <div class="dottedLine mb-3 mt-1"></div>
                         <span class="techTxt">Description</span>
-                        <p>{{devPost.projectDescription|slice(0, 180)}}...</p>
+                        <p>{{devPost.projectDescription|slice(0, 120)|raw}}...</p>
                         <div class="mb-5 mt-1"></div>
                         <div class="newsCaption-content col-12">
                             <span class="techTxt">Technologies</span>
@@ -58,7 +58,7 @@
                         <span class="projectTitle">{{ designPost.title }}</span>
                         <div class="dottedLine mb-3 mt-1"></div>
                         <span class="techTxt">Description</span>
-                        <p>{{designPost.projectDescription|slice(0, 120)}}...</p>
+                        <p>{{designPost.projectDescription|slice(0, 120)|raw}}...</p>
                         <div class="mb-5 mt-1"></div>
                         <div class="newsCaption-content col-12">
                             <span class="techTxt">Technologies</span>
@@ -85,7 +85,7 @@
                         <span class="projectTitle">{{ printPost.title }}</span>
                         <div class="dottedLine mb-3 mt-1"></div>
                         <span class="techTxt">Description</span>
-                        <p>{{printPost.projectDescription|slice(0, 180)}}...</p>
+                        <p>{{printPost.projectDescription|slice(0, 120)|raw}}...</p>
                         <div class="mb-5 mt-1"></div>
                         <div class="newsCaption-content col-12">
                             <span class="techTxt">Technologies</span>

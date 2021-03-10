@@ -209,7 +209,7 @@ searchTag = () => {
     } else if (spanTag[i].textContent === "symfony") {
       spanTag[i].style.background = "#4242c8";
     } else if (spanTag[i].textContent === "js") {
-      spanTag[i].style.background = "#ffef00";
+      spanTag[i].style.background = "rgb(162, 151, 0)";
     } else if (spanTag[i].textContent === "photoshop") {
       spanTag[i].style.background = "rgb(0, 112, 255)";
     } else if (spanTag[i].textContent === "indesign") {

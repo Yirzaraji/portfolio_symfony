@@ -13,7 +13,7 @@
         <div class="col-sm-10 col-md-7 col-lg-4 col-xl-3 p-0 text-right">
             <img src="{{post.projectImage}}" class="img-fluid imgPost" style="width:100%;" alt="Responsive image">
         </div>
-        <div class="col-sm-10 col-md-7 col-lg-7 col-xl-6 bg-white PostDescription">
+        <div class="col-sm-10 col-md-7 col-lg-7 col-xl-6 bg-white PostDescription border">
             <div class="row justify-content-center">
                 <div class="col-md-12 d-flex justify-content-between postTitle">
                     <div class="project-title ml-5">
@@ -29,7 +29,6 @@
                     <br>
                     {% if post.git is not null %}
                         <br>
-                        <span>Publié le : {{post.date|date("d/m/y")}}</span>
                         <br>
                         <a class="font-weight-bold" href="{{post.git}}" target="_blank"><i class="fab fa-github-alt"></i> REPO GIT</a>
                         <a class="font-weight-bold" href="{{post.lien}}" target="_blank"><i class="fas fa-laptop-code"></i> DEMO LIVE</a>
@@ -37,6 +36,9 @@
                 </div>              
             </div>
             <div class="row">
+                <div class="col-12 text-left tagsBloc">
+                    <span>Publié le : {{post.date|date("d/m/y")}}</span>
+                </div>
                 <div class="col-12 text-right tagsBloc">Tags :
                     {% for tag in post.tags %}
                         <span class="tagsPost">{{tag.name}}</span>
@@ -48,11 +50,13 @@
 </div>
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-1 bg-white paragraphePost"></div>
-        <div class="col-md-7 bg-white paragraphePost p-3 text-justify">
-            {{post.paragraphe|raw}}
+        <div class="col-md-9 bg-white paragraphePost p-3 border">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-justify pt-5 pb-5">
+                    {{post.paragraphe|raw}}
+                </div>
+            </div>
         </div>
-        <div class="col-md-1 bg-white paragraphePost"></div>
     </div>
 </div>
 <div class="container-fluid">
