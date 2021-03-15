@@ -229,6 +229,16 @@ searchTag = () => {
       spanTag[i].style.background = "#954495";
     } else if (spanTag[i].textContent === "node.js") {
       spanTag[i].style.background = "#026e00";
+    } else if (spanTag[i].textContent === "bootstrap") {
+      spanTag[i].style.background = "#7952b3";
+    } else if (spanTag[i].textContent === "html") {
+      spanTag[i].style.background = "#e44d26";
+    } else if (spanTag[i].textContent === "css") {
+      spanTag[i].style.background = "#264de4";
+    } else if (spanTag[i].textContent === "c#") {
+      spanTag[i].style.background = "#690081";
+    } else if (spanTag[i].textContent === "unity") {
+      spanTag[i].style.background = "#002835";
     }
   }
 };
