@@ -209,13 +209,26 @@ searchTag = () => {
     } else if (spanTag[i].textContent === "symfony") {
       spanTag[i].style.background = "#4242c8";
     } else if (spanTag[i].textContent === "js") {
-      spanTag[i].style.background = "rgb(162, 151, 0)";
+      spanTag[i].style.background = "rgb(255, 241, 42)";
+      spanTag[i].style.color = "#dbdbdb";
     } else if (spanTag[i].textContent === "photoshop") {
       spanTag[i].style.background = "rgb(0, 112, 255)";
     } else if (spanTag[i].textContent === "indesign") {
       spanTag[i].style.background = "rgb(255, 0, 72)";
     } else if (spanTag[i].textContent === "illustrator") {
       spanTag[i].style.background = "rgb(255, 72, 0)";
+    } else if (spanTag[i].textContent === "vue.js") {
+      spanTag[i].style.background = "#42b983";
+    } else if (spanTag[i].textContent === "react.js") {
+      spanTag[i].style.background = "#61dafb";
+    } else if (spanTag[i].textContent === "twig") {
+      spanTag[i].style.background = "#71b236";
+    } else if (spanTag[i].textContent === "mongo") {
+      spanTag[i].style.background = "#116149";
+    } else if (spanTag[i].textContent === "nosql") {
+      spanTag[i].style.background = "#954495";
+    } else if (spanTag[i].textContent === "node.js") {
+      spanTag[i].style.background = "#026e00";
     }
   }
 };

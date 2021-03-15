@@ -421,11 +421,13 @@ h1 {
   color: white;
   padding-left: 13px;
   padding-right: 13px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   border: 2px solid white;
   border-radius: 20px;
   margin-right: 1%;
+  line-height: 38px;
+  font-weight: 500;
 }
 
 .filterSpan {
@@ -825,7 +827,7 @@ h1 {
   -webkit-box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 0.18);
   -moz-box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 0.18);
   box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 0.18);
-  height: 100%;
+  height: 100% !important;
 }
 
 .tagsPost {
@@ -836,14 +838,14 @@ h1 {
   padding-top: 3px;
   padding-bottom: 3px;
   border-radius: 20px;
-  background: #929292;
+  background: #373737;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1rem;
+  color: #ffffff;
 }
 
 .tagsBloc {
-  position: absolute;
   bottom: 11px;
 }
 
