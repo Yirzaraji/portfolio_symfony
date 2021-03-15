@@ -68,15 +68,15 @@
 </div>
 <div class="container-fluidp-5">
     <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-11 col-lg-9">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="col-sm-10 col-md-11 col-lg-9 carouselPost">
+            <div id="carouselExId" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     {% for image in post.images %}
                         <li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index0 }}" 
                         {% if loop.first %}class="active"{% endif %}></li>
                     {% endfor %}
                 </ol>
-                <div class="carousel-inner">
+                <div class="carousel-inner border">
                     {% for image in post.images %}
                         <div class="carousel-item {% if loop.first %}active{% endif %}">
                         <img class="d-block w-100" src="{{ image.url }}" alt="First slide">

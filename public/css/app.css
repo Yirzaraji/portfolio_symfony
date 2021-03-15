@@ -825,6 +825,7 @@ h1 {
   -webkit-box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 0.18);
   -moz-box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 0.18);
   box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 0.18);
+  height: 100%;
 }
 
 .tagsPost {
@@ -851,6 +852,11 @@ h1 {
 }
 
 /*############ Caroussel ############*/
+
+.carousel-inner {
+  border-radius: 14px;
+}
+
 div.carousel-caption {
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
   text-align: left;
@@ -1051,10 +1057,20 @@ div.carousel-caption {
     /* show the menu */
     transform: translateY(0);
   }
+
+  .newsCard {
+    width: 309px;
+    height: 257px;
+  }
 }
 
 @media screen and (max-width: 320px) {
   .gridCards {
     left: 0%;
+  }
+
+  .newsCard {
+    width: 309px;
+    height: 257px;
   }
 }
