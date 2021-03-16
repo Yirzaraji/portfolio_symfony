@@ -37,7 +37,12 @@
             </div>
             <div class="row">
                 <div class="col-12 text-left tagsBloc">
-                    <span>Mofifié le : {{post.date|date("d/m/y")}}</span>
+                    <span> 
+                    {% if post.date is not null %}
+                        Mofifié le : {{post.date|date("d/m/y")}}</span>
+                    {% else %}
+                     
+                    {% endif %}
                 </div>
                 <div class="col-12 tagsBloc">Tags :
                     {% for tag in post.tags %}

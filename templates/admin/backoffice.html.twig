@@ -56,7 +56,13 @@
                         <td>{{post.categorie}}</td>
                         <td>{{post.lien}}</td>
                         <td>{{post.git}}</td>
-                        <td>{{post.date|date("d/m/y")}}</td>
+                        <td>
+                            {% if post.date is not null %}
+                                {{post.date|date("d/m/y")}}</span>
+                            {% else %}
+                                
+                            {% endif %}
+                        </td>
                         <td style="font-size:1.4rem;">
                             <a class="mr-2" href="{{ path('post_show', {'id': post.id}) }}"><i class="far fa-eye"></i></a>
                             <a class="mr-2" href="{{ path('admin_edit', {'id': post.id}) }}"><i class="far fa-edit"></i></a>

@@ -68,8 +68,11 @@ class AdminController extends AbstractController
                     $tag->setPost($post);
                     $manager->persist($tag);
                 }
+
+                $time = new \DateTime();
     
                 $manager->persist($post);
+                $manager->persist($post->setDate($time));
                 $manager->flush();
                 
                 return $this->redirectToRoute('admin');      
@@ -105,7 +108,7 @@ class AdminController extends AbstractController
     public function createPost(Request $request)
     {
         $post = new Post();
-        $post->setTechnos('<ul><li>technos</li><li>technos</li></ul>');
+        //$post->setTechnos('<ul><li>technos</li><li>technos</li></ul>');
 
         $form = $this->createForm(CreateFormType::class, $post);
         $form->handleRequest($request);
