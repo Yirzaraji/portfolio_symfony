@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\TagRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\TagRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=TagRepository::class)
@@ -14,11 +15,13 @@ class Tag
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups("post:cocolasticot")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("post:cocolasticot")
      */
     private $name;
 

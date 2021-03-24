@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\PostRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PostRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PostRepository::class)
@@ -16,41 +18,51 @@ class Post
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups("post:cocolasticot")
      */
     protected $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("post:cocolasticot")
+     * @Assert\NotBlank
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("post:cocolasticot")
+     * @Assert\NotBlank(message="You have to set the url image")
      */
     private $projectImage;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups("post:cocolasticot")
      */
     private $projectDescription;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups("post:cocolasticot")
      */
     private $paragraphe;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("post:cocolasticot")
      */
     private $lien;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("post:cocolasticot")
      */
     private $categorie;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("post:cocolasticot")
      */
     private $git;
 
@@ -61,11 +73,13 @@ class Post
 
     /**
      * @ORM\OneToMany(targetEntity=Tag::class, mappedBy="post", orphanRemoval=true, cascade={"persist"})
+     * @Groups("post:cocolasticot")
      */
     private $tags;
 
     /**
      * @ORM\Column(type="date", nullable=true)
+     * @Groups("post:cocolasticot")
      */
     private $date;
 
