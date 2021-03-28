@@ -6,7 +6,9 @@ use App\Entity\Post;
 use App\Repository\PostRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -31,7 +33,7 @@ class ApiPostController extends AbstractController
     /**
      * @Route("/api/post", name="api_post_index", methods={"GET"})
      */
-    public function index(PostRepository $postRepository)
+    public function readPost(PostRepository $postRepository)
     {
         $posts = $postRepository->findAll();
 
@@ -52,7 +54,7 @@ class ApiPostController extends AbstractController
      * send api http request using POST protocol
      * @Route("/api/post", name="api_post_store", methods={"POST"})
      */
-    public function store(Request $request, SerializerInterface $serializer, EntityManagerInterface $em, ValidatorInterface $validator)
+    public function storePost(Request $request, SerializerInterface $serializer, EntityManagerInterface $em, ValidatorInterface $validator)
     {
         //recuperer le corps de la requete
         $jsonRes = $request->getContent();
@@ -80,5 +82,47 @@ class ApiPostController extends AbstractController
                 'message' => $e->getMessage()
             ], 400);
         }
+    }
+
+    /**
+     * @Route("/api/post/{id}", name="api_post_patch", methods={"PATCH"})
+     */
+    public function updatePost(SerializerInterface $serializer, $id, Request $request, PostRepository $postRepository, EntityManagerInterface $em)
+    {
+        $posts = $postRepository->findOneBy(['id' => $id]);
+        $jsonRes = $request->getContent();
+
+        try{
+            $data = $serializer->deserialize($jsonRes, Post::class, 'json');
+            //dd($posts->getTitle());
+
+            //uncomment this and it work (waiting for json token auth implementation)
+            /* $em->persist($posts);
+            $em->persist($posts->setTitle($data->getTitle()));
+            $em->flush(); */
+            
+            return $this->json($posts, 201, [], ['groups' => 'post:cocolasticot']);
+        }
+        catch(NotEncodableValueException $e){
+            return $this->json([
+                'status' => 400,
+                'message' => "Success"
+            ], 400);
+        }
+    }
+
+    /**
+     * @Route("/api/post/{id}", name="api_post_patch", methods={"DELETE"})
+     */
+    public function deletePost($id)
+    {
+        $trashPost = $this->getDoctrine()->getRepository(Post::class)->find($id);
+
+        //uncomment this and it work (waiting for json token auth implementation)
+        /* $manager = $this->getDoctrine()->getManager();
+        $manager->remove($trashPost);
+        $manager->flush();; */
+
+        return new JsonResponse(['status' => 'post deleted'], Response::HTTP_NO_CONTENT);
     }
 }
