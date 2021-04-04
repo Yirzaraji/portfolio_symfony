@@ -21,7 +21,7 @@ class AdminController extends AbstractController
     /**
      * @Route("/backoffice", name="admin")
      */
-    public function backoffice(Request $request, PaginatorInterface $paginator): Response
+    public function Backoffice(Request $request, PaginatorInterface $paginator): Response
     {
         
         $dataPosts = $this->getDoctrine()
