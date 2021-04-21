@@ -273,3 +273,50 @@ function searchTag() {
 }
 
 searchTag();
+
+function checkedbox(){
+  $( "#btnCheckbox" ).on( "click", function () {
+    if ($(this).is(":checked")) {
+      $(".formShow").show();
+
+      $.ajax({
+        method: "POST",
+        url: "/ajax/test",
+        dataType: "json",
+        data: { ischecked: true
+        },
+        success : function( data ) {
+          if(data = true){
+            alert("json response data est a TRUE")
+          }
+        },
+        error: function (data)
+        {
+          alert('error')
+        }
+      });
+      
+
+    }else{
+      $(".formShow").hide();
+      $.ajax({
+        method: "POST",
+        url: "/ajax/test",
+        dataType: "json",
+        data: { ischecked: false
+        },
+        success : function( data ) {
+          if(data = false){
+            alert("json response data est a false")
+          }
+        },
+        error: function (data)
+        {
+          alert('error')
+        }
+      });
+    }
+  });
+}
+
+checkedbox();

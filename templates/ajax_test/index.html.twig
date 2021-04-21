@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ajax checkbox test!{% endblock %}
+{% block body %}
+{% include 'NavBar.html.twig' %}
+<div class="form-check">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input uncheckit" name="coucou" id="btnCheckbox" value="checkedValue" checked>
+    Display value
+  </label>
+</div>
+<div class="row">
+    <div class="col-md-6 formShow">
+        <div class="form-group">
+            <label for="">form random</label>
+            <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+            <small id="helpId" class="text-muted">Help text</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</div>
+
+<script>
+
+
+</script>
+{% include 'Footer.html.twig' %}
+{% endblock %}
+
