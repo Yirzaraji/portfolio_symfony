@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="col-md-10 text-center mb-5 mt-5">
-            <table class="table table-striped tableStyle">
+            <table class="table table-striped tableStyle" id="table-infos">
                 <a class="titleColor" href="{{ path('post_create') }}" style="position:absolute; left:22px; top:-36px; font-size:1.4rem">
                 <i class="far fa-edit"></i><b>Creer un post</b></a>
                 <thead class="table-white">
@@ -74,9 +74,26 @@
             </table>
             {{knp_pagination_render(posts)}}
         </div>
+        <div class="col-md-6">
+            <table class="table table-striped" id="testable" data-pagination="true" data-toggle="table" data-search="true">
+                <thead class="table-white">
+                    <tr>
+                        <th scope="col" data-sortable="true" data-field="id">ID</th>
+                        <th scope="col" data-field="title">Title</th>
+                        <th scope="col" data-field="categorie">Categorie</th>
+                        <th scope="col" data-field="lien">Demo Lien</th>
+                        <th scope="col" data-field="git">Github Lien</th>
+                        <th scope="col" data-field="date">Date</th>
+                        <th class="col-1" scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
-    
+
 
 
 {% else %}

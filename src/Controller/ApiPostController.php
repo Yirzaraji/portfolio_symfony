@@ -60,6 +60,7 @@ class ApiPostController extends AbstractController
         $jsonRes = $request->getContent();
 
         try{
+            //deserialize = json to php object
             $post = $serializer->deserialize($jsonRes, Post::class, 'json');
     
             $post->setProjectImage("http://placehold.it/400");

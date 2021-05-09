@@ -9,6 +9,8 @@
 import "./styles/app.css";
 import "./styles/app.scss";
 
+import "bootstrap-table";
+
 // start the Stimulus application
 //import "./bootstrap";
 
@@ -82,7 +84,9 @@ $(document).ready(function () {
 let navbar = document.querySelector(".navbar-mobile");
 let ham = document.querySelector(".ham");
 
-ham.addEventListener("click", toggleHamburger);
+if (ham) {
+  ham.addEventListener("click", toggleHamburger);
+}
 
 // toggles hamburger menu in and out when clicking on the hamburger
 function toggleHamburger() {
@@ -274,8 +278,8 @@ function searchTag() {
 
 searchTag();
 
-function checkedbox(){
-  $( "#btnCheckbox" ).on( "click", function () {
+function checkedbox() {
+  $("#btnCheckbox").on("click", function () {
     if ($(this).is(":checked")) {
       $(".formShow").show();
 
@@ -283,40 +287,38 @@ function checkedbox(){
         method: "POST",
         url: "/ajax/test",
         dataType: "json",
-        data: { ischecked: true
-        },
-        success : function( data ) {
-          if(data = true){
-            alert("json response data est a TRUE")
+        data: { ischecked: true },
+        success: function (data) {
+          if ((data = true)) {
+            alert("json response data est a TRUE");
           }
         },
-        error: function (data)
-        {
-          alert('error')
-        }
+        error: function (data) {
+          alert("error");
+        },
       });
-      
-
-    }else{
+    } else {
       $(".formShow").hide();
       $.ajax({
         method: "POST",
         url: "/ajax/test",
         dataType: "json",
-        data: { ischecked: false
-        },
-        success : function( data ) {
-          if(data = false){
-            alert("json response data est a false")
+        data: { ischecked: false },
+        success: function (data) {
+          if ((data = false)) {
+            alert("json response data est a false");
           }
         },
-        error: function (data)
-        {
-          alert('error')
-        }
+        error: function (data) {
+          alert("error");
+        },
       });
     }
   });
 }
+
+$("#testable").bootstrapTable({
+  url: "/backoffice/test",
+});
 
 checkedbox();

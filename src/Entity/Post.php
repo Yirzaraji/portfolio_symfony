@@ -19,12 +19,14 @@ class Post
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      * @Groups("post:cocolasticot")
+     * @Groups("post:backoffice")
      */
     protected $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("post:cocolasticot")
+     * @Groups("post:backoffice")
      * @Assert\NotBlank
      */
     private $title;
@@ -51,18 +53,21 @@ class Post
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups("post:cocolasticot")
+     * @Groups("post:backoffice")
      */
     private $lien;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("post:cocolasticot")
+     * @Groups("post:backoffice")
      */
     private $categorie;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups("post:cocolasticot")
+     * @Groups("post:backoffice")
      */
     private $git;
 
@@ -80,6 +85,7 @@ class Post
     /**
      * @ORM\Column(type="date", nullable=true)
      * @Groups("post:cocolasticot")
+     * @Groups("post:backoffice")
      */
     private $date;
 

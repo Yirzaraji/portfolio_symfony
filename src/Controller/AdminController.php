@@ -8,6 +8,7 @@ use App\Entity\Image;
 use App\Form\EditFormType;
 use App\Form\ImageFormType;
 use App\Form\CreateFormType;
+use App\Repository\PostRepository;
 use Doctrine\Persistence\ObjectManager;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -38,6 +39,16 @@ class AdminController extends AbstractController
         return $this->render('admin/backoffice.html.twig', [
             'posts' => $posts
         ]);
+    }
+    /**
+     * @Route("/backoffice/test", name="admin_test", methods={"GET"})
+     */
+    public function BackofficeTest(PostRepository $postRepository): Response
+    {
+        
+        $posts = $postRepository->findBy([],['id' => 'desc']);
+        $response = $this->json($posts, 200, [], ['groups' => 'post:backoffice']);
+        return $response;
     }
 
     /**
