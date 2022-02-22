@@ -28,7 +28,7 @@ class AppFixtures extends Fixture
 
             $login = $faker->userName();
             $email = $faker->email();
-            $hash = $this->encoder->encodePassword($user, '');
+            $hash = $this->encoder->encodePassword($user, 'admin');
             $user->setHash($hash)
                 ->setLogin('yirzaraji')
                 ->setEmail('not.iremy@gmail.com');
@@ -47,7 +47,7 @@ class AppFixtures extends Fixture
             $rand_category = array_rand($input, 2);
 
             $post->setTitle($faker->word())
-                    ->setTechnos($faker->word($nb = 3))
+                    //->setTechnos($faker->word($nb = 3))
                     ->setLien('http://remidelarue.ovh/simlon/sw_battle/')
                     ->setCategorie($input[$rand_category[0]])
                     ->setProjectImage($randomImage)
